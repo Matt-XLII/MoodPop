@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-unmotivated',
   templateUrl: './unmotivated.component.html',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class UnmotivatedComponent {
 
-}
+  quote:string = '';
+  autor:string = '';
+
+  fetchQuote():void {
+    fetch(`https://api.goprogram.ai/inspiration/?${Math.random() * 200}`)
+      .then(response => response.json())
+      .then(data => this.quote = data.quote + " - " + data.author)
+
+
+  }}
+
+
+
