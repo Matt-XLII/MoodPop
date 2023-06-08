@@ -1,0 +1,39 @@
+.container{
+
+}
+.recto{
+ img {
+width: 40%;
+height: 40%;
+border-radius: 10px;
+border: 1px solid #000;
+box-shadow: 0 0 10px #000;
+
+}}
+
+
+.verso {
+background-image: url("/assets/TristeF1.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-opacity: 0.5 ;
+margin: 5%;
+opacity:(0.20);
+width: auto;
+height: 60vh;
+border-radius: 10px;
+border: 1px solid #000;
+box-shadow: 0 0 10px #000;
+
+ }
+
+
+// #myImage {
+//   transition: transform 0.5s;
+// }
+
+// .mirror-effect {
+//   transform: scaleX(-1);
+// }
+// }

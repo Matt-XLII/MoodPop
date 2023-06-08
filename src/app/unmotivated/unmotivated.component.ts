@@ -21,3 +21,8 @@ export class UnmotivatedComponent {
 
 
 
+// function animateImage() {
+//         const test = document.getElementById("myImage");
+//         test.classList.toggle("mirror-effect");
+//         test.style.transform = "scale(1.2)";
+//       }
