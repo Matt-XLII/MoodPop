@@ -1,0 +1,20 @@
+.recto img {
+  box-shadow: 0 0  10px #000;
+  height: 40%;
+  width: 40%;
+  border-radius: 10px;
+}
+.verso {
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 60vh;
+  width: auto;
+  background-image: url("/assets/CartoonVenere1.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  margin: 5%;
+  opacity: (0.20)
+}
+
+
