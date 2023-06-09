@@ -1,17 +1,10 @@
-<div class="container">
 
-    <h1>Happy component</h1>
+    <div class="container" [ngClass]="{'isClicked': clicked}" [ngClass]="{'timer': timed}" [ngClass]="{'isChecked' : checked}" (click)="isClicked()">
 
-    <div class="recto">
-        <img src="assets/CartoonHeureuxF1.jpg" alt=""(click)="fetchData()">
+
+        <img src="assets/CartoonHeureuxF1.jpg" >
+        <p [ngClass]="{'isTimedChecked' : checkedTimed}" >happy Component</p>
           </div>
     
-    <div class="verso">
-        <p>{{this.joke.joke}}</p>
-       <button>return</button>
-       <button>share</button>
-       <button>like</button>
-    </div>
-
-</div>
+    
 

@@ -7,8 +7,33 @@ import { Component } from '@angular/core';
 })
 export class HappyComponent {
 
+joke :string ="";
 
-joke : any = ""
+
+clicked = false;
+timed = false;
+checked = false;
+checkedTimed = false;
+
+
+isClicked() {
+  if (this.checked===false){
+    if (this.timed===false && this.clicked===false) {
+      this.clicked = !this.clicked;
+      setTimeout(() => {
+        this.timed =!this.timed;
+      },750)} else {
+        if (this.timed===true && this.clicked===true) {
+          this.timed =!this.timed;
+          this.clicked =!this.clicked;
+          this.checked = true;
+          setTimeout(() => {
+            this.checkedTimed =!this.checkedTimed;
+          },750)
+        }
+      }} else {}
+    }
+
 
 fetchData():void{
   fetch("https://api.api-ninjas.com/v1/jokes?limit=1", {
@@ -20,6 +45,18 @@ fetchData():void{
   .then((data:any) => this.joke = data[0])
  }
 }
+
+
+
+
+
+
+  
+
+
+
+
+
 
 
 
