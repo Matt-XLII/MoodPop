@@ -1,14 +1,16 @@
 <h2>Angry quote</h2>
-<div class="container">
-  <div class="recto">
-    <img src="/assets/CartoonVenere1.jpg" (click)="fetchQuote()">
-  </div>
 
-  <div class="verso">
-    <p>{{this.quote}}</p>
-    <button>retour</button>
-    <button>share</button>
-    <button>like</button>
-  </div>
 
+<div class="container" [ngClass]="{'isClicked' : clicked}" [ngClass]="{'timer': timed}"
+  [ngClass]="{'isChecked': checked}" (click)="isClicked()">
+  <img src="/assets/CartoonVenere1.jpg" alt="personne énervée">
+  <div class="hide" *ngIf="clicked || checked || timed">
+    <p [ngClass]="{'isTimedChecked': checkedTimed}">{{this.quote}}</p>
+    <button [ngClass]="{'isTimedChecked': checkedTimed}">retour</button>
+    <button [ngClass]="{'isTimedChecked': checkedTimed}">share</button>
+    <button [ngClass]="{'isTimedChecked': checkedTimed}">like</button>
+    <button>plus</button>
+  </div>
 </div>
+
+<!-- *ngIf=" clicked && checked && timed" -->

@@ -1,20 +1,107 @@
-.recto img {
-  box-shadow: 0 0  10px #000;
-  height: 40%;
-  width: 40%;
-  border-radius: 10px;
+.container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  min-height: 150px;
+  margin: 5px;
+  flex-grow: 1;
+  img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+  }
 }
-.verso {
-  box-sizing: border-box;
-  border-radius: 10px;
-  height: 60vh;
-  width: auto;
-  background-image: url("/assets/CartoonVenere1.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: center;
-  margin: 5%;
-  opacity: (0.20)
+
+
+
+.hide{
+  width: 20%;
+  height: 20%;
 }
+
+button {
+
+  transition: 1.5s ease-in-out;
+  transform: translate(54%,-56%)  rotate3d(0,1,0,180deg);
+}
+
+.container.isClicked{
+  margin: 0;
+  transition: 1.5s ease-in-out;
+  transform: translate(54%,-56%) scale(2.08) rotate3d(0,1,0,180deg);
+}
+
+.container.timer {
+  margin: 0;
+  transition: 1.5s ease-in-out;
+  transform: translate(54%,-56%) scale(2.08) rotate3d(0,1,0,180deg);
+  img{
+    opacity: 0.1;
+  }
+  p{
+    transform: rotate3d(0,1,0,180deg);
+  }
+}
+
+.container.isChecked{
+  transition: 1.5s ease-in-out;
+  transform: scale(1);
+  background-color: rgb(0,0,0,);
+    img{
+      opacity: 0.3;
+    }
+    p{
+      transform: rotate3d(0,1,0,180deg);
+    }
+    .isTimedChecked{
+      display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .recto img {
+//   box-shadow: 0 0  10px #000;
+//   height: 40%;
+//   width: 40%;
+//   border-radius: 10px;
+// }
+// .verso {
+//   box-sizing: border-box;
+//   border-radius: 10px;
+//   height: 60vh;
+//   width: auto;
+//   background-image: url("/assets/CartoonVenere1.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+//   margin: 5%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: rgba(0, 0, 0, 0.2);
+// }
+
+// .verso p {
+//   text-align: center;
+
+// }
+// image position absolute z index 0
+
+// texte z index sup
 
 
