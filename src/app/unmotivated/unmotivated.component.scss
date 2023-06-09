@@ -1,8 +1,14 @@
 .quote{
+  position: absolute;
+  z-index: 0;
     width: 150px;
     height: 150px;
     text-align: center;
     justify-content: center;
+}
+.hide{
+  width: 20%;
+  height: 20%;
 }
 
 .container{
@@ -21,6 +27,7 @@
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
+    z-index: 1;
 
   }
 }
@@ -60,14 +67,16 @@
 }
 
 
-.return{
+.share{
   position: absolute;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  width: 5%;
-  height: 5%;
-  opacity: 2;
-}
+  bottom: 10px;
+  z-index: 0;
+
+
+
+  }
+
+
+
 
 
