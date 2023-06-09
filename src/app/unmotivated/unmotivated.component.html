@@ -1,14 +1,17 @@
-<div class="container">
-  <div class="recto">
-  <img src="/assets/TristeF1.jpg" alt="Femme Triste"   (click)="fetchQuote() ">
-</div>
-<div class="verso">
-
-  <p>{{quote}}</p>
-  <button>Return</button>
-  <button>Share</button>
-  <button>like</button>
+<div class="container" [ngClass]="{'isClicked' : clicked}" [ngClass]="{'timer' : timed }" [ngClass]="{'isChecked' : checked }" (click)="isClicked()"  >
+    <img src="/assets/TristeF1.jpg" alt="Femme demotivée"  >
+    <p [ngClass]="{'isTimedChecked' : checkedTimed }" class="quote">{{quote}}</p>
 
 </div>
-</div>
-<!-- <img src="/assets/TristeF1.jpg" alt="Femme Triste"(click)="fetchQuote()"> -->
+
+<!-- <div class="verso">
+    <input type="image" src="/assets/backarrow.png" alt="fleche retour" class="return">
+  <button class="share">Share</button>
+  <button class="like">like</button>
+</div> -->
+
+
+<!-- NgIf au clic
+
+
+-->

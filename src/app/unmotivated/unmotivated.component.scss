@@ -1,39 +1,73 @@
-.container{
-
+.quote{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    justify-content: center;
 }
-.recto{
- img {
-width: 40%;
-height: 40%;
-border-radius: 10px;
-border: 1px solid #000;
-box-shadow: 0 0 10px #000;
 
-}}
+.container{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  min-height: 150px;
+  margin: 5px;
+  flex-grow: 1;
+  img{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+
+  }
+}
+
+.container.isClicked{
+  margin: 0;
+  transition: 1.5s ease-in-out;
+  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+}
 
 
-.verso {
-background-image: url("/assets/TristeF1.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
-background-opacity: 0.5 ;
-margin: 5%;
-opacity:(0.20);
-width: auto;
-height: 60vh;
-border-radius: 10px;
-border: 1px solid #000;
-box-shadow: 0 0 10px #000;
+.container.timer{
+  margin: 0;
+  transition: 1.5s ease-in-out;
+  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+  img{
+    opacity: 0.1;
+  }
+  p{
+    transform:  rotate3d(0, 1, 0, 180deg);
+  }
+}
 
- }
+.container.isChecked{
+  transition: 1.5s ease-in-out;
+  transform: scale(1);
+  background-color: rgb(0, 0, 0);
+  img{
+    opacity: 0.3;
+  }
+  p{
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  p.isTimedChecked{
+    display: none;
+  }
+}
 
 
-// #myImage {
-//   transition: transform 0.5s;
-// }
+.return{
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 5%;
+  height: 5%;
+  opacity: 2;
+}
 
-// .mirror-effect {
-//   transform: scaleX(-1);
-// }
-// }
+
