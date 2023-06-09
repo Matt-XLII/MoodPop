@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { DailyMoodComponent } from './daily-mood/daily-mood.component';
 import { UnmotivatedComponent } from './unmotivated/unmotivated.component';
 import { AngryComponent } from './angry/angry.component';
+import { HappyComponent } from './happy/happy.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AngryComponent } from './angry/angry.component';
     HeaderComponent,
     DailyMoodComponent,
     UnmotivatedComponent,
-    AngryComponent
+    AngryComponent,
+    HappyComponent
   ],
   imports: [
     BrowserModule,
