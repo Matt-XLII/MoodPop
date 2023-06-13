@@ -1,1 +1,13 @@
-<p>header works!</p>
+<header>
+  <div class="logo">
+    <img src="assets/logo_final.png" alt="Logo moodpop">
+  </div>
+  <div class="menu-toggle">
+    <button (click)="toggleMenu()">☰</button>
+  </div>
+  <div class="menu" [ngClass]="{ 'show': isMenuOpen }">
+    <a routerLink="/">Accueil</a>
+    <a routerLink="/about">À propos</a>
+    <a routerLink="/contact">Contact</a>
+  </div>
+</header>

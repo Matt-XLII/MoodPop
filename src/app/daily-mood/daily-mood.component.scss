@@ -1,0 +1,20 @@
+
+body{
+  background-color: #544d56;
+}
+
+.card{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.titre{
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #fff200;
+  text-shadow: 0.5px 0.5px 0.5px #eb00d4;
+}
+
