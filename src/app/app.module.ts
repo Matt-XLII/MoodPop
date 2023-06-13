@@ -9,6 +9,11 @@ import { DailyMoodComponent } from './daily-mood/daily-mood.component';
 import { UnmotivatedComponent } from './unmotivated/unmotivated.component';
 import { AngryComponent } from './angry/angry.component';
 import { HappyComponent } from './happy/happy.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
+
 
 
 @NgModule({
@@ -19,12 +24,17 @@ import { HappyComponent } from './happy/happy.component';
     DailyMoodComponent,
     UnmotivatedComponent,
     AngryComponent,
-    HappyComponent
+    HappyComponent,
+    FooterComponent,
+  
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
