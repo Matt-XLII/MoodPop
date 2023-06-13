@@ -12,18 +12,22 @@ export class UnmotivatedComponent implements OnInit {
   ngOnInit(): void {
     this.fetchQuote();
   }
+
   fetchQuote(): void {
-    fetch(`https://api.goprogram.ai/inspiration/?${Math.random() * 200}`)
-      .then((response) => response.json())
-      .then((data) => (this.quote = data.quote + ' - ' + data.author));
+    fetch('https://api.chucknorris.io/jokes/random')
+    .then(response => response.json())
+    .then((data: any) => console.log(this.quote = data.value));
   }
+  // fetchQuote(): void {
+  //   fetch(`https://api.goprogram.ai/inspiration/?${Math.random() * 200}`)
+  //     .then((response) => response.json())
+  //     .then((data) => (this.quote = data.quote + ' - ' + data.author));
+  //     console.log(this.quote);
+  // }
 
   clicked = false;
-
   timed = false;
-
-  checked = false;
-
+  checked = false
   checkedTimed = false;
 
   isClicked() {

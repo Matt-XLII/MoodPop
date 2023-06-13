@@ -1,51 +1,171 @@
-.container{
-background-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-min-width: 150px;
-min-height: 150px;
-margin: 5px;
-flex-grow: 1;
-
-img{
+.quote {
   position: absolute;
+  z-index: 0;
   width: 150px;
   height: 150px;
-}
+  text-align: center;
+  justify-content: center;
 }
 
-.container.isClicked{
+
+.container {
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 169px;
+  min-height: 209px;
+  margin-top: 20px;
+  flex-grow: 1;
+  z-index: 1;
+  border-radius: 10px;
+  img {
+    position: absolute;
+    width: 169px;
+    height: 209px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+
+  }
+}
+
+.container.isClicked {
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(80px,60%) scale(2.1) rotate3d(0,1,0,180deg);
+  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+  border-radius: 10px;
+  img{
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+    z-index: 2;
+  }
 }
 
-.container.timer{
+.container.timer {
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(80px,60%) scale(2.1) rotate3d(0,1,0,180deg);
-img{
-  opacity: 0.1;
-}
-p{
-  transform: rotate3d(0,1,0,180deg);
-}
-}
-
-.container.isChecked{
-transition: 1.5s ease-in-out;
-transform: scale(1);
-background-color: rgb(0,0,0);
-img{
-  opacity: 0.3;
+  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+  border-radius: 10px;
+  img {
+    opacity: 0.1;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+    z-index: 2;
+  }
+  p {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
 }
 
-p{
-  transform: rotate3d(0,1,0,180deg);
+.container.isChecked {
+  transition: 1.5s ease-in-out;
+  transform: scale(1);
+  background-color: rgb(0, 0, 0);
+  width: 150px; //rajout de la width de 150px
+  justify-content: center;
+  border-radius: 10px;
+  img {
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+    opacity: 0.3;
+  }
+  p {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  p.isTimedChecked {
+    display: none;
+  }
 }
 
-p.isTimedChecked{
+.retour {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width:8px;
+  height: 8px;
+  background-image: url('/assets/retour.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 1.5s ease-in-out;
+  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+}
+
+.retour.isTimedChecked {
   display: none;
 }
+
+.plus {
+  z-index: 2;
+  position: absolute;
+  bottom: 2px;
+  right: 12px;
+  width:10px;
+  height: 10px;
+  background-image: url('/assets/Plus.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border:none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 1.5s ease-in-out;
+  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+}
+
+.plus.isClicked{
+  display: none;
+}
+.share {
+  z-index: 2;
+  position: absolute;
+  bottom: 3px;
+  left: 28px;
+  width:8px;
+  height: 8px;
+  background-image: url('/assets/share.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: transparent ;
+  transition: 1.5s ease-in-out;
+  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+
+}
+.share.isTimedChecked {
+  display: none;
+}
+
+.like {
+  z-index: 2;
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  width:10px;
+  height: 10px;
+  background-image: url('/assets/like.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: transparent ;
+  transition: 1.5s ease-in-out;
+  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+}
+
+.like.isTimedChecked {
+  display: none;
+}
+
+
+.test {
+  width: 150px;
+  height: 150px;
 }
