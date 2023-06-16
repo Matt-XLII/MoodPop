@@ -12,6 +12,7 @@ import { HappyComponent } from './happy/happy.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MenuBurgerComponent } from './menu-burger/menu-burger.component';
+import { BoredComponent } from './bored/bored.component';
 
 
 
@@ -28,6 +29,7 @@ import { MenuBurgerComponent } from './menu-burger/menu-burger.component';
     HappyComponent,
     FooterComponent,
     MenuBurgerComponent,
+    BoredComponent,
   
 
   ],

@@ -13,9 +13,6 @@ timed = false;
 checked = false;
 checkedTimed = false;
 
-ngOnInit(): void {
-  this.fetchData();
-}
 
 isClicked() {
   if (this.checked===false){
@@ -41,7 +38,7 @@ fetchData():void{
     headers: {
   'X-Api-key' : 'q80JOdvIGyOhfvSXFKWV4A==0y5PJl9FCDrqP2ik',
   'Content-type': 'application/json',}})
-  .then(function (response) { return response.json()}) 
+  .then(function (response) { return response.json()})
   .then((data:any) => this.joke = data[0].joke)
  }
 }
