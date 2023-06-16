@@ -5,7 +5,7 @@ import { DailyMoodComponent } from './daily-mood/daily-mood.component';
 
 const routes: Routes = [
     { path: 'dailyfact', component: DailyFactComponent },
-    { path: 'dailymood', component: DailyMoodComponent}
+    { path: '', component: DailyMoodComponent}
 ];
 
 @NgModule({

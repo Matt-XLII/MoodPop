@@ -32,6 +32,7 @@
 }
 
 .container.isClicked {
+  z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
   transform: translate(-54%, 56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
@@ -40,11 +41,12 @@
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-    z-index: 2;
+   
   }
 }
 
 .container.timer {
+  z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
   transform: translate(-54%, 56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
@@ -54,8 +56,7 @@
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-    z-index: 2;
-  }
+     }
   p {
     transform: rotate3d(0, 1, 0, 180deg);
   }
