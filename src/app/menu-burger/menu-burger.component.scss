@@ -1,0 +1,42 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+
+
+
+ }
+ li {
+  color: white;
+  margin-bottom: 30px; /* Ajustez la valeur en fonction de la hauteur du pied de page */
+}
+
+
+
+.catégories{
+
+  background-color: rgba(84, 77, 86, 0.52);
+  text-align: center;
+}
+
+.setting {
+  position: absolute;
+  right: 50px;
+  top: 142px;
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/profilBlanc.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+h1{
+  text-align: center;
+  color: white;
+  margin-bottom: 10%;
+  text-decoration:underline
+
+}
