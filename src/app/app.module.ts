@@ -11,6 +11,7 @@ import { AngryComponent } from './angry/angry.component';
 import { HappyComponent } from './happy/happy.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MenuBurgerComponent } from './menu-burger/menu-burger.component';
 
 
 
@@ -26,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AngryComponent,
     HappyComponent,
     FooterComponent,
+    MenuBurgerComponent,
   
 
   ],
