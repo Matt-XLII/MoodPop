@@ -2,9 +2,9 @@
   [ngClass]="{'isChecked': checked}" (click)="isClicked()">
   <img src="/assets/CartoonVenere1.jpg" alt="personne énervée">
   <div class="test" *ngIf="clicked || checked || timed">
-    <p [ngClass]="{'isTimedChecked': checkedTimed}"  class="quote">{{quote}}</p>
-    <button [ngClass]="{'isClicked': clicked }" [ngClass]="{'isTimedChecked': checkedTimed}" class="retour"></button>
-    <button [ngClass]="{'isClicked': clicked }" [ngClass]="{'isTimedChecked': checkedTimed}" class="share"></button>
-    <button [ngClass]="{'isClicked': clicked }"[ngClass]="{'isTimedChecked': checkedTimed}" class="like"></button>
-    <button [ngClass]="{'isTimedChecked': checkedTimed}" [ngClass]="{'isClicked': clicked }" class="plus"></button>
+    <p [ngClass]="{'isTimedChecked': checkedTimed}" *ngIf="timed && !checkedTimed"  class="quote">{{quote}}</p>
+    <button [ngClass]="{'isClicked': clicked }" [ngClass]="{'isTimedChecked': checkedTimed}" *ngIf="timed && !checkedTimed"class="retour"></button>
+    <button [ngClass]="{'isClicked': clicked }" [ngClass]="{'isTimedChecked': checkedTimed}"*ngIf="timed && !checkedTimed" class="share"></button>
+    <button [ngClass]="{'isClicked': clicked }"[ngClass]="{'isTimedChecked': checkedTimed}" *ngIf="timed && !checkedTimed" class="like"></button>
+    <button [ngClass]="{'isTimedChecked': checkedTimed}" [ngClass]="{'isClicked': clicked }"  class="plus"></button>
 </div>

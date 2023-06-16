@@ -9,6 +9,9 @@ export class HappyComponent implements OnInit{
 
 joke : string = "";
 
+ngOnInit(): void {
+  this.fetchData();
+}
 
 clicked = false;
 timed = false;
@@ -37,7 +40,6 @@ isClicked() {
       }} else {}
     }
 
-
 fetchData():void{
   fetch("https://api.api-ninjas.com/v1/jokes?limit=1", {
     method:'GET',
@@ -54,7 +56,7 @@ fetchData():void{
 
 
 
-  
+
 
 
 
