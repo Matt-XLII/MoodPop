@@ -8,11 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class HappyComponent implements OnInit{
 
 joke : string = "";
-
-ngOnInit(): void {
-  this.fetchData();
-}
-
 clicked = false;
 timed = false;
 checked = false;
