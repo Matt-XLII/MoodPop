@@ -1,0 +1,171 @@
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin: 20px;
+  border-radius: 10px;
+}
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+.sub-section {
+  display: flex;
+  justify-content: space-between;
+}
+.subtitle {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.separator {
+  border: none;
+  border-top: 1px solid black;
+  margin: 10px 0;
+  width: 70%;
+}
+.section-title {
+  font-weight: bold;
+}
+
+.theme-options {
+  display: flex;
+  align-items:start;
+  margin-bottom: 10px;
+  margin: 0;
+}
+
+.gender-options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-right: 0px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+}
+
+#white-theme{
+  margin-left: 15px;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #747474;
+  transition: 0.4s;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.theme-options input:checked + .slider {
+  background-color: #ffffff;
+}
+
+
+.male input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.male .slider {
+  background-color: #a3a3a3;
+}
+
+.male input[type="checkbox"]:checked + .slider {
+  background-color: #2196f3;
+}
+
+.male input[type="checkbox"]:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.female input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.female .slider {
+  background-color: #a3a3a3;
+}
+
+.female input[type="checkbox"]:checked + .slider {
+  background-color: #B409C2;
+}
+
+.female input[type="checkbox"]:focus + .slider {
+  box-shadow: 0 0 1px #B409C2;
+}
+
+
+.vegan input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.vegan .slider {
+  background-color: #a3a3a3;
+}
+
+.vegan input[type="checkbox"]:checked + .slider {
+  background-color: #09c250;
+}
+
+.vegan input[type="checkbox"]:focus + .slider {
+  box-shadow: 0 0 1px #09c250;
+}
+
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider:before {
+  border: 1px solid black;
+}
