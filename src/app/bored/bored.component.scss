@@ -27,8 +27,8 @@
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-
   }
+
 }
 
 .container.isClicked {
@@ -41,8 +41,8 @@
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
+ }
 
-  }
 }
 
 .container.timer {
@@ -75,12 +75,15 @@
     box-shadow: 0 0 10px #000;
     opacity: 0.3;
   }
+
   p {
     transform: rotate3d(0, 1, 0, 180deg);
   }
+
   p.isTimedChecked {
     display: none;
   }
+
 }
 
 .retour {
@@ -97,6 +100,7 @@
   background-color: transparent;
   transform:  rotate3d(0, 1, 0, 180deg);
 }
+
 
 .retour.isTimedChecked {
   display: none;
@@ -121,6 +125,7 @@
 .plus.isClicked{
   display: none;
 }
+
 .share {
   z-index: 2;
   position: absolute;
@@ -137,6 +142,7 @@
   transform:  rotate3d(0, 1, 0, 180deg);
 
 }
+
 .share.isTimedChecked {
   display: none;
 }
@@ -154,20 +160,18 @@
   border: none;
   cursor: pointer;
   background-color: transparent ;
-    transform:  rotate3d(0, 1, 0, 180deg);
+  transform:  rotate3d(0, 1, 0, 180deg);
 }
 
 .like.isTimedChecked {
   display: none;
 }
 
-
 .test {
   width: 150px;
   height: 150px;
 }
+
 .answer{
-  z-index: 3;
+  z-index: 2;
 }
-
-
