@@ -17,6 +17,8 @@ ngOnInit(): void {
   this.fetchData();
 }
 
+
+
 isClicked() {
   if (this.checked===false){
     if (this.timed===false && this.clicked===false) {
