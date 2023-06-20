@@ -20,16 +20,20 @@ export class BoredComponent implements OnInit {
   checked = false;
   checkedTimed = false;
   showSolution: boolean = false; // Ajout de la variable showSolution
+  revealed = false;
 
   // ...
 
   solution() {
+    console.log("Bouton Answer cliqué!");
     this.showSolution = true; // Afficher la solution lorsque le bouton est cliqué
+    this.revealed = true;
   }
 
 
 
   isClicked() {
+    if (!this.revealed && !this.checked) {
     if (this.checked===false){
       if (this.timed===false && this.clicked===false) {
         this.clicked = !this.clicked;
@@ -46,6 +50,7 @@ export class BoredComponent implements OnInit {
           }
         }} else {}
       }
+    }
 
   fetchData():void{
     fetch("https://api.api-ninjas.com/v1/riddles/", {

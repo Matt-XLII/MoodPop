@@ -31,6 +31,22 @@
   }
 }
 
+.container.isRevealed {
+  z-index: 2;
+  margin: 0;
+  transform: translate(-54%, -56%) scale(2.08); /* Pas de rotation */
+  border-radius: 10px;
+  img {
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+    opacity: 0; /* Rendre l'image transparente */
+  }
+  p {
+    display: block; /* Afficher le texte */
+  }
+}
+
 .container.isClicked {
   z-index: 2;
   margin: 0;
@@ -163,11 +179,16 @@
 
 
 .test {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 150px;
   height: 150px;
 }
 .answer{
-  z-index: 3;
+  z-index: 4;
+
 }
 
 
