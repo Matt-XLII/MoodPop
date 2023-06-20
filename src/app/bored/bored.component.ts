@@ -20,16 +20,37 @@ export class BoredComponent implements OnInit {
   checked = false;
   checkedTimed = false;
   showSolution: boolean = false; // Ajout de la variable showSolution
-
-  // ...
+  revealed = false;
+  expanded = false;
+  texteVisible = true;
 
   solution() {
+    console.log("Bouton Answer cliqué!");
     this.showSolution = true; // Afficher la solution lorsque le bouton est cliqué
+    this.revealed = true;
+    this.expanded = true;  // Définition de "expanded" à "true" quand le bouton "Answer" est cliqué
+    this.texteVisible = false;
+  }
+
+  isAnswered() {
+
+    if (this.timed===true && this.clicked===true) {
+      this.timed =!this.timed;
+      this.clicked =!this.clicked;
+      this.checked = true;
+      setTimeout(() => {
+        this.checkedTimed =!this.checkedTimed;
+      },750)
+    } else {}
+
   }
 
 
 
+
+
   isClicked() {
+    if (!this.revealed && !this.checked) {
     if (this.checked===false){
       if (this.timed===false && this.clicked===false) {
         this.clicked = !this.clicked;
@@ -46,6 +67,7 @@ export class BoredComponent implements OnInit {
           }
         }} else {}
       }
+    }
 
   fetchData():void{
     fetch("https://api.api-ninjas.com/v1/riddles/", {
