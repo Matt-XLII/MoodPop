@@ -9,7 +9,7 @@ export class MenuBurgerComponent {
 showBurgerMenu = false;
 
 hideMenu() {
-  this.showBurgerMenu = false;
+  this.showBurgerMenu = !this.showBurgerMenu;
 }
 
 

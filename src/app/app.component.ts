@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = "MoodPop"
+
+showBurger = false;
+
+toggleBurger (event : boolean) {
+this.showBurger = event;
+
+}
+
 }

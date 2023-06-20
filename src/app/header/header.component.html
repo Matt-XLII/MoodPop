@@ -3,7 +3,7 @@
     <img src="assets/logo_final.png" alt="Logo moodpop">
   </div>
   <div class="menu-toggle">
-    <button (click)="toggleMenu()">☰</button>
+    <button (click)="toggleMenu(isMenuOpen)">☰</button>
   </div>
   <div class="menu" [ngClass]="{ 'show': isMenuOpen }">
     <a routerLink="/">Accueil</a>

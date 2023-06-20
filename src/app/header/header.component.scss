@@ -41,7 +41,10 @@ header {
   flex-direction: column;
 }
 
-
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
 
 .menu a {
   padding: 10px;

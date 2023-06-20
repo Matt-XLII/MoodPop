@@ -1,3 +1,4 @@
-<app-header></app-header>
+<app-header (Toggle) = "this.toggleBurger($event)"></app-header>
+<app-menu-burger *ngIf="showBurger"></app-menu-burger>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

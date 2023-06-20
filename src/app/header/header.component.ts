@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +8,12 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
+  @Output() Toggle = new EventEmitter<boolean>();
   isMenuOpen = false;
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-
+  toggleMenu(bool: boolean) {
+    bool = !bool;
+    this.Toggle.emit(bool)
   }
 
 
