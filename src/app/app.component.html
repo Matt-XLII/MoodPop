@@ -1,4 +1,10 @@
-<app-header (Toggle) = "this.toggleBurger($event)"></app-header>
-<app-menu-burger *ngIf="showBurger"></app-menu-burger>
+<!--<app-header (Toggle) = "this.toggleBurger($event)"></app-header>
+<app-menu-burger *ngIf="showBurger" (click)="resetBurgerMenu()"></app-menu-burger>
+<router-outlet></router-outlet>
+<app-footer></app-footer>-->
+
+<app-header (Toggle)="toggleBurger($event)"></app-header>
+<app-menu-burger *ngIf="showBurger" (MenuClosed)="resetBurgerMenu()"></app-menu-burger>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+
