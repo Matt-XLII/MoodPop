@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu-burger.component.scss']
 })
 export class MenuBurgerComponent {
+showBurgerMenu = false;
+
+hideMenu() {
+  this.showBurgerMenu = false;
+}
+
 
 }

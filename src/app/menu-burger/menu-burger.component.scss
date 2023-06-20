@@ -19,6 +19,7 @@ ul {
 }
 
 .setting {
+  display: none;
   position: absolute;
   right: 50px;
   top: 142px;
@@ -30,7 +31,10 @@ ul {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
 
+.setting.show {
+  display: block;
 }
 
 h1{
