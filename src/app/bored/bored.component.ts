@@ -21,13 +21,13 @@ export class BoredComponent implements OnInit {
   checkedTimed = false;
   showSolution: boolean = false; // Ajout de la variable showSolution
   revealed = false;
-
-  // ...
+  expanded = false;
 
   solution() {
     console.log("Bouton Answer cliqué!");
     this.showSolution = true; // Afficher la solution lorsque le bouton est cliqué
     this.revealed = true;
+    this.expanded = true;  // Définition de "expanded" à "true" quand le bouton "Answer" est cliqué
   }
 
 
