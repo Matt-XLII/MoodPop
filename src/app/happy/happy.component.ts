@@ -13,6 +13,9 @@ timed = false;
 checked = false;
 checkedTimed = false;
 
+ngOnInit(): void {
+  this.fetchData();
+}
 
 isClicked() {
   if (this.checked===false){
