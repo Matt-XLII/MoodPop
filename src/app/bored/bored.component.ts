@@ -22,13 +22,30 @@ export class BoredComponent implements OnInit {
   showSolution: boolean = false; // Ajout de la variable showSolution
   revealed = false;
   expanded = false;
+  texteVisible = true;
 
   solution() {
     console.log("Bouton Answer cliqué!");
     this.showSolution = true; // Afficher la solution lorsque le bouton est cliqué
     this.revealed = true;
     this.expanded = true;  // Définition de "expanded" à "true" quand le bouton "Answer" est cliqué
+    this.texteVisible = false;
   }
+
+  isAnswered() {
+
+    if (this.timed===true && this.clicked===true) {
+      this.timed =!this.timed;
+      this.clicked =!this.clicked;
+      this.checked = true;
+      setTimeout(() => {
+        this.checkedTimed =!this.checkedTimed;
+      },750)
+    } else {}
+
+  }
+
+
 
 
 
