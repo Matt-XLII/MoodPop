@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = "MoodPop"
+  title = "MoodPop";
+  showBurger = false;
+
+  toggleBurger(event: boolean) {
+    this.showBurger = event;
+  }
+
+  resetBurgerMenu() {
+    this.showBurger = false;
+  }
 }
