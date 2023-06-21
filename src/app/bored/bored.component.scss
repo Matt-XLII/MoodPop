@@ -203,9 +203,17 @@
 
 .answer{
   position: absolute;
-  bottom: 3px;
+  bottom: 35px;
   transform:  rotate3d(0, 1, 0, 180deg);
   z-index: 2;
+  background-image: url('/assets/IconeLoupe.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:35px; 
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent ;
 }
 .answer.isTimedChecked {
   display: none;
