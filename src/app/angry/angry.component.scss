@@ -104,23 +104,23 @@
   display: none;
 }
 
-.plus {
+.check {
   z-index: 2;
   position: absolute;
-  bottom: 2px;
-  right: 12px;
-  width:10px;
-  height: 10px;
-  background-image: url('/assets/Plus.png');
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/iconeCheck.png');
   background-size: cover;
   background-repeat: no-repeat;
   border:none;
   cursor: pointer;
   background-color: transparent;
-  transform:  rotate3d(0, 1, 0, 180deg);
+  transition: 1.5s ease-in-out;
 }
 
-.plus.isClicked{
+.check.isClicked{
   display: none;
 }
 .share {

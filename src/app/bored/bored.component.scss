@@ -20,7 +20,7 @@
   flex-grow: 1;
   z-index: 1;
   border-radius: 10px;
-  font-size: small;
+  font-size: 1em;
   img {
     position: absolute;
     width: 169px;
@@ -131,34 +131,35 @@
   display: none;
 }
 
-.plus {
+.check {
   z-index: 2;
   position: absolute;
-  bottom: 2px;
-  right: 12px;
-  width:10px;
-  height: 10px;
-  background-image: url('/assets/Plus.png');
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/iconeCheck.png');
   background-size: cover;
   background-repeat: no-repeat;
   border:none;
   cursor: pointer;
   background-color: transparent;
-  transform:  rotate3d(0, 1, 0, 180deg);
+  transition: 1.5s ease-in-out;
+
 }
 
-.plus.isClicked{
+.check.isClicked{
   display: none;
 }
 
 .share {
   z-index: 2;
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
   left: 28px;
-  width:8px;
-  height: 8px;
-  background-image: url('/assets/share.png');
+  width:20px;
+  height: 20px;
+  background-image: url('/assets/iconeShare.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -175,11 +176,11 @@
 .like {
   z-index: 2;
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   left: 5px;
-  width:10px;
-  height: 10px;
-  background-image: url('/assets/like.png');
+  width:20px;
+  height:20px;
+  background-image: url('/assets/star3.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -209,12 +210,14 @@
   background-image: url('/assets/IconeLoupe.png');
   background-size: cover;
   background-repeat: no-repeat;
-  width:35px; 
+  width:35px;
   height: 35px;
   border: none;
   cursor: pointer;
   background-color: transparent ;
 }
+
+
 .answer.isTimedChecked {
   display: none;
 }
