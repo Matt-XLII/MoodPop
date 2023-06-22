@@ -90,11 +90,11 @@
 
 .retour {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width:8px;
-  height: 8px;
-  background-image: url('/assets/iconeReturn.png');
+  top: 5px;
+  right: 5px;
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeReturn5.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -135,18 +135,18 @@
 .share {
   z-index: 2;
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
   left: 28px;
-  width:8px;
-  height: 8px;
-  background-image: url('/assets/iconeShare.png');
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeShare5.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   background-color: transparent ;
   transition: 1.5s ease-in-out;
-  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+  transform:  rotate3d(0, 1, 0, 180deg);
 
 }
 .share.isTimedChecked {
@@ -156,18 +156,18 @@
 .like {
   z-index: 2;
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   left: 5px;
-  width:10px;
-  height: 10px;
-  background-image: url('/assets/iconeFavorite.png');
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeStar5.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   background-color: transparent ;
   transition: 1.5s ease-in-out;
-  transform: translate(54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg);
 }
 
 .like.isTimedChecked {

@@ -113,17 +113,19 @@
 
 .retour {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width:8px;
-  height: 8px;
-  background-image: url('/assets/retour.png');
+  top: 5px;
+  right: 5px;
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeReturn6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   background-color: transparent;
   transform:  rotate3d(0, 1, 0, 180deg);
+
+
 }
 
 
@@ -157,9 +159,9 @@
   position: absolute;
   bottom: 5px;
   left: 28px;
-  width:20px;
-  height: 20px;
-  background-image: url('/assets/iconeShare.png');
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeShare6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -178,9 +180,9 @@
   position: absolute;
   bottom: 5px;
   left: 5px;
-  width:20px;
-  height:20px;
-  background-image: url('/assets/star3.png');
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeStar6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -207,7 +209,7 @@
   bottom: 35px;
   transform:  rotate3d(0, 1, 0, 180deg);
   z-index: 2;
-  background-image: url('/assets/IconeLoupe.png');
+  background-image: url('/assets/IconeLoupe4.png');
   background-size: cover;
   background-repeat: no-repeat;
   width:35px;

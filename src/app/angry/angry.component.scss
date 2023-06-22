@@ -87,17 +87,17 @@
 
 .retour {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width:8px;
-  height: 8px;
-  background-image: url('/assets/retour.png');
+  top: 5px;
+  right: 5px;
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeRetour2.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   background-color: transparent;
-  transform:  rotate3d(0, 1, 0, 180deg);
+  
 }
 
 .retour.isTimedChecked {
@@ -126,11 +126,11 @@
 .share {
   z-index: 2;
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
   left: 28px;
-  width:8px;
-  height: 8px;
-  background-image: url('/assets/share.png');
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeShare4.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -146,11 +146,11 @@
 .like {
   z-index: 2;
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   left: 5px;
-  width:10px;
-  height: 10px;
-  background-image: url('/assets/like.png');
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeStar4.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
