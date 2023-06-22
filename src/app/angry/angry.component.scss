@@ -91,13 +91,13 @@
   right: 5px;
   width:15px;
   height: 15px;
-  background-image: url('/assets/IconeRetour2.png');
+  background-image: url('/assets/IconeReturn6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   background-color: transparent;
-  
+  transform:  rotate3d(0, 1, 0, 180deg);
 }
 
 .retour.isTimedChecked {
@@ -130,7 +130,7 @@
   left: 28px;
   width:15px;
   height: 15px;
-  background-image: url('/assets/IconeShare4.png');
+  background-image: url('/assets/IconeShare6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -150,7 +150,7 @@
   left: 5px;
   width:15px;
   height: 15px;
-  background-image: url('/assets/IconeStar4.png');
+  background-image: url('/assets/IconeStar6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
