@@ -1,12 +1,14 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FakeAPI } from '../fake-api/fake-api';
+import { GenderthemesService } from '../genderthemes.service';
+
 
 @Component({
   selector: 'app-angry',
   templateUrl: './angry.component.html',
   styleUrls: ['./angry.component.scss']
 })
-export class AngryComponent {
+export class AngryComponent implements OnInit {
 
   clicked: boolean = false;
   timed: boolean = false;
@@ -16,6 +18,29 @@ export class AngryComponent {
 
 quote: string = "";
 insult: string = "";
+theme!: string;
+imageSource!: string;
+
+constructor(private genderthemesService: GenderthemesService) { } // Injecte le service
+
+
+ngOnInit(): void {
+
+    this.genderthemesService.theme$.subscribe(theme => {
+    this.theme = theme;
+    if (theme === 'male-theme') {
+      this.imageSource = "assets/CartoonVenere1.jpg";
+    } else if (theme === 'female-theme') {
+      this.imageSource = "assets/CartoonVenereF2.jpg";
+    } else if (theme === 'vegan-theme') {
+      this.imageSource = 'assets/VeganEnerveF3.jfif';
+    } else {
+      this.imageSource = "assets/CartoonVenereF2.jpg";
+    }
+  });
+}
+
+
 
 isClicked() {
   if (this.checked === false){

@@ -25,21 +25,21 @@
   <div class="gender-options">
     <span class="option" >Male</span>
     <label class="toggle-switch" class="male">
-      <input type="checkbox" />
+      <input type="checkbox" (click)="onMaleToggle()" />
       <span class="slider"></span>
     </label>
   </div>
   <div class="gender-options">
     <span class="option" >Female</span>
     <label class="toggle-switch" class="female">
-      <input type="checkbox" />
+      <input type="checkbox" (click)="onFemaleToggle()" />
       <span class="slider" ></span>
     </label>
   </div>
   <div class="gender-options">
     <span class="option" >Vegan</span>
-    <label class="toggle-switch" class="vegan">
-      <input type="checkbox" />
+    <label class="toggle-switch"  class="vegan">
+      <input type="checkbox" (click)="onVeganToggle()"/>
       <span class="slider"></span>
     </label>
   </div>
