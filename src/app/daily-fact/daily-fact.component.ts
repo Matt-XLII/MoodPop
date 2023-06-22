@@ -16,7 +16,7 @@ export class DailyFactComponent implements OnInit {
     fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
       .then(response => response.json())
       .then(quote => {
-        const limitedQuote = this.limitCharacterLength(quote.text, 100); 
+        const limitedQuote = this.limitCharacterLength(quote.text, 100);
         this.quote = limitedQuote;
       });
   }

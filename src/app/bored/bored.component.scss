@@ -2,11 +2,9 @@
   position: absolute;
   z-index: 0;
   width: 150px;
-  height: 150px;
+  height: 75%;
   text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  justify-content:flex-start;
 }
 
 
@@ -22,7 +20,7 @@
   flex-grow: 1;
   z-index: 1;
   border-radius: 10px;
-  font-size: small;
+  font-size: 1em;
   img {
     position: absolute;
     width: 169px;
@@ -55,6 +53,7 @@
 
 .container.isExpanded {
   height: 300px;  // Double de la hauteur initiale
+
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
@@ -72,15 +71,16 @@
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(-54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
+  transform: translate(-57%, -11%) scale(2.14) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
-  height: 300px;
+  height: 315px;
   img {
     opacity: 0.1;
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-    height: 300px;
+    height: 315px;
+
      }
   p {
     transform: rotate3d(0, 1, 0, 180deg);
@@ -113,17 +113,19 @@
 
 .retour {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width:8px;
-  height: 8px;
-  background-image: url('/assets/retour.png');
+  top: 5px;
+  right: 5px;
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeReturn6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   background-color: transparent;
   transform:  rotate3d(0, 1, 0, 180deg);
+
+
 }
 
 
@@ -131,34 +133,35 @@
   display: none;
 }
 
-.plus {
+.check {
   z-index: 2;
   position: absolute;
-  bottom: 2px;
-  right: 12px;
-  width:10px;
-  height: 10px;
-  background-image: url('/assets/Plus.png');
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/iconeCheck.png');
   background-size: cover;
   background-repeat: no-repeat;
   border:none;
   cursor: pointer;
   background-color: transparent;
-  transform:  rotate3d(0, 1, 0, 180deg);
+  transition: 1.5s ease-in-out;
+
 }
 
-.plus.isClicked{
+.check.isClicked{
   display: none;
 }
 
 .share {
   z-index: 2;
   position: absolute;
-  bottom: 3px;
+  bottom: 5px;
   left: 28px;
-  width:8px;
-  height: 8px;
-  background-image: url('/assets/share.png');
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeShare6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -175,11 +178,11 @@
 .like {
   z-index: 2;
   position: absolute;
-  bottom: 0px;
+  bottom: 5px;
   left: 5px;
-  width:10px;
-  height: 10px;
-  background-image: url('/assets/like.png');
+  width:15px;
+  height: 15px;
+  background-image: url('/assets/IconeStar6.png');
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -203,11 +206,20 @@
 
 .answer{
   position: absolute;
-  bottom: 3px;
+  bottom: 35px;
   transform:  rotate3d(0, 1, 0, 180deg);
   z-index: 2;
+  background-image: url('/assets/IconeLoupe4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:35px;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent ;
 }
+
+
 .answer.isTimedChecked {
   display: none;
 }
-
