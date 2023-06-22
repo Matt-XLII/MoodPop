@@ -8,12 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = "MoodPop";
   showBurger = false;
+  showProfileMenu = false;
 
   toggleBurger(event: boolean) {
     this.showBurger = event;
   }
 
-  resetBurgerMenu() {
-    this.showBurger = false;
+  showProfile(event: boolean) {
+    this.showProfileMenu = event;
   }
+
 }

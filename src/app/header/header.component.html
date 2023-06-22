@@ -1,9 +1,10 @@
 <header>
   <div class="logo">
     <img src="assets/logo_final.png" alt="Logo moodpop">
-  </div>
+  </div><button class="setting"(click)="showProfile()"><img src="/assets/profilBlanc.png" height="30"></button>
   <div class="menu-toggle">
-    <button (click)="toggleMenu()">{{ isMenuOpen ? 'X' : '☰' }}</button>
+    
+    <button class = "toggle" (click)="toggleMenu()">{{ isMenuOpen ? 'X' : '☰' }}</button>
   </div>
   <div class="menu" [ngClass]="{ 'show': isMenuOpen }">
     <a routerLink="/">Accueil</a>

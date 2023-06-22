@@ -9,8 +9,6 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class MenuBurgerComponent {
   @Output() MenuClosed = new EventEmitter<void>();
 
-  hideMenu() {
-    this.MenuClosed.emit();
-  }
+
 }
 
