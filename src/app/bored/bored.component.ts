@@ -77,12 +77,26 @@ export class BoredComponent implements OnInit {
     'Content-type': 'application/json',}})
     .then(response => response.json())
     .then(data => {
-      this.title = data[0].title;
-      this.question = data[0].question;
-      this.answer = data[0].answer;
+      const validData = data.find((item: { question: string | any[]; }) => item.question.length <= 120);
+      if (validData) {
+        this.title = data[0].title;
+        this.question = validData.question;
+        console.log(this.question);
+
+        this.answer = data[0].answer;
+      } else {
+        this.fetchData();
+      }
     });
 
    }
+
+   limitCharacterLength(text: string, maxLength: number): string {
+    if (text.length > maxLength) {
+      return text.substring(0, maxLength) + "...";
+    }
+    return text;
+  }
 
 
   }

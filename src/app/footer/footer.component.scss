@@ -4,15 +4,16 @@ footer {
     align-items: center;
     padding: 20px;
     background-color: #2f2f2fcc;
+    bottom: 0;
   }
-  
+
   fieldset {
     border: 1px solid whitesmoke;
-    border-radius: 5px; 
+    border-radius: 5px;
     padding: 7px 0px 7px 9px;
     margin: 0;
   }
-  
+
   .social-icons {
     display: flex;
     align-items: center;
@@ -20,11 +21,11 @@ footer {
     margin: 0;
     padding: 0;
   }
-  
+
   .social-icons li {
     margin-right: 10px;
   }
-  
+
   .footer-links {
     display: flex;
     align-items: center;
@@ -32,11 +33,11 @@ footer {
     margin: 0;
     padding: 0;
   }
-  
+
   .footer-links li {
     margin-left: 10px;
   }
-  
+
   a {
     color: whitesmoke;
     text-decoration: none;
