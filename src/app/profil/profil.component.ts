@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-profil',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent {
+  @Output() Theme = new EventEmitter<boolean>();
+  isThemeWhite = false;
+
+changeTheme() {
+this.isThemeWhite = !this.isThemeWhite;
+this.Theme.emit(this.isThemeWhite);
+}
 
 }
+
