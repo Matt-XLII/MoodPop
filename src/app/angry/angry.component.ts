@@ -1,28 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { FakeAPI } from '../fake-api/fake-api';
 
 @Component({
   selector: 'app-angry',
   templateUrl: './angry.component.html',
   styleUrls: ['./angry.component.scss']
 })
-export class AngryComponent implements OnInit{
+export class AngryComponent {
 
   clicked: boolean = false;
   timed: boolean = false;
   checked: boolean = false;
   checkedTimed: boolean = false;
+  insultList = new FakeAPI().insultList;
 
 quote: string = "";
-
-ngOnInit(): void {
-  this.fetchQuote();
-}
-
-fetchQuote(): void {
-  fetch('https://api.chucknorris.io/jokes/random')
-  .then(response => response.json())
-  .then((data: any) => console.log(this.quote = data.value));
-}
+insult: string = "";
 
 isClicked() {
   if (this.checked === false){
@@ -30,6 +23,7 @@ isClicked() {
       this.clicked = !this.clicked;
       setTimeout(() => {
         this.timed = !this.timed;
+        this.insult = this.randomInsult();
       }, 750)} else {
         if (this.timed === true && this.clicked === true) {
           this.timed = !this.timed;
@@ -41,6 +35,11 @@ isClicked() {
           }
 
         }} else {}
+  }
+
+  randomInsult() {
+    let random = Math.floor(Math.random() * this.insultList.length);
+    return this.insultList[random];
   }
 }
 
