@@ -14,6 +14,7 @@ export class ProfilComponent {
 
 changeTheme() {
 this.isThemeWhite = !this.isThemeWhite;
+console.log('isThemeWhite:', this.isThemeWhite);
 this.Theme.emit(this.isThemeWhite);
 }
 
