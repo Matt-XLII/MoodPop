@@ -19,6 +19,8 @@ import { BoredComponent } from './bored/bored.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,8 @@ import { BoredComponent } from './bored/bored.component';
     ProfilComponent,
     MenuBurgerComponent,
     BoredComponent,
+   
+
   
 
   ],
