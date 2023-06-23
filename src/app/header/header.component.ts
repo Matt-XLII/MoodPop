@@ -24,5 +24,6 @@ export class HeaderComponent {
     this.isMenuOpen = false;
     this.Toggle.emit(this.isMenuOpen);
   }
-  
+
+
 }
