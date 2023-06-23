@@ -7,7 +7,7 @@ import { HappyService } from '../services/happy.service';
   styleUrls: ['./happy-page.component.scss']
 })
 export class HappyPageComponent implements OnInit {
-  jokes: object[] = [];
+  jokes: string[] = [];
 
 constructor(private happyService: HappyService) {
 
@@ -15,7 +15,6 @@ constructor(private happyService: HappyService) {
 
 ngOnInit(): void {
 this.happyService.fetchJokes(this.jokes);
-console.log(this.jokes);
 }
 
 

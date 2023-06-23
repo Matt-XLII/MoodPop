@@ -101,7 +101,6 @@ export class BoredComponent implements OnInit {
       if (validData) {
         this.title = data[0].title;
         this.question = validData.question;
-        console.log(this.question);
 
         this.answer = data[0].answer;
       } else {
