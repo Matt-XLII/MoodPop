@@ -1,28 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { FakeAPI } from '../fake-api/fake-api';
+import { GenderthemesService } from '../genderthemes.service';
+
 
 @Component({
   selector: 'app-angry',
   templateUrl: './angry.component.html',
   styleUrls: ['./angry.component.scss']
 })
-export class AngryComponent implements OnInit{
+export class AngryComponent implements OnInit {
 
   clicked: boolean = false;
   timed: boolean = false;
   checked: boolean = false;
   checkedTimed: boolean = false;
+  insultList = new FakeAPI().insultList;
 
 quote: string = "";
+insult: string = "";
+theme!: string;
+imageSource!: string;
+
+constructor(private genderthemesService: GenderthemesService) { } // Injecte le service
+
 
 ngOnInit(): void {
-  this.fetchQuote();
+
+    this.genderthemesService.theme$.subscribe(theme => {
+    this.theme = theme;
+    if (theme === 'male-theme') {
+      this.imageSource = "assets/CartoonVenere1.jpg";
+    } else if (theme === 'female-theme') {
+      this.imageSource = "assets/CartoonVenereF2.jpg";
+    } else if (theme === 'vegan-theme') {
+      this.imageSource = 'assets/VeganEnerveF3.jfif';
+    } else {
+      this.imageSource = "assets/CartoonVenereF2.jpg";
+    }
+  });
 }
 
-fetchQuote(): void {
-  fetch('https://api.chucknorris.io/jokes/random')
-  .then(response => response.json())
-  .then((data: any) => console.log(this.quote = data.value));
-}
+
 
 isClicked() {
   if (this.checked === false){
@@ -30,6 +48,7 @@ isClicked() {
       this.clicked = !this.clicked;
       setTimeout(() => {
         this.timed = !this.timed;
+        this.insult = this.randomInsult();
       }, 750)} else {
         if (this.timed === true && this.clicked === true) {
           this.timed = !this.timed;
@@ -41,6 +60,11 @@ isClicked() {
           }
 
         }} else {}
+  }
+
+  randomInsult() {
+    let random = Math.floor(Math.random() * this.insultList.length);
+    return this.insultList[random];
   }
 }
 

@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfilComponent } from './profil/profil.component';
 import { MenuBurgerComponent } from './menu-burger/menu-burger.component';
 import { BoredComponent } from './bored/bored.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 
@@ -34,8 +35,12 @@ import { BoredComponent } from './bored/bored.component';
     ProfilComponent,
     MenuBurgerComponent,
     BoredComponent,
+<<<<<<< HEAD
    
 
+=======
+    SignInComponent,
+>>>>>>> 2aa52f4e9a9a900fc0f6db7316a499ed64fa4eac
   
 
   ],

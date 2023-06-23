@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GenderthemesService } from '../genderthemes.service';
+
 
 @Component({
   selector: 'app-bored',
@@ -10,10 +12,9 @@ export class BoredComponent implements OnInit {
   title : string = "";
   question : string = "";
   answer : string = "";
+  theme!: string;
+  imageSource!: string;
 
-  ngOnInit(): void {
-    this.fetchData();
-  }
 
   clicked = false;
   timed = false;
@@ -23,6 +24,25 @@ export class BoredComponent implements OnInit {
   revealed = false;
   expanded = false;
   texteVisible = true;
+
+  constructor(private genderthemesService: GenderthemesService) { } // Injecte le service
+
+  ngOnInit(): void {
+    this.fetchData();
+    this.genderthemesService.theme$.subscribe(theme => {
+      this.theme = theme;
+      if (theme === 'male-theme') {
+        this.imageSource = "assets/EmbarasséNeutreH3.jfif";
+      } else if (theme === 'female-theme') {
+        this.imageSource = "assets/EmbarasséF1.jpg";
+      } else if (theme === 'vegan-theme') {
+        this.imageSource = 'assets/VeganBoredF2.jfif';
+      } else {
+        this.imageSource = "assets/EmbarasséF1.jpg";
+      }
+    });
+
+  }
 
   solution() {
     console.log("Bouton Answer cliqué!");

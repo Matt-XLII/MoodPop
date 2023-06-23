@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,7 @@ export class AppComponent {
   title = "MoodPop";
   showBurger = false;
   showProfileMenu = false;
+  whiteTheme = false;
 
   toggleBurger(event: boolean) {
     this.showBurger = event;
@@ -16,6 +17,10 @@ export class AppComponent {
 
   showProfile(event: boolean) {
     this.showProfileMenu = event;
+  }
+
+  themeSwitch(event: boolean) {
+this.whiteTheme = event;
   }
 
 }

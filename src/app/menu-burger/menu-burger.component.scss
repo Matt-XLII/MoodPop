@@ -6,8 +6,20 @@ ul {
 
  }
  li {
-  color: white;
   margin-bottom: 30px; /* Ajustez la valeur en fonction de la hauteur du pied de page */
+  border: 1px solid black;
+  width: 45%;
+  margin: auto;
+  margin-bottom: 60px;
+  border-radius: 5px;
+  padding: 5px 20px 5px 20px;
+  background: radial-gradient(#f1f1f1, #a3eef4);  color: black;
+
+}
+
+li:hover {
+  transform: scale(1.1) ;
+  cursor: pointer;
 }
 
 
@@ -42,4 +54,8 @@ h1{
   margin-bottom: 10%;
   text-decoration:underline
 
+}
+
+.separator {
+  width: 70%;
 }
