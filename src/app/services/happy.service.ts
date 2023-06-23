@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class HappyService {
   joke : string = "";
+
   constructor() { }
 
 
@@ -17,4 +18,18 @@ export class HappyService {
     .then(function (response) { return response.json()})
     .then((data:any) => this.joke = data[0].joke)
    }
-}
+
+    fetchJokes(list:object[]):void{
+      fetch("https://api.api-ninjas.com/v1/jokes?limit=20", {
+        method:'GET',
+        headers: {
+      'X-Api-key' : 'q80JOdvIGyOhfvSXFKWV4A==0y5PJl9FCDrqP2ik',
+      'Content-type': 'application/json',}})
+      .then(function (response) { return response.json()})
+      .then((data:any) => list.push(...data))
+     }
+
+
+    }
+
+

@@ -15,6 +15,7 @@ import { ProfilComponent } from './profil/profil.component';
 import { MenuBurgerComponent } from './menu-burger/menu-burger.component';
 import { BoredComponent } from './bored/bored.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { HappyPageComponent } from './happy-page/happy-page.component';
 
 
 
@@ -34,6 +35,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     MenuBurgerComponent,
     BoredComponent,
     SignInComponent,
+    HappyPageComponent,
   
 
   ],
