@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GenderthemesService } from '../genderthemes.service';
+
 
 @Component({
   selector: 'app-unmotivated',
@@ -8,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 export class UnmotivatedComponent implements OnInit {
   quote: string = '';
   autor: string = '';
+  clicked = false;
+  timed = false;
+  checked = false
+  checkedTimed = false;
+  theme!: string;
+  imageSource!: string;
+
+  constructor(private genderthemesService: GenderthemesService) { } // Injecte le service
+
 
   ngOnInit(): void {
     this.fetchQuote();
+
+    this.genderthemesService.theme$.subscribe(theme => {
+      this.theme = theme;
+      if (theme === 'male-theme') {
+        this.imageSource = "assets/TristeH2.jfif";
+      } else if (theme === 'female-theme') {
+        this.imageSource = "assets/TristeF3.jfif";
+      } else if (theme === 'vegan-theme') {
+        this.imageSource = 'assets/VeganTristeF2.jfif';
+      } else {
+        this.imageSource = "assets/TristeF3.jfif";
+      }
+    });
   }
 
   fetchQuote(): void {
@@ -18,12 +42,9 @@ export class UnmotivatedComponent implements OnInit {
     .then(response => response.json())
     .then((data: any) => console.log(this.quote = data.value));
   }
- 
 
-  clicked = false;
-  timed = false;
-  checked = false
-  checkedTimed = false;
+
+
 
   isClicked() {
     if (this.checked === false) {
