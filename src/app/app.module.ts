@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
 
 import { AppRoutingModule } from './app-routing.module';
+import { LogInComponent } from './log-in/log-in.component';
 import { AppComponent } from './app.component';
 import { DailyFactComponent } from './daily-fact/daily-fact.component';
 import { HeaderComponent } from './header/header.component';
@@ -22,6 +24,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,19 +38,19 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ProfilComponent,
     MenuBurgerComponent,
     BoredComponent,
-<<<<<<< HEAD
-   
-
-=======
     SignInComponent,
->>>>>>> 2aa52f4e9a9a900fc0f6db7316a499ed64fa4eac
+    LogInComponent,
+    
+    
+   
   
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
 
   providers: [],
