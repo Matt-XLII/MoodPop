@@ -1,0 +1,15 @@
+
+
+<h1>Login</h1>
+
+<form>
+  <fieldset class="input-with-icon">
+    <input type="text" placeholder="👥 Username" required [(ngModel)]="username">
+  </fieldset>
+  <fieldset>
+    <input type="password" placeholder="Password" required [(ngModel)]="password">
+  </fieldset>
+  <a href="">Forgot your password?</a>
+
+  <button type="submit" (click)="login()">Log-In</button>
+</form>
