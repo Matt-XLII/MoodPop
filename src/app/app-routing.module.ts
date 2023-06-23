@@ -3,13 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { DailyFactComponent } from './daily-fact/daily-fact.component';
 import { DailyMoodComponent } from './daily-mood/daily-mood.component';
 import { LogInComponent } from './log-in/log-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 
 const routes: Routes = [
 
     { path: 'dailyfact', component: DailyFactComponent },
     { path: '', component: DailyMoodComponent},
-    { path: 'login', component: LogInComponent}
+    { path: 'login', component: LogInComponent},
+    { path: 'signin', component: SignInComponent}
    
 ];
 

@@ -10,6 +10,11 @@ import { Component } from '@angular/core';
 export class LogInComponent {
   username: string = '';
   password: string | any = '';
+  isLinkVisited: boolean = true;
+
+  onLinkClick() {
+    this.isLinkVisited = true;
+  }
 
   login() {
     if (this.username === 'admin' && this.password === 'admin') {

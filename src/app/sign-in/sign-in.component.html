@@ -1,4 +1,4 @@
-<h1>Register Account</h1>
+<!--<h1>Register Account</h1>
 
 <form class="form">
 
@@ -21,5 +21,32 @@
   <fieldset>
     <input type="password" placeholder="Confirm Password" required >
   </fieldset>
+  <button type="submit">Register</button>
+</form>-->
+
+<h1>Register Account</h1>
+
+<form class="form" (ngSubmit)="submitRegister()">
+
+  <fieldset class="input-with-icon">
+    <input type="text" placeholder="👽 Your Name" required [(ngModel)]="name">
+  </fieldset>
+
+  <fieldset>
+    <input type="text" placeholder="👥 Username" required [(ngModel)]="username">
+  </fieldset>
+
+  <fieldset>
+    <input type="email" placeholder="📩 Email" required [(ngModel)]="email">
+  </fieldset>
+
+  <fieldset>
+    <input type="password" placeholder="Password" required [(ngModel)]="password">
+  </fieldset>
+
+  <fieldset>
+    <input type="password" placeholder="Confirm Password" required [(ngModel)]="confirmPassword">
+  </fieldset>
+
   <button type="submit">Register</button>
 </form>
