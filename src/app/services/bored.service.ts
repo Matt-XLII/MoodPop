@@ -31,4 +31,14 @@ export class BoredService {
     });
 
    }
+
+   fetchRiddles(list:any[]):void{
+    fetch("https://api.api-ninjas.com/v1/riddles?limit=5", {
+      method:'GET',
+      headers: {
+    'X-Api-key' : 'q80JOdvIGyOhfvSXFKWV4A==0y5PJl9FCDrqP2ik',
+    'Content-type': 'application/json',}})
+    .then(function (response) { return response.json()})
+    .then((data:any) => data.forEach((item:any) => list.push([item.question, item.answer])))
+   }
 }

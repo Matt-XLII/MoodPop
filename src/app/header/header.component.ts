@@ -1,5 +1,6 @@
 
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  constructor(private Router: Router) { }
   @Output() Toggle = new EventEmitter<boolean>();
   @Output() Profile = new EventEmitter<boolean>();
   isMenuOpen = false;
@@ -24,6 +27,8 @@ export class HeaderComponent {
     this.isMenuOpen = false;
     this.Toggle.emit(this.isMenuOpen);
   }
-
+toHome(){
+  this.Router.navigateByUrl('');
+}
 
 }
