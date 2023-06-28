@@ -9,7 +9,8 @@
   <fieldset>
     <input type="password" placeholder="Password" required [(ngModel)]="password">
   </fieldset>
-  <a href="">Forgot your password?</a>
+  <!--<a href="">Forgot your password?</a>-->
+  <a href="#" (click)="onLinkClick()" [ngClass]="{'visited': isLinkVisited}">Forgot your password?</a>
 
   <button type="submit" (click)="login()">Log-In</button>
 </form>
