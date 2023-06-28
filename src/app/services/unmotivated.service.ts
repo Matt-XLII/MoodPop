@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class UnmotivatedService {
   quote: string = '';
 
-  constructor() { }
+  constructor() {}
 
   fetchQuote(): void {
     fetch('https://api.chucknorris.io/jokes/random')
@@ -14,12 +14,6 @@ export class UnmotivatedService {
     .then((data: any) => this.quote = data.value);
 
   }
-
-  fetchQuotes(list:string[]): void {
-    fetch('https://api.chucknorris.io/jokes/random')
-    .then(response => response.json())
-    .then((data: any) => this.quote = data.value);
-}
 
 fetchChuck(list:string[]):void{
   for (let i = 0; i < 20; i++){

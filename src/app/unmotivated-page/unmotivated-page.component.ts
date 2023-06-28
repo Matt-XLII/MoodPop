@@ -7,7 +7,7 @@ import { UnmotivatedService } from '../services/unmotivated.service';
   styleUrls: ['./unmotivated-page.component.scss']
 })
 export class UnmotivatedPageComponent  {
-  quote: string[]= [];
+  chuckQuotes: string[]= [];
 
 constructor(private unmotivatedService: UnmotivatedService) {
 
@@ -16,7 +16,7 @@ constructor(private unmotivatedService: UnmotivatedService) {
 }
 
 ngOnInit(): void {
-this.unmotivatedService.fetchQuotes(this.quote);
+this.unmotivatedService.fetchChuck(this.chuckQuotes);
 }
 
 }

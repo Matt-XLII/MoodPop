@@ -1,5 +1,6 @@
 
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-burger',
@@ -7,8 +8,32 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./menu-burger.component.scss']
 })
 export class MenuBurgerComponent {
-  @Output() MenuClosed = new EventEmitter<void>();
 
+  constructor(private router: Router) { }
+  
+  @Output() MenuClosed = new EventEmitter<boolean>();
+
+showBurger = false;
+
+toBored(){
+  this.router.navigateByUrl('/bored');
+  this.MenuClosed.emit(this.showBurger);
+}
+toHappy(){
+  this.router.navigateByUrl('/happy');
+  this.MenuClosed.emit(this.showBurger);
+}
+toUnmotivated(){
+  this.router.navigateByUrl('/unmotivated');
+  this.MenuClosed.emit(this.showBurger);
+}
+toAngry(){
+  this.router.navigateByUrl('/angry');
+  this.MenuClosed.emit(this.showBurger);
+}
 
 }
+
+
+
 

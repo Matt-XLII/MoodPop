@@ -1,1 +1,4 @@
-<p>bored-page works!</p>
+<div *ngFor="let riddle of riddles">
+    <p> Question : {{riddle[0]}}</p>
+    <p> Answer : {{riddle[1]}}</p>
+</div>
