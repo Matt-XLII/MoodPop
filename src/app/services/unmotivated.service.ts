@@ -11,14 +11,14 @@ export class UnmotivatedService {
   fetchQuote(): void {
     fetch('https://api.chucknorris.io/jokes/random')
     .then(response => response.json())
-    .then((data: any) => console.log(this.quote = data.value));
+    .then((data: any) => this.quote = data.value);
 
   }
 
-  fetchQuotes(): void {
+  fetchQuotes(list:string[]): void {
     fetch('https://api.chucknorris.io/jokes/random')
     .then(response => response.json())
-    .then((data: any) => console.log(this.quote = data.value));
+    .then((data: any) => this.quote = data.value);
 }
 
 fetchChuck(list:string[]):void{
