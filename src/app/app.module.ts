@@ -18,6 +18,9 @@ import { MenuBurgerComponent } from './menu-burger/menu-burger.component';
 import { BoredComponent } from './bored/bored.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HappyPageComponent } from './happy-page/happy-page.component';
+import { AngryPageComponent } from './angry-page/angry-page.component';
+import { BoredPageComponent } from './bored-page/bored-page.component';
+import { UnmotivatedPageComponent } from './unmotivated-page/unmotivated-page.component';
 
 
 
@@ -42,6 +45,9 @@ import { HappyPageComponent } from './happy-page/happy-page.component';
     SignInComponent,
     LogInComponent,
     HappyPageComponent,
+    AngryPageComponent,
+    BoredPageComponent,
+    UnmotivatedPageComponent,
 
   ],
   imports: [

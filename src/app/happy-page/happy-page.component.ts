@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+  import { Component,OnInit } from '@angular/core';
 import { HappyService } from '../services/happy.service';
 
 @Component({
