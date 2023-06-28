@@ -18,6 +18,7 @@ import { MenuBurgerComponent } from './menu-burger/menu-burger.component';
 import { BoredComponent } from './bored/bored.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HappyPageComponent } from './happy-page/happy-page.component';
+import { StatsMensuellesComponent } from './stats-mensuelles/stats-mensuelles.component';
 
 
 
@@ -42,6 +43,7 @@ import { HappyPageComponent } from './happy-page/happy-page.component';
     SignInComponent,
     LogInComponent,
     HappyPageComponent,
+    StatsMensuellesComponent,
 
   ],
   imports: [
