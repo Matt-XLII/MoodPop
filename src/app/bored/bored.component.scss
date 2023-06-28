@@ -1,7 +1,7 @@
 .quote {
   position: absolute;
   z-index: 0;
-  width: 150px;
+  width: 165px;
   height: 75%;
   text-align: center;
   justify-content:flex-start;
@@ -14,8 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 169px;
-  min-height: 209px;
+  min-width: 165px;
+  min-height: 205px;
   margin-top: 20px;
   flex-grow: 1;
   z-index: 1;
@@ -23,8 +23,8 @@
   font-size: 1em;
   img {
     position: absolute;
-    width: 169px;
-    height: 209px;
+    width: 165px;
+    height: 205px;
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
@@ -32,16 +32,29 @@
 
 }
 
+.container.isClicked {
+  z-index: 2;
+  margin: 0;
+  transition: 1.5s ease-in-out;
+  transform: translate(-95px, -95px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+  border-radius: 10px;
+  img{
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+
+  }
+}
+
 .container.isRevealed {
   z-index: 2;
   margin: 0;
-  transform: translate(-54%, -56%) scale(2.08); /* Pas de rotation */
+  transform: translate(-95px, -95px) scale(2.3); /* Pas de rotation */
     border-radius: 10px;
   img {
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-    height: 300px;
     opacity: 0; /* Rendre l'image transparente */
     transform:  rotate3d(0, 1, 0, 180deg);
   }
@@ -51,36 +64,18 @@
   }
 }
 
-.container.isExpanded {
-  height: 300px;  // Double de la hauteur initiale
-
-  z-index: 2;
-  margin: 0;
-  transition: 1.5s ease-in-out;
-  transform: translate(-54%, -56%) scale(2.08) rotate3d(0, 1, 0, 180deg);
-  border-radius: 10px;
-  img{
-    border-radius: 10px;
-    border: 1px solid #000;
-    box-shadow: 0 0 10px #000;
-    transform:  rotate3d(0, 1, 0, 180deg);
-  }
-}
 
 .container.timer {
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(-57%, -11%) scale(2.14) rotate3d(0, 1, 0, 180deg);
+  transform: translate(-95px, -95px) scale(2.3) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
-  height: 315px;
   img {
     opacity: 0.1;
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-    height: 315px;
-
      }
   p {
     transform: rotate3d(0, 1, 0, 180deg);
@@ -91,7 +86,7 @@
   transition: 1.5s ease-in-out;
   transform: scale(1);
   background-color: rgb(0, 0, 0);
-  width: 150px; //rajout de la width de 150px
+  width: 165px; //rajout de la width de 150px
   justify-content: center;
   border-radius: 10px;
   img {
@@ -222,4 +217,15 @@
 
 .answer.isTimedChecked {
   display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .container{
+    min-height: 360px;
+    min-width: 300px;
+    img{
+      min-width: 300px;
+      min-height: 360px;
+    }
+  }
 }

@@ -45,7 +45,6 @@ export class BoredComponent implements OnInit {
   }
 
   solution() {
-    console.log("Bouton Answer cliqué!");
     this.showSolution = true; // Afficher la solution lorsque le bouton est cliqué
     this.revealed = true;
     this.expanded = true;  // Définition de "expanded" à "true" quand le bouton "Answer" est cliqué
