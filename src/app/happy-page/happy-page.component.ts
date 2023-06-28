@@ -16,6 +16,4 @@ constructor(private happyService: HappyService) {
 ngOnInit(): void {
 this.happyService.fetchJokes(this.jokes);
 }
-
-
 }

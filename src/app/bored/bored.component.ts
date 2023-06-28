@@ -107,7 +107,6 @@ export class BoredComponent implements OnInit {
         this.fetchData();
       }
     });
-
    }
 
    limitCharacterLength(text: string, maxLength: number): string {

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { LogInComponent } from './log-in/log-in.component';
@@ -19,6 +19,9 @@ import { BoredComponent } from './bored/bored.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HappyPageComponent } from './happy-page/happy-page.component';
 import { StatsMensuellesComponent } from './stats-mensuelles/stats-mensuelles.component';
+import { AngryPageComponent } from './angry-page/angry-page.component';
+import { BoredPageComponent } from './bored-page/bored-page.component';
+import { UnmotivatedPageComponent } from './unmotivated-page/unmotivated-page.component';
 
 
 
@@ -44,6 +47,9 @@ import { StatsMensuellesComponent } from './stats-mensuelles/stats-mensuelles.co
     LogInComponent,
     HappyPageComponent,
     StatsMensuellesComponent,
+    AngryPageComponent,
+    BoredPageComponent,
+    UnmotivatedPageComponent,
 
   ],
   imports: [
