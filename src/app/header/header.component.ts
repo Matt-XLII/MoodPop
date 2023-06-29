@@ -36,4 +36,21 @@ toHome(){
   this.Toggle.emit(false);
 }
 
+toBored(){
+  this.Router.navigateByUrl('/bored');
+
+}
+toHappy(){
+  this.Router.navigateByUrl('/happy');
+
+}
+toUnmotivated(){
+  this.Router.navigateByUrl('/unmotivated');
+
+}
+toAngry(){
+  this.Router.navigateByUrl('/angry');
+
+}
+
 }

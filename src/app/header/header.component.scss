@@ -1,5 +1,4 @@
 header {
-
   display: flex;
   position: sticky;
   justify-content: space-between;
@@ -16,11 +15,12 @@ header {
 .logo img {
   height: 90px;
   width: 90px;
+  cursor: pointer;
 }
 
 
 
-.menu-toggle button {
+.menu-toggle .toggle {
   font-size: 30px;
   background: none;
   border: none;
@@ -38,18 +38,10 @@ header {
 }
 
 
-
-
-
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 .menu a {
-  padding: 10px;
   text-decoration: none;
-  color: #333;
+  color: white;
+  cursor: pointer;
 }
 
 .setting {
@@ -59,4 +51,55 @@ header {
   border: none;
   cursor: pointer;
   background: none;
+}
+
+@media screen and (min-width : 800px) {
+  header{
+    top: 0px;
+    position: sticky;
+    width : 15%;
+    height: 100vh;
+    min-width: 100px;
+    .logo{
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+  }
+  .hidden{
+    display: none;
+  }
+
+  .setting{
+    top : 15%;
+    left : 50%;
+  }
+
+
+  
+  .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    top : 20%;
+    right: 0px;
+    list-style: none;
+    li{
+      font-size: 1.4rem;
+      text-shadow: 3px 3px 6px #000;
+    }
+    li:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  .setting2 {
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
 }

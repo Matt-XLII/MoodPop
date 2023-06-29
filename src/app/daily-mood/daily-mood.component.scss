@@ -1,40 +1,58 @@
-
-body{
+body {
   background-color: #544d56;
 }
 
-.card{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: space-around;
-width: 400px;
-margin : auto;
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 400px;
+  margin: 80px auto 80px;
 }
-.titre{
+.titre {
   background-clip: initial;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
-  margin-top: 20px;
-  background: linear-gradient(
-            to right, #f32170, #ff6b08,#cf23cf, #eedd44);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
+  margin-top: 80px;
 }
 
-.breaker{
+.breaker {
   flex-basis: 100%;
   height: 0;
 }
 
+.grad1 {
+  background: -webkit-linear-gradient(right, #ffff00, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-@media screen and (min-width: 650px) {
-  .card{
+.grad2 {
+  background: -webkit-linear-gradient(right, #1ced00, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grad3 {
+  background: -webkit-linear-gradient(right, #2387fa, #1ced00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grad4 {
+  background: -webkit-linear-gradient(right, #de04ff, #2387fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 800px) {
+  .card {
     width: 650px;
   }
 
-
+  h1 {
+    font-size: 50px;
+  }
 }
-
-

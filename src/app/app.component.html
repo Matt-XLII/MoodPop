@@ -1,13 +1,23 @@
-<div [ngClass]="{'white-theme': whiteTheme, 'dark-theme': !whiteTheme}">
-<app-header class = "header"(Toggle)="toggleBurger($event)" (Profile)="showProfile($event)" [isMenuOpen]="showBurger" ></app-header>
-<app-menu-burger [ngClass]="{hidden : !showBurger}" (MenuClosed)="toggleBurger($event)"></app-menu-burger>
-<app-profil  (Theme) ="themeSwitch($event)" *ngIf="showProfileMenu"></app-profil>
-<router-outlet *ngIf="!showBurger && !showProfileMenu"></router-outlet>
 
-<app-footer></app-footer>
-
-
+  <div [ngClass]="{ 'white-theme': whiteTheme, 'dark-theme': !whiteTheme }">
+    <div class="responsivedesign">
+    <app-header
+      class="header"
+      (Toggle)="toggleBurger($event)"
+      (Profile)="showProfile($event)"
+      [isMenuOpen]="showBurger"
+    ></app-header>
+    <app-menu-burger
+      [ngClass]="{ hidden: !showBurger }"
+      (MenuClosed)="toggleBurger($event)"
+    ></app-menu-burger>
+    <app-profil
+      (Theme)="themeSwitch($event)"
+      *ngIf="showProfileMenu"
+    ></app-profil>
+    <div class="centerrouter">
+    <router-outlet *ngIf="!showBurger && !showProfileMenu"></router-outlet>
 </div>
-
-
-
+  </div>
+</div>
+<app-footer></app-footer>
