@@ -1,5 +1,6 @@
 
 <div class="settings-container" [class.white-theme]="isThemeWhite">
+
   <h1 class="title">SETTINGS</h1>
   <div class="theme-options">
     <span class="option">Dark</span>
@@ -10,11 +11,13 @@
     <span id="white-theme">White</span>
   </div>
   <!-- (click)="toggleTheme()" -->
-  <h2 class="title">STATS MENSUELLES</h2>
+  <h2 class="title" (click)="onStats()">STATS MENSUELLES</h2>
+  <app-stats-mensuelles *ngIf="stats"></app-stats-mensuelles>
   <div class="sub-section">
     <h3 class="subtitle">LOGIN</h3>
+    <app-sign-in *ngIf="isSignIn"></app-sign-in>
+    <button class="subtitle" (click)="onSignIn()" >Sign-In</button>
 
-    <h3 class="subtitle">SIGN IN </h3>
   </div>
   <hr class="separator" />
   <h3 class="section-title">Favoris</h3>
