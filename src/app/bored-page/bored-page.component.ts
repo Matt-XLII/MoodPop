@@ -10,8 +10,13 @@ export class BoredPageComponent implements OnInit{
 constructor(private BoredService : BoredService) { }
 
 riddles : string[] = [];
+answer : boolean = false;
 
 ngOnInit(): void {
     this.BoredService.fetchRiddles(this.riddles);
+}
+
+showSolution(){
+  this.answer = true;
 }
 }

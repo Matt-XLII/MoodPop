@@ -1,0 +1,54 @@
+.mainField{
+  display: block;
+  margin: 15px;
+  padding: 25px;
+  border: 1px solid #2a2929;
+  border-radius: 10px;
+  background-color: #666464;
+}
+
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:#ffe44d;
+  text-shadow: 3px 3px 6px #000;
+  font-size: 32px;
+  margin-top: 0px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+
+hr{
+  border: 0.5px solid #2a2929 ;
+  margin: 15px;
+
+}
+
+
+p {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+  animation: scroll 10s linear infinite;
+  text-shadow: 1px 1px 2px #000;
+}
+
+p:hover {
+  color:  #ffe44d;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.answer {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px;
+  text-align: center;
+  color: #fff;
+  animation: scroll 10s linear infinite;
+  text-shadow: 1px 1px 2px #000;
+}
