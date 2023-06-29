@@ -1,6 +1,11 @@
-<div class="settings-container">
-<div class="settings-container" *ngIf="settingsOut" [class.white-theme]="isThemeWhite">
 
+<div class="settings-container" *ngIf="settingsOut" [class.white-theme]="isThemeWhite">
+  <div class="sub-section">
+    <h3 class="subtitle">LOGIN</h3>
+
+    <button class="subtitle" (click)="onSignIn()"(click)="onSettings()"  >Sign-In</button>
+
+  </div>
   <h1 class="title" >SETTINGS</h1>
   <div class="theme-options">
     <span class="option">Dark</span>
@@ -13,18 +18,12 @@
   <!-- (click)="toggleTheme()" -->
   <h2 class="title" (click)="onStats()"(click)="onSettings()">STATS MENSUELLES</h2>
 
-  <div class="sub-section">
-    <h3 class="subtitle">LOGIN</h3>
 
-    <button class="subtitle" (click)="onSignIn()"(click)="onSettings()"  >Sign-In</button>
 
-  </div>
-  <hr class="separator" />
-  <h3 class="section-title">Favoris</h3>
-  <hr class="separator" />
+  <!-- <h3 class="section-title">Favoris</h3>
+  <hr class="separator" /> -->
   <h3 class="section-title">What's your gender?</h3>
 
-  <a href="/assets/CGU.pdf">CGU</a>
 
   <div class="gender-options">
     <span class="option" >Male</span>
