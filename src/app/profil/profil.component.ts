@@ -14,7 +14,7 @@ export class ProfilComponent {
   isThemeWhite = false;
   isSignIn: boolean = false;
   stats: boolean = false;
-  settingsOut: boolean = false;
+  settingsOut: boolean = true;
 
 
 changeTheme() {
