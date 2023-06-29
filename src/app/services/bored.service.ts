@@ -33,7 +33,7 @@ export class BoredService {
    }
 
    fetchRiddles(list:any[]):void{
-    fetch("https://api.api-ninjas.com/v1/riddles?limit=5", {
+    fetch("https://api.api-ninjas.com/v1/riddles?limit=20", {
       method:'GET',
       headers: {
     'X-Api-key' : 'q80JOdvIGyOhfvSXFKWV4A==0y5PJl9FCDrqP2ik',

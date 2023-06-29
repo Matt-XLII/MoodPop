@@ -14,16 +14,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 169px;
-  min-height: 209px;
+  min-width: 165px;
+  min-height: 205px;
   margin-top: 20px;
   flex-grow: 1;
   z-index: 1;
   border-radius: 10px;
   img {
     position: absolute;
-    width: 169px;
-    height: 209px;
+    width: 165px;
+    height: 205px;
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
@@ -34,7 +34,7 @@
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(56%, 61%) scale(2.14) rotate3d(0, 1, 0, 180deg);
+  transform: translate(95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
   img{
     border-radius: 10px;
@@ -48,15 +48,15 @@
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(56%, 61%) scale(2.14) rotate3d(0, 1, 0, 180deg);
+  transform: translate(95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
-  height: 315px;
+
   img {
     opacity: 0.1;
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-    height: 315px;
+
 
   }
   p {
@@ -175,4 +175,24 @@
 .test {
   width: 150px;
   height: 150px;
+}
+
+
+@media screen and (min-width: 650px) {
+  .container{
+    min-height: 360px;
+    min-width: 300px;
+    img{
+      min-width: 300px;
+      min-height: 360px;
+    }
+  }
+
+  .container.isClicked {
+    transform: translate(150px, 180px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+  }
+
+  .container.timer {
+    transform: translate(150px, 180px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+  }
 }

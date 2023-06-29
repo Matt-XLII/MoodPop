@@ -1,28 +1,25 @@
 ul {
   list-style-type: none;
   padding: 0;
-
-
-
  }
- li {
-  margin-bottom: 30px; /* Ajustez la valeur en fonction de la hauteur du pied de page */
+
+
+li {
+  margin-bottom: 30px;
   border: 1px solid black;
   width: 45%;
   margin: auto;
   margin-bottom: 60px;
   border-radius: 5px;
   padding: 5px 20px 5px 20px;
+  transition: transform 0.2s ease-in-out;
   background: radial-gradient(#a3eef4, #ccf5f8);  color: black;
-
 }
 
 li:hover {
-  transform: scale(1.2) ;
+  transform: scale(1.1);
   cursor: pointer;
 }
-
-
 
 .catégories{
 
@@ -50,9 +47,10 @@ li:hover {
 
 h1{
   text-align: center;
-  color: white;
+  color: whitesmoke;
+  text-shadow: 3px 3px 6px #000;
   margin-bottom: 10%;
-  text-decoration:underline
+  text-decoration:none
 
 }
 
