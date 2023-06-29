@@ -32,6 +32,8 @@ export class HeaderComponent {
   }
 toHome(){
   this.Router.navigateByUrl('');
+  this.Profile.emit(false);
+  this.Toggle.emit(false);
 }
 
 }

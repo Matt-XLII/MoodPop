@@ -1,13 +1,14 @@
 header {
 
   display: flex;
+  position: sticky;
   justify-content: space-between;
   align-items: center;
-  background-color: #2f2f2fcc;
+  background-color: #2f2f2f;
   padding: 10px;
   height: 90px;
   width: 100%;
-
+  min-width: 375px;
 }
 
 
@@ -25,7 +26,9 @@ header {
   border: none;
   cursor: pointer;
   color: white;
-  margin-right: 20px;
+  position: absolute;
+  right: 20px;
+  top: 33px;
 }
 
 
@@ -51,7 +54,8 @@ header {
 
 .setting {
   position: absolute;
-  right: 50px;
+  right: 65px;
+  top: 40px;
   border: none;
   cursor: pointer;
   background: none;
