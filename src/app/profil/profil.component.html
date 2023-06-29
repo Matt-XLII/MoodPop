@@ -1,7 +1,7 @@
 
-<div class="settings-container" [class.white-theme]="isThemeWhite">
+<div class="settings-container"  [class.white-theme]="isThemeWhite">
 
-  <h1 class="title">SETTINGS</h1>
+  <h1 class="title" *ngIf="settingsOut">SETTINGS</h1>
   <div class="theme-options">
     <span class="option">Dark</span>
     <label class="toggle-switch" >
@@ -16,7 +16,7 @@
   <div class="sub-section">
     <h3 class="subtitle">LOGIN</h3>
     <app-sign-in *ngIf="isSignIn"></app-sign-in>
-    <button class="subtitle" (click)="onSignIn()" >Sign-In</button>
+    <button class="subtitle" (click)="onSignIn()"(click)="onSettings()"  >Sign-In</button>
 
   </div>
   <hr class="separator" />
