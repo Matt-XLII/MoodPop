@@ -1,4 +1,12 @@
-<div *ngFor="let riddle of riddles">
+<div class="mainField">
+
+  <h2>Lets find out!</h2>
+
+  <div *ngFor="let riddle of riddles">
+    <hr>
     <p> Question : {{riddle[0]}}</p>
-    <p> Answer : {{riddle[1]}}</p>
+    <button class = "answer" (click)="showSolution()">Here's the answer</button>
+    <p *ngIf="answer"> Answer : {{riddle[1]}}</p>
+  </div>
+
 </div>
