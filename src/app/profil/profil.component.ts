@@ -14,6 +14,7 @@ export class ProfilComponent {
   isThemeWhite = false;
   isSignIn: boolean = false;
   stats: boolean = false;
+  settingsOut: boolean = true;
 
 
 changeTheme() {
@@ -41,6 +42,10 @@ onSignIn(){
   onStats(){
     this.stats = !this.stats;
 
+  }
+
+  onSettings(){
+    this.settingsOut = !this.settingsOut;
   }
 }
 

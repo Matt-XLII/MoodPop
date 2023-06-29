@@ -1,7 +1,12 @@
 
-<div class="settings-container" [class.white-theme]="isThemeWhite">
+<div class="settings-container" *ngIf="settingsOut" [class.white-theme]="isThemeWhite">
+  <div class="sub-section">
+    <h3 class="subtitle">LOGIN</h3>
 
-  <h1 class="title">SETTINGS</h1>
+    <button class="subtitle" (click)="onSignIn()"(click)="onSettings()"  >Sign-In</button>
+
+  </div>
+  <h1 class="title" >SETTINGS</h1>
   <div class="theme-options">
     <span class="option">Dark</span>
     <label class="toggle-switch" >
@@ -11,20 +16,14 @@
     <span id="white-theme">White</span>
   </div>
   <!-- (click)="toggleTheme()" -->
-  <h2 class="title" (click)="onStats()">STATS MENSUELLES</h2>
-  <app-stats-mensuelles *ngIf="stats"></app-stats-mensuelles>
-  <div class="sub-section">
-    <h3 class="subtitle">LOGIN</h3>
-    <app-sign-in *ngIf="isSignIn"></app-sign-in>
-    <button class="subtitle" (click)="onSignIn()" >Sign-In</button>
+  <h2 class="title" (click)="onStats()"(click)="onSettings()">STATS MENSUELLES</h2>
 
-  </div>
-  <hr class="separator" />
-  <h3 class="section-title">Favoris</h3>
-  <hr class="separator" />
+
+
+  <!-- <h3 class="section-title">Favoris</h3>
+  <hr class="separator" /> -->
   <h3 class="section-title">What's your gender?</h3>
 
-  <a href="/assets/CGU.pdf">CGU</a>
 
   <div class="gender-options">
     <span class="option" >Male</span>
@@ -49,4 +48,6 @@
   </div>
 
 </div>
+<app-sign-in *ngIf="isSignIn"></app-sign-in>
+<app-stats-mensuelles *ngIf="stats"></app-stats-mensuelles>
 
