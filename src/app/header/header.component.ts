@@ -1,5 +1,5 @@
 
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,8 +12,11 @@ export class HeaderComponent {
   constructor(private Router: Router) { }
   @Output() Toggle = new EventEmitter<boolean>();
   @Output() Profile = new EventEmitter<boolean>();
-  isMenuOpen = false;
+  @Input() isMenuOpen = false;
+  
   isProfileOpen = false;
+
+
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
