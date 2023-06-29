@@ -32,8 +32,15 @@ toAngry(){
   this.MenuClosed.emit(this.showBurger);
 }
 
+rachidJoke(){ 
+  return alert("Fuck Rachid");
 }
 
+richardJoke(){
+  return alert("Fuck Richard");
+}
+
+}
 
 
 

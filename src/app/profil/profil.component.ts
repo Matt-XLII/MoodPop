@@ -1,5 +1,6 @@
 import { Component, Output,EventEmitter } from '@angular/core';
 import { GenderthemesService } from '../genderthemes.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profil',
@@ -7,10 +8,13 @@ import { GenderthemesService } from '../genderthemes.service';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent {
-  constructor(private genderthemesService: GenderthemesService) { } // Injecte le service
+  constructor(private genderthemesService: GenderthemesService ,private router :Router) { } // Injecte le service
 
   @Output() Theme = new EventEmitter<boolean>();
   isThemeWhite = false;
+  isSignIn: boolean = false;
+  stats: boolean = false;
+
 
 changeTheme() {
 this.isThemeWhite = !this.isThemeWhite;
@@ -30,4 +34,14 @@ onVeganToggle() {
   this.genderthemesService.changeTheme('vegan-theme');
 }
 
+onSignIn(){
+  this.isSignIn = !this.isSignIn;
+  }
+
+  onStats(){
+    this.stats = !this.stats;
+
+  }
 }
+
+
