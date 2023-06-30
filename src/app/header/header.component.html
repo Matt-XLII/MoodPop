@@ -7,10 +7,10 @@
     <button class = "toggle hidden" (click)="toggleMenu()">{{ isMenuOpen ? 'X' : '☰' }}</button>
   </div>
   <ul class="menu" >
-    <li><a (click)="toHappy()">Jokes</a></li>
-    <li><a (click)="toUnmotivated()">Facts</a></li>
+    <li><a (click)="toHappy()">Happy</a></li>
+    <li><a (click)="toAngry()">Insultes</a></li>
+    <li><a (click)="toUnmotivated()">Unmotivated</a></li>
     <li><a (click)="toBored()">Riddles</a></li>
-    <li><a (click)="toAngry()">Insults</a></li>
     <li><button class="setting2" (click)="showProfile()"><img src="/assets/profilBlanc.png" height="40"></button></li>
   </ul>
 </header>
