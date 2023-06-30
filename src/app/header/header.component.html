@@ -11,41 +11,7 @@
     </button>
   </div>
   <ul class="menu">
-    <div class="sub-section">
-      <form>
-        <h3 class="subtitle">LOGIN</h3>
-        <fieldset class="input-with-icon">
-          <input
-            type="text"
-            placeholder="👥 Username"
-            required
-            [(ngModel)]="username"
-          />
-        </fieldset>
-        <fieldset>
-          <input
-            type="password"
-            placeholder="Password"
-            required
-            [(ngModel)]="password"
-          />
-        </fieldset>
-        <a
-          href="#"
-          (click)="onLinkClick()"
-          [ngClass]="{ visited: isLinkVisited }"
-          >Forgot your password?</a
-        >
-        <div class="btn">
-          <button class="btn-log" (click)="onSignIn()" (click)="onSettings()">
-            Sign-In
-          </button>
-          <button class="btn-log" type="submit" (click)="login()">
-            Log-In
-          </button>
-        </div>
-      </form>
-    </div>
+   <app-log-in></app-log-in>
     <li><a (click)="toHappy()">Happy</a></li>
     <li><a (click)="toAngry()">Insultes</a></li>
     <li><a (click)="toUnmotivated()">Unmotivated</a></li>
