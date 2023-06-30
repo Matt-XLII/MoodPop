@@ -61,3 +61,21 @@ p:hover {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (min-width : 800px) {
+
+  .mainField {
+    margin: 450px;
+    margin-top: 30px;
+    box-shadow: #2a2929 10px 0px 25px;
+    padding: 50px;
+  }
+  h2 {
+    font-size: 65px;
+    margin-top: 0%;
+    margin-bottom: 41.6px;
+  }
+p {
+font-size: 25px;
+}
+}
