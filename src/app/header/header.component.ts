@@ -13,10 +13,33 @@ export class HeaderComponent {
   @Output() Toggle = new EventEmitter<boolean>();
   @Output() Profile = new EventEmitter<boolean>();
   @Input() isMenuOpen = false;
-  
+
   isProfileOpen = false;
+  isSignIn: boolean = false;
+  isLinkVisited: boolean = true;
+  settingsOut: boolean = true;
+  username: string = '';
+  password: string | any = '';
 
+  onSignIn(){
+    this.isSignIn = !this.isSignIn;
+    }
 
+  onLinkClick() {
+      this.isLinkVisited = true;
+    }
+  onSettings(){
+      this.settingsOut = !this.settingsOut;
+    }
+  login() {
+      console.log('test');
+      if (this.username === 'admin' && this.password === 'admin') {
+        alert('You are logged in');
+      } else {
+        alert('Invalid credentials');
+      }
+
+    }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

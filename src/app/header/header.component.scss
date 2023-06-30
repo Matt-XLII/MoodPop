@@ -52,6 +52,9 @@ header {
   cursor: pointer;
   background: none;
 }
+.sub-section{
+  display:none
+}
 
 @media screen and (min-width : 800px) {
   header{
@@ -76,7 +79,6 @@ header {
   }
 
 
-  
   .menu{
     display: flex;
     flex-direction: column;
@@ -102,4 +104,63 @@ header {
     cursor: pointer;
     background: none;
   }
+
+  /* Ajout du login */
+  .sub-section{
+    display:initial;
+    width: 95%;
+    form {
+      display: flex;
+      flex-direction: column;
+      background-color: #333232;
+      border: 1px solid #2a2929;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #2a2929;
+      padding: 10px;
+      margin: 10px;
+
+      h3{
+        text-align: center;
+        color: whitesmoke;
+        text-shadow: 3px 3px 6px #000;
+        margin-bottom: 10%;
+        text-decoration:none
+      }
+      input {
+        display: block;
+        width: 70%;
+        padding: 5px;
+        border: 1px solid #2a2929;
+        border-radius: 4px;
+        margin:auto ;
+        margin-bottom: 10px;
+     }
+    }
+    a{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .btn-log{
+      border: 1px solid black;
+      width: 48%;
+      border-radius: 5px;
+      padding: 5px 20px 5px 20px;
+      transition: transform 0.2s ease-in-out;
+      background: radial-gradient(#a3eef4, #ccf5f8);
+      color: black;
+    }
+    .btn-signin{
+      border: 1px solid black;
+      width: 48%;
+      border-radius: 5px;
+      padding: 5px 20px 5px 20px;
+      background: radial-gradient(#a3eef4, #ccf5f8);
+      color: black;
+    }
+    .btn{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
 }
