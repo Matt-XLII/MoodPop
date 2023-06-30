@@ -7,6 +7,10 @@
   background-color: #666464;
 }
 
+.riddle {
+  display: flex;
+  flex-direction: column;
+}
 
 
 h2 {
@@ -44,6 +48,7 @@ p:hover {
 }
 
 .answer {
+  display: flex;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
   margin: 10px;
@@ -51,4 +56,8 @@ p:hover {
   color: #fff;
   animation: scroll 10s linear infinite;
   text-shadow: 1px 1px 2px #000;
+  width: 30%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
