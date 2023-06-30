@@ -1,22 +1,6 @@
 <header >
   <div class="logo"(click)="toHome()">
     <img src="assets/logo_final.png" alt="Logo moodpop">
-    <div class="sub-section">
-      <form>
-        <h3 class="subtitle">LOGIN</h3>
-        <fieldset class="input-with-icon">
-          <input type="text" placeholder="👥 Username" required [(ngModel)]="username">
-        </fieldset>
-        <fieldset>
-          <input type="password" placeholder="Password" required [(ngModel)]="password">
-        </fieldset>
-        <a href="#" (click)="onLinkClick()" [ngClass]="{'visited': isLinkVisited}">Forgot your password?</a>
-        <div class="btn">
-          <button class="btn-log"  (click)="onSignIn()"(click)="onSettings()">Sign-In</button>
-          <button class="btn-log"  type="submit" (click)="login()">Log-In</button>
-        </div>
-      </form>
-        </div>
   </div><button class="setting hidden"(click)="showProfile()"><img src="/assets/profilBlanc.png" height="30"></button>
   <div class="menu-toggle">
 

@@ -6,64 +6,59 @@
     margin: 0;
   }
 
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fff;
-
+  .sub-section{
+    width: 95%;
   }
 
   form {
-    background-color: #3f3e3e;
+    display: flex;
+    flex-direction: column;
+    background-color: #333232;
     border: 1px solid #2a2929;
     border-radius: 10px;
     box-shadow: 0 0 15px #2a2929;
-    padding: 20px;
-    margin: 20px auto;
-    width: 60%;
+    padding: 10px;
+    margin: 10px;
 
+    h3{
+      text-align: center;
+      color: whitesmoke;
+      text-shadow: 3px 3px 6px #000;
+      margin-bottom: 10%;
+      text-decoration:none
+    }
     input {
       display: block;
-      width: 50%;
+      width: 70%;
       padding: 5px;
       border: 1px solid #2a2929;
       border-radius: 4px;
-      margin-bottom: 20px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+      margin:auto ;
+      margin-bottom: 10px;
+   }
   }
-
-  button {
-    background-color: #505757;
-    background-color: #a3eef4;
-    width: 60%;
-    color: #fff;
-    color: black;
-    padding: 5px 10px;
-    border-radius: 10px;
-    border: 1px solid #2a2929;
-    box-shadow: 0 0 5px #2a2929;
-    cursor: pointer;
-    margin: 0 auto;
-    display: block;
-     }
-
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-decoration: none;
+  a{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-
-  .visited{
-    color: "#fff";
+  .btn-log{
+    border: 1px solid black;
+    width: 48%;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    transition: transform 0.2s ease-in-out;
+    background: radial-gradient(#a3eef4, #ccf5f8);
+    color: black;
   }
-
-  a:hover {
-    color: #f3def3;
-    text-decoration: underline;
+  .btn-signin{
+    border: 1px solid black;
+    width: 48%;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+    background: radial-gradient(#a3eef4, #ccf5f8);
+    color: black;
+  }
+  .btn{
+    display: flex;
+    justify-content: space-between;
   }
