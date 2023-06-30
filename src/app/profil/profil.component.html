@@ -1,11 +1,25 @@
 
 <div class="settings-container" *ngIf="settingsOut" [class.white-theme]="isThemeWhite">
   <div class="sub-section">
-    <h3 class="subtitle">LOGIN</h3>
+<form>
+  <h3 class="subtitle">LOGIN</h3>
+  <fieldset class="input-with-icon">
+    <input type="text" placeholder="👥 Username" required [(ngModel)]="username">
+  </fieldset>
+  <fieldset>
+    <input type="password" placeholder="Password" required [(ngModel)]="password">
+  </fieldset>
+  <a href="#" (click)="onLinkClick()" [ngClass]="{'visited': isLinkVisited}">Forgot your password?</a>
+  <div class="btn">
+    <button class="btn-log"  (click)="onSignIn()"(click)="onSettings()">Sign-In</button>
+    <button class="btn-log"  type="submit" (click)="login()">Log-In</button>
+  </div>
+</form>
 
-    <button class="subtitle" (click)="onSignIn()"(click)="onSettings()"  >Sign-In</button>
+
 
   </div>
+
   <h1 class="title" >SETTINGS</h1>
   <div class="theme-options">
     <span class="option">Dark</span>

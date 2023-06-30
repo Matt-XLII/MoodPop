@@ -15,6 +15,9 @@ export class ProfilComponent {
   isSignIn: boolean = false;
   stats: boolean = false;
   settingsOut: boolean = true;
+  username: string = '';
+  password: string | any = '';
+  isLinkVisited: boolean = true;
 
 
 changeTheme() {
@@ -39,6 +42,7 @@ onSignIn(){
   this.isSignIn = !this.isSignIn;
   }
 
+
   onStats(){
     this.stats = !this.stats;
 
@@ -46,6 +50,19 @@ onSignIn(){
 
   onSettings(){
     this.settingsOut = !this.settingsOut;
+  }
+  onLinkClick() {
+    this.isLinkVisited = true;
+  }
+
+  login() {
+    console.log('test');
+    if (this.username === 'admin' && this.password === 'admin') {
+      alert('You are logged in');
+    } else {
+      alert('Invalid credentials');
+    }
+
   }
 }
 
