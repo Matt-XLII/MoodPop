@@ -5,14 +5,14 @@
     padding: 0;
     margin: 0;
   }
-  
+
   h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #fff;
-    
+
   }
-  
+
   form {
     background-color: #3f3e3e;
     border: 1px solid #2a2929;
@@ -21,7 +21,7 @@
     padding: 20px;
     margin: 20px auto;
     width: 60%;
-  
+
     input {
       display: block;
       width: 50%;
@@ -33,7 +33,7 @@
       margin-right: auto;
     }
   }
-  
+
   button {
     background-color: #505757;
     background-color: #a3eef4;
@@ -47,10 +47,8 @@
     cursor: pointer;
     margin: 0 auto;
     display: block;
-   
-   
-  }
-  
+     }
+
   a {
     display: flex;
     justify-content: center;
@@ -64,9 +62,8 @@
   .visited{
     color: "#fff";
   }
-  
+
   a:hover {
     color: #f3def3;
     text-decoration: underline;
   }
-  
