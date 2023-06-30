@@ -11,6 +11,9 @@ export class LogInComponent {
   username: string = '';
   password: string | any = '';
   isLinkVisited: boolean = true;
+  isSignIn: boolean = false;
+  settingsOut: boolean = true;
+
 
   onLinkClick() {
     this.isLinkVisited = true;
@@ -24,4 +27,10 @@ export class LogInComponent {
     }
 
   }
+  onSignIn(){
+    this.isSignIn = !this.isSignIn;
+    }
+    onSettings(){
+      this.settingsOut = !this.settingsOut;
+    }
 }
