@@ -1,13 +1,24 @@
-<div class="settings-container" *ngIf="settingsOut">
-  <div class="sub-section">
+<div class="settings-container" *ngIf="settingsOut" [ngStyle]="{
+  'background-color': themeService.isDark
+  ? themeService.darkThemeBackground2
+  : themeService.lightThemeBackground,
+}">
+  <div class="sub-section" >
     <form
       [ngStyle]="{
-        'background-color': themeService.isDark
-          ? themeService.darkThemeBackground2
-          : themeService.lightThemeBackground
-      }"
+      'background-color': themeService.isDark
+      ? themeService.darkThemeBackground2
+      : themeService.lightThemeBackground
+  }"
     >
-      <h3 class="subtitle">LOGIN</h3>
+      <h3 class="subtitle" [ngStyle]="{
+        'color': themeService.isDark
+      ? themeService.darkThemeFontColor
+      : themeService.lightThemeFontColor,
+      'text-shadow': themeService.isDark
+      ? themeService.darkThemeTextShadow
+      : themeService.lightThemeTextShadow
+      }">LOGIN</h3>
       <fieldset class="input-with-icon">
         <input
           type="text"
@@ -31,12 +42,19 @@
         <button class="btn-log" (click)="onSignIn()" (click)="onSettings()">
           Sign-In
         </button>
-        <button class="btn-log" type="submit" (click)="login()">Log-In</button>
+        <button class="btn-log" type="submit" (click)="login()" >Log-In</button>
       </div>
     </form>
   </div>
 
-  <h1 class="title">SETTINGS</h1>
+  <h1 class="title" [ngStyle]="{
+    'color': themeService.isDark
+  ? themeService.darkThemeFontColor
+  : themeService.lightThemeFontColor,
+  'text-shadow': themeService.isDark
+  ? themeService.darkThemeTextShadow
+  : themeService.lightThemeTextShadow
+  }">SETTINGS</h1>
   <div class="theme-options">
     <span class="option">Dark</span>
     <label class="toggle-switch">
@@ -50,23 +68,51 @@
     <span id="white-theme">White</span>
   </div>
   <!-- (click)="toggleTheme()" -->
-  <h2 class="title" (click)="onStats()" (click)="onSettings()">
+  <h2 class="title" (click)="onStats()" (click)="onSettings()" [ngStyle]="{
+    'color': themeService.isDark
+  ? themeService.darkThemeFontColor
+  : themeService.lightThemeFontColor,
+  'text-shadow': themeService.isDark
+  ? themeService.darkThemeTextShadow
+  : themeService.lightThemeTextShadow
+  }">
     STATS MENSUELLES
   </h2>
 
   <!-- <h3 class="section-title">Favoris</h3>
   <hr class="separator" /> -->
-  <h3 class="section-title">What's your gender?</h3>
+  <h3 class="section-title" [ngStyle]="{
+    'color': themeService.isDark
+  ? themeService.darkThemeFontColor
+  : themeService.lightThemeFontColor,
+  'text-shadow': themeService.isDark
+  ? themeService.darkThemeTextShadow
+  : themeService.lightThemeTextShadow
+  }">What's your gender?</h3>
 
   <div class="gender-options">
-    <span class="option" >Male &nbsp;&nbsp;</span>
+    <span class="option" [ngStyle]="{
+      'color': themeService.isDark
+    ? themeService.darkThemeFontColor
+    : themeService.lightThemeFontColor,
+    'text-shadow': themeService.isDark
+    ? themeService.darkThemeTextShadow
+    : themeService.lightThemeTextShadow
+    }" >Male &nbsp;&nbsp;</span>
     <label class="toggle-switch" class="male">
       <input type="checkbox" (click)="onMaleToggle()" />
       <span class="slider"></span>
     </label>
   </div>
   <div class="gender-options">
-    <span class="option">Female</span>
+    <span class="option" [ngStyle]="{
+      'color': themeService.isDark
+    ? themeService.darkThemeFontColor
+    : themeService.lightThemeFontColor,
+    'text-shadow': themeService.isDark
+    ? themeService.darkThemeTextShadow
+    : themeService.lightThemeTextShadow
+    }">Female</span>
     <label class="toggle-switch" class="female">
       <input type="checkbox" (click)="onFemaleToggle()" />
 
@@ -74,7 +120,14 @@
     </label>
   </div>
   <div class="gender-options">
-    <span class="option" >Vegan &nbsp;</span>
+    <span class="option" [ngStyle]="{
+      'color': themeService.isDark
+    ? themeService.darkThemeFontColor
+    : themeService.lightThemeFontColor,
+    'text-shadow': themeService.isDark
+    ? themeService.darkThemeTextShadow
+    : themeService.lightThemeTextShadow
+    }" >Vegan &nbsp;</span>
     <label class="toggle-switch"  class="vegan">
       <input type="checkbox" (click)="onVeganToggle()"/>
 

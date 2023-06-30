@@ -14,6 +14,10 @@ export class AppComponent {
 
 constructor(public themeService : ThemeService) {}
 
+changeTheme() {
+this.themeService.toggleTheme();
+}
+
   toggleBurger(event: boolean) {
     this.showBurger = event;
   }
@@ -27,5 +31,5 @@ this.whiteTheme = event;
   }
 
 
-  
+
 }

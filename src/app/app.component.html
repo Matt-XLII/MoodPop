@@ -1,5 +1,9 @@
 
-    <div class="responsivedesign">
+    <div class="responsivedesign" [ngStyle]="{
+      'background-color': themeService.isDark
+      ? themeService.darkThemeBackground2
+      : themeService.lightThemeBackground
+  }">
     <app-header
       class="header"
       (Toggle)="toggleBurger($event)"
