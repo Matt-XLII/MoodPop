@@ -11,6 +11,7 @@ constructor(private BoredService : BoredService) { }
 
 riddles : string[] = [];
 answer : boolean = false;
+riddleIndex : number = 0;
 
 ngOnInit(): void {
     this.BoredService.fetchRiddles(this.riddles);
@@ -18,5 +19,10 @@ ngOnInit(): void {
 
 showSolution(){
   this.answer = true;
+}
+
+nextRiddle(){
+  this.riddleIndex = Math.floor(Math.random() * this.riddles.length);
+  this.answer = false;
 }
 }

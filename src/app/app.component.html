@@ -1,5 +1,4 @@
 
-  <div [ngClass]="{ 'white-theme': whiteTheme, 'dark-theme': !whiteTheme }">
     <div class="responsivedesign">
     <app-header
       class="header"
@@ -12,12 +11,10 @@
       (MenuClosed)="toggleBurger($event)"
     ></app-menu-burger>
     <app-profil
-      (Theme)="themeSwitch($event)"
       *ngIf="showProfileMenu"
     ></app-profil>
     <div class="centerrouter">
     <router-outlet *ngIf="!showBurger && !showProfileMenu"></router-outlet>
 </div>
   </div>
-</div>
 <app-footer></app-footer>
