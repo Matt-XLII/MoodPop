@@ -2,11 +2,12 @@
 
   <h2>Lets find out!</h2>
 
-  <div class="riddle" *ngFor="let riddle of riddles">
+  <div class="riddle">
     <hr>
-    <p> Question : {{riddle[0]}}</p>
+    <p> Question : {{riddles[riddleIndex][0]}}</p>
     <button class = "answer" (click)="showSolution()">Here's the answer</button>
-    <p *ngIf="answer"> Answer : {{riddle[1]}}</p>
+    <p *ngIf="answer"> Answer : {{riddles[riddleIndex][1]}}</p>
+    <button class = "next" (click)="nextRiddle()">Next</button>
   </div>
 
 </div>

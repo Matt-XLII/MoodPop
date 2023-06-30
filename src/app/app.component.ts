@@ -1,4 +1,5 @@
 import { Component,} from '@angular/core';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent {
   showBurger = false;
   showProfileMenu = false;
   whiteTheme = false;
+
+constructor(public themeService : ThemeService) {}
 
   toggleBurger(event: boolean) {
     this.showBurger = event;

@@ -1,6 +1,7 @@
 import { Component, Output,EventEmitter } from '@angular/core';
 import { GenderthemesService } from '../genderthemes.service';
 import { Router } from '@angular/router';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-profil',
@@ -8,10 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent {
-  constructor(private genderthemesService: GenderthemesService ,private router :Router) { } // Injecte le service
+  constructor(private genderthemesService: GenderthemesService ,
+    public themeService : ThemeService,
+    private router :Router) { } // Injecte le service
 
-  @Output() Theme = new EventEmitter<boolean>();
-  isThemeWhite = false;
   isSignIn: boolean = false;
   stats: boolean = false;
   settingsOut: boolean = true;
@@ -21,9 +22,7 @@ export class ProfilComponent {
 
 
 changeTheme() {
-this.isThemeWhite = !this.isThemeWhite;
-console.log('isThemeWhite:', this.isThemeWhite);
-this.Theme.emit(this.isThemeWhite);
+this.themeService.toggleTheme();
 }
 
 onMaleToggle() {

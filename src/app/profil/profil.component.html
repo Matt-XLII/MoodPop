@@ -1,67 +1,84 @@
-
-<div class="settings-container" *ngIf="settingsOut" [class.white-theme]="isThemeWhite">
+<div class="settings-container" *ngIf="settingsOut">
   <div class="sub-section">
-<form>
-  <h3 class="subtitle">LOGIN</h3>
-  <fieldset class="input-with-icon">
-    <input type="text" placeholder="👥 Username" required [(ngModel)]="username">
-  </fieldset>
-  <fieldset>
-    <input type="password" placeholder="Password" required [(ngModel)]="password">
-  </fieldset>
-  <a href="#" (click)="onLinkClick()" [ngClass]="{'visited': isLinkVisited}">Forgot your password?</a>
-  <div class="btn">
-    <button class="btn-log"  (click)="onSignIn()"(click)="onSettings()">Sign-In</button>
-    <button class="btn-log"  type="submit" (click)="login()">Log-In</button>
+    <form
+      [ngStyle]="{
+        'background-color': themeService.isDark
+          ? themeService.darkThemeBackground2
+          : themeService.lightThemeBackground
+      }"
+    >
+      <h3 class="subtitle">LOGIN</h3>
+      <fieldset class="input-with-icon">
+        <input
+          type="text"
+          placeholder="👥 Username"
+          required
+          [(ngModel)]="username"
+        />
+      </fieldset>
+      <fieldset>
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          [(ngModel)]="password"
+        />
+      </fieldset>
+      <a href="#" (click)="onLinkClick()" [ngClass]="{ visited: isLinkVisited }"
+        >Forgot your password?</a
+      >
+      <div class="btn">
+        <button class="btn-log" (click)="onSignIn()" (click)="onSettings()">
+          Sign-In
+        </button>
+        <button class="btn-log" type="submit" (click)="login()">Log-In</button>
+      </div>
+    </form>
   </div>
-</form>
 
-
-
-  </div>
-
-  <h1 class="title" >SETTINGS</h1>
+  <h1 class="title">SETTINGS</h1>
   <div class="theme-options">
     <span class="option">Dark</span>
-    <label class="toggle-switch" >
-      <input type="checkbox" (click) = "changeTheme()"/>
+    <label class="toggle-switch">
+      <input
+        type="checkbox"
+        (click)="changeTheme()"
+        [checked]="!themeService.isDark"
+      />
       <span class="slider"></span>
     </label>
     <span id="white-theme">White</span>
   </div>
   <!-- (click)="toggleTheme()" -->
-  <h2 class="title" (click)="onStats()"(click)="onSettings()">STATS MENSUELLES</h2>
-
-
+  <h2 class="title" (click)="onStats()" (click)="onSettings()">
+    STATS MENSUELLES
+  </h2>
 
   <!-- <h3 class="section-title">Favoris</h3>
   <hr class="separator" /> -->
   <h3 class="section-title">What's your gender?</h3>
 
-
   <div class="gender-options">
-    <span class="option" >Male</span>
+    <span class="option">Male</span>
     <label class="toggle-switch" class="male">
       <input type="checkbox" (click)="onMaleToggle()" />
       <span class="slider"></span>
     </label>
   </div>
   <div class="gender-options">
-    <span class="option" >Female</span>
+    <span class="option">Female</span>
     <label class="toggle-switch" class="female">
       <input type="checkbox" (click)="onFemaleToggle()" />
-      <span class="slider" ></span>
-    </label>
-  </div>
-  <div class="gender-options">
-    <span class="option" >Vegan</span>
-    <label class="toggle-switch"  class="vegan">
-      <input type="checkbox" (click)="onVeganToggle()"/>
       <span class="slider"></span>
     </label>
   </div>
-
+  <div class="gender-options">
+    <span class="option">Vegan</span>
+    <label class="toggle-switch" class="vegan">
+      <input type="checkbox" (click)="onVeganToggle()" />
+      <span class="slider"></span>
+    </label>
+  </div>
 </div>
 <app-sign-in *ngIf="isSignIn"></app-sign-in>
 <app-stats-mensuelles *ngIf="stats"></app-stats-mensuelles>
-
