@@ -1,4 +1,4 @@
-.mainField{
+/*.mainField{
     display: block;
     margin: 15px;
     padding: 25px;
@@ -56,5 +56,98 @@ p {
 p {
   font-size: 25px;
 }
-  }
+  }*/
+
   
+  .mainField {
+    display: block;
+    margin: 15px;
+    padding: 25px;
+    border: 1px solid #1e90ff;
+    border-radius: 10px;
+    background-color: #686565;
+    overflow: hidden;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: blue;
+      text-shadow: 3px 3px 6px #000;
+      font-size: 32px;
+      margin-top: 0px;
+      font-family: 'Roboto', sans-serif;
+    }
+  
+    hr {
+      border: 0.5px solid #2a2929;
+      margin: 15px;
+      width: 50%;
+    }
+  
+    p {
+      font-size: 18px;
+      font-family: 'Roboto', sans-serif;
+      margin: 10px;
+      text-align: center;
+      color: #fff;
+      animation: scroll 10s linear infinite;
+      text-shadow: 1px 1px 2px #000;
+  
+      &:hover {
+        
+        text-shadow: 4px 4px 8px #000;
+      }
+    }
+  
+    @media screen and (min-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      margin-top: 130px;
+      box-shadow: #2a2929 10px 0px 25px;
+      padding: 40px;
+      height: 50%;
+      width: 30%;
+      border-radius: 20%;
+      background-color: #686565;
+      border: 4mm ridge rgba(0, 191, 255, 0.6);
+  
+      h2 {
+        font-size: 50px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        color: rgb(57, 57, 238);
+        font-family: 'Roboto', sans-serif;
+      }
+  
+      p {
+        font-size: 25px;
+      }
+  
+      button.next {
+        margin: 5px auto;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #000;
+        animation: scroll 10s linear infinite;
+        border: 1px solid #2a2929;
+        border-radius: 5px;
+        background-color: #1e90ff;
+        width: 15%;
+        height: 30px;
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+        transition: 0.5s;
+        outline: none;
+  
+        &:hover {
+          background-color: #4d94ff;
+          color: #000;
+          box-shadow: #2a2929 10px 0px 25px;
+        }
+      }
+    }
+  }

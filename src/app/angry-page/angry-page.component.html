@@ -1,19 +1,16 @@
-<!--<div *ngFor="let insult of insults">
-    <p>
-        {{insult}}
-</div>-->
 
 <fieldset class="mainField">
 
     <h2>Be Angry!</h2>
     
-    <div *ngFor="let insult of insults">
+    
       <hr>
       <p>
-        {{insult}}
+        {{getCurrentInsult()}}  
       </p>
+      <button class="next" (click)="nextInsult()">Next</button>
     
-    </div>
+    
     </fieldset>
     
     

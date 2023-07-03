@@ -7,12 +7,24 @@ import { AngryService } from '../services/angry.service';
   styleUrls: ['./angry-page.component.scss']
 })
 export class AngryPageComponent implements OnInit {
+  insults: string[] = [];
+  currentIndex: number = 0;
+
 
   constructor(private angryService: AngryService) { }
   
-insults: string[] = [];
+  getCurrentInsult(): string {
+    return this.insults[this.currentIndex];
+  }
 
   ngOnInit(): void {
       this.insults = this.angryService.insultList;
+  }
+
+  nextInsult(): void {
+    this.currentIndex++;
+    if (this.currentIndex >= this.insults.length) {
+      this.currentIndex = 0;
+    }
   }
 }
