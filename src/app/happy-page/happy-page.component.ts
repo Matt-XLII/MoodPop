@@ -1,4 +1,6 @@
-import { Component,OnInit } from '@angular/core';
+
+
+import { Component, OnInit } from '@angular/core';
 import { HappyService } from '../services/happy.service';
 
 @Component({
@@ -8,12 +10,22 @@ import { HappyService } from '../services/happy.service';
 })
 export class HappyPageComponent implements OnInit {
   jokes: string[] = [];
+  currentIndex: number = 0;
 
-constructor(private happyService: HappyService) {
+  constructor(private happyService: HappyService) {}
 
-}
+  ngOnInit(): void {
+    this.happyService.fetchJokes(this.jokes);
+  }
 
-ngOnInit(): void {
-this.happyService.fetchJokes(this.jokes);
-}
+  getCurrentJoke(): string {
+    return this.jokes[this.currentIndex];
+  }
+
+  nextJoke(): void {
+    this.currentIndex++;
+    if (this.currentIndex >= this.jokes.length) {
+      this.currentIndex = 0;
+    }
+  }
 }

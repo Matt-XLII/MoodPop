@@ -1,16 +1,10 @@
-
-
 <fieldset class="mainField">
-
-    <h2>Be Unmotivated !</h2>
-    
-    <div *ngFor="let joke of chuckQuotes">
-      <hr>
-      <p>
-        {{joke}}
-      </p>
-    
-    </div>
-    </fieldset>
+  <h2>Be Unmotivated !</h2>
+  <hr>
+  <p>
+    {{getCurrentQuote()}}
+  </p>
+  <button class="next" (click)="nextQuote()">Next</button>
+</fieldset>
     
     

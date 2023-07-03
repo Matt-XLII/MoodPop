@@ -1,13 +1,10 @@
+
+
 <fieldset class="mainField">
-
-<h2>Be Happy !</h2>
-
-<div *ngFor="let joke of jokes">
+  <h2>Be Happy !</h2>
   <hr>
-  <p>
-    {{joke}}
-  </p>
-
-</div>
+  <p>{{ getCurrentJoke() }}</p>
+  <button class="next" (click)="nextJoke()">Next</button>
 </fieldset>
+
 

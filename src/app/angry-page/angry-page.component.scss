@@ -1,34 +1,29 @@
-.mainField{
-    display: block;
-    margin: 15px;
-    padding: 25px;
-    border: 1px solid #2a2929;
-    border-radius: 10px;
-    background-color: #666464;
-}
+.mainField {
+  display: block;
+  margin: 15px;
+  padding: 25px;
+  border: 1px solid #2a2929;
+  border-radius: 10px;
+  background-color: red;
+  overflow: hidden;
 
-
-
-h2 {
+  h2 {
     text-align: center;
     margin-bottom: 20px;
-    color:#ff4d4d;
+    color: rgb(243, 54, 54);
     text-shadow: 3px 3px 6px #000;
     font-size: 32px;
     margin-top: 0px;
     font-family: 'Roboto', sans-serif;
-   
   }
-  
 
-hr{
-    border: 1px solid #2a2929 ;
+  hr {
+    border: 0.5px solid #2a2929;
     margin: 15px;
-     
-}
+    width: 50%;
+  }
 
-
-p {
+  p {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     margin: 10px;
@@ -36,28 +31,59 @@ p {
     color: #fff;
     animation: scroll 10s linear infinite;
     text-shadow: 1px 1px 2px #000;
-  }
-  
-  p:hover {
-    color:  #ff4d4d;
-    text-shadow: 2px 2px 4px #000;
-  }
 
-  @media screen and (min-width : 800px) {
-
-    .mainField {
-      margin: 450px;
-      margin-top: 30px;
-      box-shadow: #2a2929 10px 0px 25px;
-      padding: 50px;
+    &:hover {
+      text-shadow: 4px 4px 8px #000;
     }
+  }
+
+  @media screen and (min-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 130px;
+    box-shadow: #2a2929 10px 0px 25px;
+    padding: 40px;
+    height: 50%;
+    width: 30%;
+    border-radius: 20%;
+    background-color: #686565;
+    border: 4mm ridge rgba(255, 0, 0, 0.6);
+
     h2 {
-      font-size: 65px;
-      margin-top: 0%;
-      margin-bottom: 41.3px;
+      font-size: 50px;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
-p {
-  font-size: 25px;
-}
+
+    p {
+      font-size: 25px;
+    }
+
+    button.next {
+      margin: 5px auto;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #000;
+      animation: scroll 10s linear infinite;
+      border: 1px solid #2a2929;
+      border-radius: 5px;
+      background-color: rgb(214, 53, 53);
+      width: 15%;
+      height: 30px;
+      font-size: 15px;
+      font-family: 'Roboto', sans-serif;
+      cursor: pointer;
+      transition: 0.5s;
+      outline: none;
+
+      &:hover {
+        background-color: #ee8b8b;
+        color: #000;
+        box-shadow: #2a2929 10px 0px 25px;
+      }
+    }
   }
-  
+}

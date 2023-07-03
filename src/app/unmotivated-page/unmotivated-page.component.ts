@@ -8,10 +8,9 @@ import { UnmotivatedService } from '../services/unmotivated.service';
 })
 export class UnmotivatedPageComponent  {
   chuckQuotes: string[]= [];
+  currentIndex: number = 0;
 
 constructor(private unmotivatedService: UnmotivatedService) {
-
-
 
 }
 
@@ -19,4 +18,15 @@ ngOnInit(): void {
 this.unmotivatedService.fetchChuck(this.chuckQuotes);
 }
 
+getCurrentQuote(): string {
+return this.chuckQuotes[this.currentIndex];
+
+}
+
+nextQuote(): void {
+this.currentIndex++;
+if (this.currentIndex >= this.chuckQuotes.length) {
+this.currentIndex = 0;
+}
+}
 }
