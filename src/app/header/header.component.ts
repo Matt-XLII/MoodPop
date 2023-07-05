@@ -61,19 +61,23 @@ toHome(){
 
 toBored(){
   this.Router.navigateByUrl('/bored');
-
+  this.Profile.emit(false);
+  this.Toggle.emit(false);
 }
 toHappy(){
   this.Router.navigateByUrl('/happy');
-
+  this.Profile.emit(false);
+  this.Toggle.emit(false);
 }
 toUnmotivated(){
   this.Router.navigateByUrl('/unmotivated');
-
+  this.Profile.emit(false);
+  this.Toggle.emit(false);
 }
 toAngry(){
   this.Router.navigateByUrl('/angry');
-
+  this.Profile.emit(false);
+  this.Toggle.emit(false);
 }
 
 }

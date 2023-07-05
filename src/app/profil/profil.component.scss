@@ -256,3 +256,8 @@ input:checked + .slider:before {
 }
 
 
+@media screen and (min-width: 768px) {
+  .sub-section{
+    display: none;
+  }
+}
