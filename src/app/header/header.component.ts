@@ -21,25 +21,32 @@ export class HeaderComponent {
   username: string = '';
   password: string | any = '';
 
-  onSignIn(){
+  onSignIn() {
     this.isSignIn = !this.isSignIn;
-    }
+  }
 
   onLinkClick() {
-      this.isLinkVisited = true;
-    }
-  onSettings(){
-      this.settingsOut = !this.settingsOut;
-    }
+    this.isLinkVisited = true;
+  }
+  onSettings() {
+    this.settingsOut = !this.settingsOut;
+  }
   login() {
-      console.log('test');
-      if (this.username === 'admin' && this.password === 'admin') {
-        alert('You are logged in');
-      } else {
-        alert('Invalid credentials');
-      }
-
+    console.log('test');
+    if (this.username === 'admin' && this.password === 'admin') {
+      alert('You are logged in');
+    } else {
+      alert('Invalid credentials');
     }
+
+  }
+
+  closeMenuProfile() {
+    this.isMenuOpen = false;
+    this.isProfileOpen = false;
+    this.Profile.emit(false);
+    this.Toggle.emit(false);
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -53,31 +60,26 @@ export class HeaderComponent {
     this.isMenuOpen = false;
     this.Toggle.emit(this.isMenuOpen);
   }
-toHome(){
-  this.Router.navigateByUrl('');
-  this.Profile.emit(false);
-  this.Toggle.emit(false);
-}
+  toHome() {
+    this.Router.navigateByUrl('');
+    this.closeMenuProfile()
+  }
 
-toBored(){
-  this.Router.navigateByUrl('/bored');
-  this.Profile.emit(false);
-  this.Toggle.emit(false);
-}
-toHappy(){
-  this.Router.navigateByUrl('/happy');
-  this.Profile.emit(false);
-  this.Toggle.emit(false);
-}
-toUnmotivated(){
-  this.Router.navigateByUrl('/unmotivated');
-  this.Profile.emit(false);
-  this.Toggle.emit(false);
-}
-toAngry(){
-  this.Router.navigateByUrl('/angry');
-  this.Profile.emit(false);
-  this.Toggle.emit(false);
-}
+  toBored() {
+    this.Router.navigateByUrl('/bored');
+    this.closeMenuProfile()
+  }
+  toHappy() {
+    this.Router.navigateByUrl('/happy');
+    this.closeMenuProfile()
+  }
+  toUnmotivated() {
+    this.Router.navigateByUrl('/unmotivated');
+    this.closeMenuProfile()
+  }
+  toAngry() {
+    this.Router.navigateByUrl('/angry');
+    this.closeMenuProfile()
+  }
 
 }

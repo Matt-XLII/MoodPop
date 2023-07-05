@@ -1,5 +1,5 @@
 import { Component, Output,EventEmitter, OnInit } from '@angular/core';
-import { GenderthemesService } from '../genderthemes.service';
+
 import { Router } from '@angular/router';
 import { ThemeService } from '../services/theme.service';
 
@@ -9,8 +9,7 @@ import { ThemeService } from '../services/theme.service';
   styleUrls: ['./profil.component.scss']
 })
 export class ProfilComponent implements OnInit{
-  constructor(public genderthemesService: GenderthemesService ,
-    public themeService : ThemeService,
+  constructor(public themeService : ThemeService,
     private router :Router) { } // Injecte le service
 
   isSignIn: boolean = false;
@@ -19,26 +18,31 @@ export class ProfilComponent implements OnInit{
   username: string = '';
   password: string | any = '';
   isLinkVisited: boolean = true;
+  theme: string = 'female-theme'
+  isDark : boolean = false;
 
   ngOnInit(): void {
-    this.genderthemesService.theme = this.genderthemesService.theme;
+  this.theme = this.themeService.theme;
+  this.isDark = this.themeService.isDark;
   }
 
 changeTheme() {
 this.themeService.toggleTheme();
-console.log("@@@@@@@@@@@@@@@",this.themeService.isDark);
 }
 
 onMaleToggle() {
-  this.genderthemesService.changeTheme('male-theme');
+  this.themeService.changeTheme('male-theme');
+  this.theme = this.themeService.theme;
 }
 
 onFemaleToggle() {
-  this.genderthemesService.changeTheme('female-theme');
+  this.themeService.changeTheme('female-theme');
+  this.theme = this.themeService.theme;
 }
 
 onVeganToggle() {
-  this.genderthemesService.changeTheme('vegan-theme');
+  this.themeService.changeTheme('vegan-theme');
+  this.theme = this.themeService.theme;
 }
 
 onSignIn(){
