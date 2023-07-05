@@ -13,7 +13,9 @@
     border-radius: 10%;
     background-color:#62b36c;
     border: 4mm ridge rgba(2, 175, 13, 0.6);
-    
+    border-top: 4mm groove rgba(2, 175, 13, 0.6);
+    border-left: 4mm groove rgba(2, 175, 13, 0.6);
+  }
 
   
 
@@ -89,6 +91,8 @@
     width: 30%;
     border-radius: 20%;
     border: 4mm ridge rgba(2, 175, 13, 0.6);
+    border-top: 4mm groove rgba(2, 175, 13, 0.6);
+    border-left: 4mm groove rgba(2, 175, 13, 0.6);
     }
     h2 {
       font-size: 50px;
@@ -101,7 +105,7 @@
       font-size: 25px;
     }
   }
-}
+
 
 
 
