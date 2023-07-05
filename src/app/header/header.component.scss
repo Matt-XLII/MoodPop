@@ -62,7 +62,7 @@ header {
     top: 0px;
     position: sticky;
     width : 15%;
-    height: 120vh;
+    height: 100vh;
     min-width: 250px;
     box-shadow: #2f2f2f 5px 0px 35px;
     .logo{
@@ -71,8 +71,8 @@ header {
       left: 15px;   
     }
     .logo img {
-      height: 230px;
-      width: 230px;
+      height: 200px;
+      width: 220px;
     }
   }
     .hidden{
@@ -84,21 +84,29 @@ header {
     left : 50%;
   }
 
+  hr{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    
+  }
+
 
   .menu{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 75%;
+    height: auto;
     width: 100%;
     position: absolute;
-    top : 20%;
+    top : 25%;
     right: 0px;
     list-style: none;
     li{
-      font-size: 2rem;
+      font-size: 1.6rem;
       text-shadow: 3px 3px 6px #000;
+      margin-bottom: 1rem;
     }
     li:hover{
       transform: scale(1.1);

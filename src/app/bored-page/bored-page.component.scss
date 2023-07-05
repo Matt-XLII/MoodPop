@@ -5,7 +5,7 @@
   padding: 25px;
   border: 1px solid #2a2929;
   border-radius: 10px;
-  background-color: #686565;
+  background-color: #64640b;
   overflow: hidden;
 }
 
@@ -17,7 +17,7 @@
 h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #ffe44d;
+  color: whitesmoke;
   text-shadow: 3px 3px 6px #000;
   font-size: 32px;
   margin-top: 0px;
@@ -71,7 +71,6 @@ p:hover {
     height: 50%;
     width: 30%;
     border-radius: 20%;
-    background-color:#686565;
     border: 4mm ridge rgba(211, 220, 50, .6);
   }
   
@@ -95,13 +94,13 @@ p:hover {
     animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
     border-radius: 10px;
-    background-color: #ffe44d;
+    background-color: #c9ad0d;
     cursor: pointer;
     transition: 0.5s;
     &:hover {
-      background-color: #f3f14f;
+      background-color: #c9ad0d;
       color: #000;
-      box-shadow: #2a2929 10px 0px 25px;
+      box-shadow: #ffffff 5px 0px 15px;
     }
   }
   
@@ -109,22 +108,21 @@ p:hover {
     margin: 5px auto;
     margin-bottom: 10px;
     text-align: center;
-    color: #000;
+    color: #ffffff;
     animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
     border-radius: 5px;
-    background-color: #089e0d;
+    background-color:#c9ad0d;
     width: 15%;
     height: 30px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     transition: 0.5s;
-    outline: none;
+    
     &:hover {
-      background-color: #5af213;
-      color: #000;
-      box-shadow: #2a2929 10px 0px 25px;
+      
+      box-shadow: #ffffff 10px 0px 25px;
     }
   }
 }
