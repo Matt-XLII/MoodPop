@@ -86,8 +86,6 @@ a{
 }
 .title {
   text-align: center;
-  color: whitesmoke;
-  text-shadow: 3px 3px 6px #000;
   margin-bottom: 10%;
 
 
@@ -258,3 +256,8 @@ input:checked + .slider:before {
 }
 
 
+@media screen and (min-width: 768px) {
+  .sub-section{
+    display: none;
+  }
+}

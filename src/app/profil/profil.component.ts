@@ -23,6 +23,7 @@ export class ProfilComponent {
 
 changeTheme() {
 this.themeService.toggleTheme();
+console.log("@@@@@@@@@@@@@@@",this.themeService.isDark);
 }
 
 onMaleToggle() {

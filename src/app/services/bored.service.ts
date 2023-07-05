@@ -39,6 +39,12 @@ export class BoredService {
     'X-Api-key' : 'q80JOdvIGyOhfvSXFKWV4A==0y5PJl9FCDrqP2ik',
     'Content-type': 'application/json',}})
     .then(function (response) { return response.json()})
-    .then((data:any) => data.forEach((item:any) => list.push([item.question, item.answer])))
-   }
+    .then((data:any) => {
+      data.forEach((item: any) => {
+        if (item.question.length <= 120) {
+          list.push([item.question, item.answer]);
+        }
+      });
+    });
+  }
 }
