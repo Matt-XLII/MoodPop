@@ -1,4 +1,7 @@
 <div class="settings-container" *ngIf="settingsOut" [ngStyle]="{
+  'color': themeService.isDark
+  ? themeService.darkThemeFontColor
+  : themeService.lightThemeFontColor,
   'background-color': themeService.isDark
   ? themeService.darkThemeBackground2
   : themeService.lightThemeBackground,
