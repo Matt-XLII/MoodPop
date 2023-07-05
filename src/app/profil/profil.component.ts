@@ -26,6 +26,7 @@ export class ProfilComponent implements OnInit{
 
 changeTheme() {
 this.themeService.toggleTheme();
+console.log("@@@@@@@@@@@@@@@",this.themeService.isDark);
 }
 
 onMaleToggle() {

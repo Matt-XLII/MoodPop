@@ -182,6 +182,8 @@
   .container{
     min-height: 360px;
     min-width: 300px;
+    margin-right: 20px;
+
     img{
       min-width: 300px;
       min-height: 360px;
@@ -189,10 +191,17 @@
   }
 
   .container.isClicked {
-    transform: translate(150px, 180px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+    transform: translate(0px, 19px) rotate3d(0, 1, 0, 180deg);
+    margin-right: 20px;
   }
 
   .container.timer {
-    transform: translate(150px, 180px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+    transform:   translate(0px, 19px) rotate3d(0, 1, 0, 180deg);
+    margin-right: 20px;
+  }
+
+  .quote {
+    font-size: x-large;
   }
 }
+
