@@ -1,5 +1,5 @@
 .mainField {
-  display: block;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -7,11 +7,13 @@
   margin-top: 130px;
   padding: 40px;
   height: 50%;
-  width: 30%;
+  width: 50%;
   border: 1px solid #2a2929;
-  border-radius: 10px;
-  background-color: red;
+  border-radius: 20%;
+  background-color: #f26666;
   border: 4mm ridge rgba(255, 0, 0, 0.6);
+  border-top: 4mm groove rgba(255, 0, 0, 0.6);
+  border-left: 4mm groove rgba(255, 0, 0, 0.6);
 
   h2 {
     text-align: center;
@@ -90,6 +92,7 @@
       font-size: 50px;
       margin-top: 20px;
       margin-bottom: 30px;
+      color: whitesmoke;
     }
 
     p {
