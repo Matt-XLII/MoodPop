@@ -28,10 +28,6 @@ export class ProfilComponent implements OnInit{
 
 changeTheme() {
 this.themeService.toggleTheme();
-<<<<<<< HEAD
-console.log(this.themeService.isDark);
-=======
->>>>>>> 8b76454f16501633fcfe80fdd9263ed63ec8316b
 }
 
 onMaleToggle() {
@@ -64,6 +60,7 @@ onSignIn(){
   }
   onLinkClick() {
     this.isLinkVisited = true;
+    alert("Very smart 👏, you should have noted that !" )
   }
 
   login() {
