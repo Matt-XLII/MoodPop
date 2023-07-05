@@ -21,4 +21,10 @@ lightThemeTextShadow = "none"
   toggleTheme() {
     this.isDark = !this.isDark;
 }
+
+theme = 'female-theme';
+
+changeTheme(newTheme: string) {
+  this.theme = newTheme;
+}
 }

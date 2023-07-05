@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GenderthemesService } from '../genderthemes.service';
+import { ThemeService } from '../services/theme.service';
 
 
 @Component({
@@ -17,14 +17,14 @@ export class UnmotivatedComponent implements OnInit {
   theme!: string;
   imageSource!: string;
 
-  constructor(private genderthemesService: GenderthemesService) { } // Injecte le service
+  constructor(private themeService: ThemeService) { } // Injecte le service
 
 
   ngOnInit(): void {
     this.fetchQuote();
 
    
-      this.theme = this.genderthemesService.theme;
+      this.theme = this.themeService.theme;
       if (this.theme === 'male-theme') {
         this.imageSource = "assets/TristeH2.jfif";
       } else if (this.theme === 'female-theme') {

@@ -1,7 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FakeAPI } from '../fake-api/fake-api';
-import { GenderthemesService } from '../genderthemes.service';
-
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-angry',
@@ -21,13 +20,14 @@ insult: string = "";
 theme!: string;
 imageSource!: string;
 
-constructor(private genderthemesService: GenderthemesService) { } // Injecte le service
+
+constructor(private themeService: ThemeService) { } // Injecte le service
 
 
 ngOnInit(): void {
 
 
-    this.theme = this.genderthemesService.theme;
+    this.theme = this.themeService.theme;
     if (this.theme === 'male-theme') {
       this.imageSource = "assets/CartoonVenere1.jpg";
     } else if (this.theme === 'female-theme') {
