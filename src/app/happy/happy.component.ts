@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GenderthemesService } from '../genderthemes.service';
 import { HappyService } from '../services/happy.service';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-happy',
@@ -17,13 +17,13 @@ checkedTimed = false;
 theme!: string;
 imageSource!: string;
 
-constructor(private genderthemesService: GenderthemesService,
+constructor(private themeService: ThemeService,
   private HappyService: HappyService) { } // Injecte le service
 
 ngOnInit(): void {
   this.HappyService.fetchData(this.joke);
 
-  this.theme = this.genderthemesService.theme;
+  this.theme = this.themeService.theme;
     if (this.theme === 'male-theme') {
       this.imageSource = "assets/HeureuxH1.jpg";
     } else if (this.theme === 'female-theme') {

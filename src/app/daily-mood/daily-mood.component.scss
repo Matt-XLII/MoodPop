@@ -1,6 +1,4 @@
-body {
-  background-color: #544d56;
-}
+
 
 .card {
   display: flex;
@@ -10,6 +8,7 @@ body {
   width: 400px;
   margin: 6px auto 80px ;
   margin-bottom: 30px;
+
 }
 .titre {
   background-clip: initial;
@@ -62,11 +61,20 @@ body {
 @media screen and (min-width: 800px) {
 
 
+.titre {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+}
+
+  h1 {
+    font-size: 45px;
+  }
 
 .card {
   display: flex;
   flex-wrap: nowrap;
- 
-
+  margin-bottom: 60px;
 }
 }

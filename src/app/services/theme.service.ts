@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class ThemeService {
 isDark: boolean = true;
 darkTheme = "#2a2929"
-darkThemeBackground = "#666464"
-darkThemeBackground2 = "#333232"
+darkThemeBackground = "#544D56"
+darkThemeBackground2 = "#544D56"
 darkThemeFontColor = "#ffffff"
 darkThemeTextShadow = "3px 3px 6px #000"
 
@@ -20,5 +20,11 @@ lightThemeTextShadow = "none"
 
   toggleTheme() {
     this.isDark = !this.isDark;
+}
+
+theme = 'female-theme';
+
+changeTheme(newTheme: string) {
+  this.theme = newTheme;
 }
 }

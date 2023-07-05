@@ -25,7 +25,7 @@ export class SignInComponent {
 
   submitRegister() {
     if (this.name === '' && this.username === '' && this.email === '' && this.password === '' && this.confirmPassword === '') {
-      alert('Fuck Rachid');
+      alert('Please fill out all fields');
     } else if (this.password !== this.confirmPassword) {
       alert('Passwords do not match');
     } else {
