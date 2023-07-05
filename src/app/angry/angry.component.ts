@@ -26,19 +26,18 @@ constructor(private genderthemesService: GenderthemesService) { } // Injecte le 
 
 ngOnInit(): void {
 
-    this.genderthemesService.theme$.subscribe(theme => {
-    this.theme = theme;
-    if (theme === 'male-theme') {
+
+    this.theme = this.genderthemesService.theme;
+    if (this.theme === 'male-theme') {
       this.imageSource = "assets/CartoonVenere1.jpg";
-    } else if (theme === 'female-theme') {
+    } else if (this.theme === 'female-theme') {
       this.imageSource = "assets/CartoonVenereF2.jpg";
-    } else if (theme === 'vegan-theme') {
+    } else if (this.theme === 'vegan-theme') {
       this.imageSource = 'assets/VeganEnerveF3.jfif';
     } else {
       this.imageSource = "assets/CartoonVenereF2.jpg";
     }
-  });
-}
+  };
 
 
 

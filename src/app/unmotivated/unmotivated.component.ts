@@ -23,19 +23,19 @@ export class UnmotivatedComponent implements OnInit {
   ngOnInit(): void {
     this.fetchQuote();
 
-    this.genderthemesService.theme$.subscribe(theme => {
-      this.theme = theme;
-      if (theme === 'male-theme') {
+   
+      this.theme = this.genderthemesService.theme;
+      if (this.theme === 'male-theme') {
         this.imageSource = "assets/TristeH2.jfif";
-      } else if (theme === 'female-theme') {
+      } else if (this.theme === 'female-theme') {
         this.imageSource = "assets/TristeF3.jfif";
-      } else if (theme === 'vegan-theme') {
+      } else if (this.theme === 'vegan-theme') {
         this.imageSource = 'assets/VeganTristeF2.jfif';
       } else {
         this.imageSource = "assets/TristeF3.jfif";
       }
-    });
-  }
+    };
+  
 
   fetchQuote(): void {
     fetch('https://api.chucknorris.io/jokes/random')
