@@ -138,8 +138,8 @@
       }"
       >Male</span
     >
-    <label class="toggle-switch" class="male">
-      <input type="checkbox" (click)="onMaleToggle()" />
+    <label class="toggle-switch" class="male" >
+      <input type="checkbox" (click)="onMaleToggle()" [checked]="genderthemesService.theme=='male-theme'"/>
       <span class="slider"></span>
     </label>
   </div>
@@ -157,7 +157,7 @@
       >Female</span
     >
     <label class="toggle-switch" class="female">
-      <input type="checkbox" (click)="onFemaleToggle()" />
+      <input type="checkbox" (click)="onFemaleToggle()" [checked]="genderthemesService.theme=='female-theme'"/>
 
       <span class="slider"></span>
     </label>
@@ -176,7 +176,7 @@
       >Vegan &nbsp;</span
     >
     <label class="toggle-switch" class="vegan">
-      <input type="checkbox" (click)="onVeganToggle()" />
+      <input type="checkbox" (click)="onVeganToggle()" [checked]="genderthemesService.theme=='vegan-theme'"/>
 
       <span class="slider"></span>
     </label>

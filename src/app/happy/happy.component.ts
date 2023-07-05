@@ -23,20 +23,19 @@ constructor(private genderthemesService: GenderthemesService,
 ngOnInit(): void {
   this.HappyService.fetchData(this.joke);
 
-    this.genderthemesService.theme$.subscribe(theme => {
-    this.theme = theme;
-    if (theme === 'male-theme') {
+  this.theme = this.genderthemesService.theme;
+    if (this.theme === 'male-theme') {
       this.imageSource = "assets/HeureuxH1.jpg";
-    } else if (theme === 'female-theme') {
+    } else if (this.theme === 'female-theme') {
       this.imageSource = "assets/CartoonHeureuxF1.jpg";
-    } else if (theme === 'vegan-theme') {
+    } else if (this.theme === 'vegan-theme') {
       this.imageSource = 'assets/VeganHeureuxF3.jfif';
     } else {
       this.imageSource = "assets/CartoonHeureuxF1.jpg";
     }
-  });
+  };
 
-}
+
 
 
 
