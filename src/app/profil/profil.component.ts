@@ -1,4 +1,4 @@
-import { Component, Output,EventEmitter } from '@angular/core';
+import { Component, Output,EventEmitter, OnInit } from '@angular/core';
 import { GenderthemesService } from '../genderthemes.service';
 import { Router } from '@angular/router';
 import { ThemeService } from '../services/theme.service';
@@ -8,8 +8,8 @@ import { ThemeService } from '../services/theme.service';
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.scss']
 })
-export class ProfilComponent {
-  constructor(private genderthemesService: GenderthemesService ,
+export class ProfilComponent implements OnInit{
+  constructor(public genderthemesService: GenderthemesService ,
     public themeService : ThemeService,
     private router :Router) { } // Injecte le service
 
@@ -20,6 +20,9 @@ export class ProfilComponent {
   password: string | any = '';
   isLinkVisited: boolean = true;
 
+  ngOnInit(): void {
+    this.genderthemesService.theme = this.genderthemesService.theme;
+  }
 
 changeTheme() {
 this.themeService.toggleTheme();

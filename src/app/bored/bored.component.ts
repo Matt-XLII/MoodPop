@@ -28,21 +28,20 @@ export class BoredComponent implements OnInit {
   constructor(private genderthemesService: GenderthemesService) { } // Injecte le service
 
   ngOnInit(): void {
-    this.fetchData();
-    this.genderthemesService.theme$.subscribe(theme => {
-      this.theme = theme;
-      if (theme === 'male-theme') {
+   this.fetchData();
+    this.theme = this.genderthemesService.theme;
+      if (this.theme === 'male-theme') {
         this.imageSource = "assets/EmbarasséNeutreH3.jfif";
-      } else if (theme === 'female-theme') {
+      } else if (this.theme === 'female-theme') {
         this.imageSource = "assets/EmbarasséF1.jpg";
-      } else if (theme === 'vegan-theme') {
+      } else if (this.theme === 'vegan-theme') {
         this.imageSource = 'assets/VeganBoredF2.jfif';
       } else {
         this.imageSource = "assets/EmbarasséF1.jpg";
       }
-    });
+    };
 
-  }
+  
 
   solution() {
     this.showSolution = true; // Afficher la solution lorsque le bouton est cliqué
@@ -116,4 +115,4 @@ export class BoredComponent implements OnInit {
   }
 
 
-  }
+}
