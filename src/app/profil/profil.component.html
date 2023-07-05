@@ -1,12 +1,9 @@
 
 <div class="settings-container" *ngIf="settingsOut" [ngStyle]="{
-  
-
 'background-color': themeService.isDark
   ? themeService.darkThemeBackground2
   : themeService.lightThemeBackground,
-}"
-
+}">
   <div class="sub-section">
     <form
       [ngStyle]="{
