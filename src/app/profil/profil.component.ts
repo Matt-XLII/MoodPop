@@ -52,7 +52,7 @@ onSignIn(){
   }
   onLinkClick() {
     this.isLinkVisited = true;
-    alert("very smart 👏, you should have noted that !" )
+    alert("Very smart 👏, you should have noted that !" )
   }
 
   login() {
