@@ -23,7 +23,7 @@ export class ProfilComponent {
 
 changeTheme() {
 this.themeService.toggleTheme();
-console.log("@@@@@@@@@@@@@@@",this.themeService.isDark);
+console.log(this.themeService.isDark);
 }
 
 onMaleToggle() {
@@ -53,7 +53,6 @@ onSignIn(){
   }
   onLinkClick() {
     this.isLinkVisited = true;
-    alert("Very smart 👏, you should have noted that !" )
   }
 
   login() {
