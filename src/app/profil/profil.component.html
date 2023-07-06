@@ -202,5 +202,5 @@
     </label>
   </div>
 </div>
-<app-sign-in *ngIf="isSignIn"></app-sign-in>
+<app-sign-in *ngIf="isSignIn" (closeSignInEvent)="closeSignIn($event)"></app-sign-in>
 <app-stats-mensuelles *ngIf="stats"></app-stats-mensuelles>

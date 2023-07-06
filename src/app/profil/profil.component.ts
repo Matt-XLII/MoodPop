@@ -49,7 +49,10 @@ export class ProfilComponent implements OnInit {
     this.isSignIn = !this.isSignIn;
   }
 
-
+  closeSignIn(event: boolean) {
+    this.isSignIn = event;
+    this.settingsOut = !this.settingsOut;
+  }
   onStats() {
     this.stats = !this.stats;
 

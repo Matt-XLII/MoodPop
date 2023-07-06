@@ -67,15 +67,14 @@ p:hover {
   &:hover {
     background-color: rgb(252, 177, 3);
     color: #000;
-    box-shadow: #ffffff 5px 0px 15px;
+    box-shadow: #161616 5px 0px 15px;
   }
 
-  button.next {
+  .next {
     margin: 5px auto;
     margin-bottom: 10px;
     text-align: center;
     color: #ffffff;
-    animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
     border-radius: 5px;
     background-color:#780dc9;
@@ -85,7 +84,6 @@ p:hover {
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     transition: 0.5s;
-
   }
 }
 
@@ -123,8 +121,8 @@ p:hover {
     font-size: 20px;
     margin: 20px auto;
     margin-bottom: 10px;
-    color: #000;
-    text-shadow: 1px 1px 2px #fff;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
     animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
     border-radius: 10px;
@@ -133,30 +131,29 @@ p:hover {
     transition: 0.5s;
     &:hover {
       background-color: rgba(252, 177, 3, 0.779);;
-      color: #000;
-      box-shadow: #ffffff 5px 0px 15px;
+      color: #ffffff;
+      box-shadow: #000000 5px 0px 15px;
     }
   }
 
-  button.next {
-    margin: 5px auto;
-    margin-bottom: 10px;
+  .next {
+    margin: 5px auto 10px;
     text-align: center;
     color: #ffffff;
-    animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #fcb204;
     width: 25%;
     height: 30px;
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     transition: 0.5s;
+    padding-top: 8px;
 
     &:hover {
 
-      box-shadow: #ffffff 10px 0px 25px;
+      box-shadow: #1f1f1f 10px 0px 10px;
     }
   }
 }
