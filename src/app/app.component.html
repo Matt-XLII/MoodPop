@@ -8,6 +8,7 @@
       class="header"
       (Toggle)="toggleBurger($event)"
       (Profile)="showProfile($event)"
+      (SignIn)="onSignIn($event)"
       [isMenuOpen]="showBurger"
     ></app-header>
     <app-menu-burger
@@ -23,7 +24,8 @@
       ? themeService.darkThemeBackground2
       : themeService.lightThemeBackground
   }">
-    <router-outlet *ngIf="!showBurger && !showProfileMenu"></router-outlet>
+  <app-sign-in *ngIf="SignIn" (closeSignInEvent)="onSignIn($event)"></app-sign-in>
+    <router-outlet *ngIf="!showBurger && !showProfileMenu && !SignIn"></router-outlet>
 </div>
   </div>
 <app-footer></app-footer>

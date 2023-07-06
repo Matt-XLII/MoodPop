@@ -12,6 +12,7 @@ export class HeaderComponent {
   constructor(private Router: Router) { }
   @Output() Toggle = new EventEmitter<boolean>();
   @Output() Profile = new EventEmitter<boolean>();
+  @Output() SignIn = new EventEmitter<boolean>();
   @Input() isMenuOpen = false;
 
   isProfileOpen = false;
@@ -21,8 +22,11 @@ export class HeaderComponent {
   username: string = '';
   password: string | any = '';
 
-  onSignIn() {
-    this.isSignIn = !this.isSignIn;
+
+
+  onSignIn(event : boolean) {
+    this.isSignIn = event;
+    this.SignIn.emit(this.isSignIn);
   }
 
   onLinkClick() {

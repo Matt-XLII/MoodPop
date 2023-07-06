@@ -1,15 +1,4 @@
-/*import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
-})
-export class SignInComponent {
-
-}*/
-
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sign-in',
@@ -22,6 +11,10 @@ export class SignInComponent {
   email: string = '';
   password: string | any = '';
   confirmPassword: string | any = '';
+  SignIn: boolean = false;
+
+  @Output() closeSignInEvent = new EventEmitter<boolean>();
+
 
   submitRegister() {
     if (this.name === '' && this.username === '' && this.email === '' && this.password === '' && this.confirmPassword === '') {
@@ -31,5 +24,9 @@ export class SignInComponent {
     } else {
       alert('You are registered');
     }
+  }
+
+  closeSignIn() {
+    this.closeSignInEvent.emit(this.SignIn);
   }
 }

@@ -1,21 +1,9 @@
-/*.body{
-     background: #000000A1;
-     height: 50%;
-     padding-top: 40px;
 
-
-}
-
-span{
-    color: #000000A1;
-    margin-top: 50px;
-}
-*/
 
 img {
     display: flex;
     justify-content: left;
-    //align-items: left;
+
     align-items: start;
     justify-content: start;
     width: 50px;
@@ -41,7 +29,7 @@ section {
     background-color: #c6c2c2;
     border-radius: 10px;
     padding: 10px;
-   /* margin: 20px 10px 100px 10px;*/
+
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.348);
     border: 2px solid rgb(0, 0, 0);
     max-width: 82%;
@@ -82,12 +70,11 @@ button:hover {
       background-color: #c6c2c2;
       border-radius: 10px;
       padding: 10px;
-     /* margin: 20px 10px 100px 10px;*/
       box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.348);
       border: 2px solid rgb(0, 0, 0);
       max-width: 60%;
       max-height: 100px;
-      margin: auto;
+      margin:  0 auto 80px;
         p {
             font-size: 18px;
             font-family: 'roboto';
