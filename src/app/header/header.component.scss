@@ -4,21 +4,17 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #2f2f2f;
-  padding: 10px;
+
   height: 90px;
   width: 100%;
   min-width: 375px;
 }
-
-
 
 .logo img {
   height: 90px;
   width: 90px;
   cursor: pointer;
 }
-
-
 
 .menu-toggle .toggle {
   font-size: 30px;
@@ -31,12 +27,9 @@ header {
   top: 33px;
 }
 
-
-
 .menu {
   display: none;
 }
-
 
 .menu a {
   text-decoration: none;
@@ -53,46 +46,44 @@ header {
   cursor: pointer;
   background: none;
 }
-.sub-section{
-  display:none
+.sub-section {
+  display: none;
 }
 
-@media screen and (min-width : 800px) {
-  header{
+@media screen and (min-width: 800px) {
+  header {
     top: 0px;
     position: sticky;
-    width : 15%;
+    width: 15%;
     height: 100vh;
     min-width: 250px;
     box-shadow: #2f2f2f 5px 0px 35px;
-    .logo{
+    .logo {
       position: absolute;
       top: 15px;
-      left: 15px;   
+      left: 15px;
     }
     .logo img {
       height: 200px;
       width: 220px;
     }
   }
-    .hidden{
+  .hidden {
     display: none;
   }
 
-  .setting{
-    top : 15%;
-    left : 50%;
+  .setting {
+    top: 15%;
+    left: 50%;
   }
 
-  hr{
+  hr {
     width: 80%;
     margin: 0 auto;
     margin-bottom: 10px;
-    
   }
 
-
-  .menu{
+  .menu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -100,18 +91,18 @@ header {
     height: auto;
     width: 100%;
     position: absolute;
-    top : 25%;
+    top: 25%;
     right: 0px;
     list-style: none;
-    li{
+    li {
       font-size: 1.6rem;
       text-shadow: 3px 3px 6px #000;
       margin-bottom: 1rem;
     }
-    li:hover{
+    li:hover {
       transform: scale(1.1);
     }
-      }
+  }
 
   .setting2 {
     border: none;
@@ -120,8 +111,8 @@ header {
   }
 
   /* Ajout du login */
-  .sub-section{
-    display:initial;
+  .sub-section {
+    display: initial;
     width: 95%;
     form {
       display: flex;
@@ -133,12 +124,12 @@ header {
       padding: 10px;
       margin: 10px;
 
-      h3{
+      h3 {
         text-align: center;
         color: whitesmoke;
         text-shadow: 3px 3px 6px #000;
         margin-bottom: 10%;
-        text-decoration:none
+        text-decoration: none;
       }
       input {
         display: block;
@@ -146,15 +137,15 @@ header {
         padding: 5px;
         border: 1px solid #2a2929;
         border-radius: 4px;
-        margin:auto ;
+        margin: auto;
         margin-bottom: 10px;
-     }
+      }
     }
-    a{
+    a {
       text-align: center;
       margin-bottom: 10px;
     }
-    .btn-log{
+    .btn-log {
       border: 1px solid black;
       width: 48%;
       border-radius: 5px;
@@ -163,7 +154,7 @@ header {
       background: radial-gradient(#a3eef4, #ccf5f8);
       color: black;
     }
-    .btn-signin{
+    .btn-signin {
       border: 1px solid black;
       width: 48%;
       border-radius: 5px;
@@ -171,10 +162,9 @@ header {
       background: radial-gradient(#a3eef4, #ccf5f8);
       color: black;
     }
-    .btn{
+    .btn {
       display: flex;
       justify-content: space-between;
     }
   }
-
 }

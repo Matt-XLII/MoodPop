@@ -24,23 +24,23 @@ export class UnmotivatedComponent implements OnInit {
     this.fetchQuote();
 
 
-      this.theme = this.themeService.theme;
-      if (this.theme === 'male-theme') {
-        this.imageSource = "assets/TristeH2.jfif";
-      } else if (this.theme === 'female-theme') {
-        this.imageSource = "assets/TristeF3.jfif";
-      } else if (this.theme === 'vegan-theme') {
-        this.imageSource = 'assets/VeganTristeF2.jfif';
-      } else {
-        this.imageSource = "assets/TristeF3.jfif";
-      }
-    };
+    this.theme = this.themeService.theme;
+    if (this.theme === 'male-theme') {
+      this.imageSource = "assets/TristeH2.jfif";
+    } else if (this.theme === 'female-theme') {
+      this.imageSource = "assets/TristeF3.jfif";
+    } else if (this.theme === 'vegan-theme') {
+      this.imageSource = 'assets/VeganTristeF2.jfif';
+    } else {
+      this.imageSource = "assets/TristeF3.jfif";
+    }
+  };
 
 
   fetchQuote(): void {
     fetch('https://api.chucknorris.io/jokes/random')
-    .then(response => response.json())
-    .then((data: any) => this.quote = data.value);
+      .then(response => response.json())
+      .then((data: any) => this.quote = data.value);
   }
 
 

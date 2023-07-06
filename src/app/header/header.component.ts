@@ -24,7 +24,7 @@ export class HeaderComponent {
 
 
 
-  onSignIn(event : boolean) {
+  onSignIn(event: boolean) {
     this.isSignIn = event;
     this.SignIn.emit(this.isSignIn);
   }

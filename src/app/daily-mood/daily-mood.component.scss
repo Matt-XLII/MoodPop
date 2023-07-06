@@ -1,6 +1,5 @@
-
 h1 {
-margin :20px 0 0 0 ;
+  margin: 20px 0 0 0;
 }
 .card {
   display: flex;
@@ -8,9 +7,8 @@ margin :20px 0 0 0 ;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 400px;
-  margin: 6px auto 40px ;
+  margin: 6px auto 40px;
   margin-bottom: 20px;
-
 }
 .titre {
   background-clip: initial;
@@ -53,9 +51,8 @@ margin :20px 0 0 0 ;
   .card {
     width: 650px;
     display: flex;
-  margin-bottom: 30px;
-  justify-content: center;
-
+    margin-bottom: 30px;
+    justify-content: center;
   }
 
   h1 {
@@ -63,16 +60,14 @@ margin :20px 0 0 0 ;
     margin-bottom: 0;
   }
 
-.titre {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-
-}
+  .titre {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
 
   h1 {
     font-size: 50px;
-   margin-top:20px;
+    margin-top: 20px;
   }
-
 }

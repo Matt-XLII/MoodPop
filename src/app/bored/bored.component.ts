@@ -9,9 +9,9 @@ import { ThemeService } from '../services/theme.service';
 })
 export class BoredComponent implements OnInit {
 
-  title : string = "";
-  question : string = "";
-  answer : string = "";
+  title: string = "";
+  question: string = "";
+  answer: string = "";
   theme!: string;
   imageSource!: string;
 
@@ -28,18 +28,18 @@ export class BoredComponent implements OnInit {
   constructor(private themeService: ThemeService) { } // Injecte le service
 
   ngOnInit(): void {
-   this.fetchData();
+    this.fetchData();
     this.theme = this.themeService.theme;
-      if (this.theme === 'male-theme') {
-        this.imageSource = "assets/emojiEmbarrassé.jpeg";
-      } else if (this.theme === 'female-theme') {
-        this.imageSource = "assets/EmbarasséF1.jpg";
-      } else if (this.theme === 'vegan-theme') {
-        this.imageSource = 'assets/VeganBoredF2.jfif';
-      } else {
-        this.imageSource = "assets/EmbarasséF1.jpg";
-      }
-    };
+    if (this.theme === 'male-theme') {
+      this.imageSource = "assets/emojiEmbarrassé.jpeg";
+    } else if (this.theme === 'female-theme') {
+      this.imageSource = "assets/EmbarasséF1.jpg";
+    } else if (this.theme === 'vegan-theme') {
+      this.imageSource = 'assets/VeganBoredF2.jfif';
+    } else {
+      this.imageSource = "assets/EmbarasséF1.jpg";
+    }
+  };
 
 
 
@@ -52,14 +52,14 @@ export class BoredComponent implements OnInit {
 
   isAnswered() {
 
-    if (this.timed===true && this.clicked===true) {
-      this.timed =!this.timed;
-      this.clicked =!this.clicked;
+    if (this.timed === true && this.clicked === true) {
+      this.timed = !this.timed;
+      this.clicked = !this.clicked;
       this.checked = true;
       setTimeout(() => {
-        this.checkedTimed =!this.checkedTimed;
-      },750)
-    } else {}
+        this.checkedTimed = !this.checkedTimed;
+      }, 750)
+    } else { }
 
   }
 
@@ -69,45 +69,49 @@ export class BoredComponent implements OnInit {
 
   isClicked() {
     if (!this.revealed && !this.checked) {
-    if (this.checked===false){
-      if (this.timed===false && this.clicked===false) {
-        this.clicked = !this.clicked;
-        setTimeout(() => {
-          this.timed =!this.timed;
-        },750)} else {
-          if (this.timed===true && this.clicked===true) {
-            this.timed =!this.timed;
-            this.clicked =!this.clicked;
+      if (this.checked === false) {
+        if (this.timed === false && this.clicked === false) {
+          this.clicked = !this.clicked;
+          setTimeout(() => {
+            this.timed = !this.timed;
+          }, 750)
+        } else {
+          if (this.timed === true && this.clicked === true) {
+            this.timed = !this.timed;
+            this.clicked = !this.clicked;
             this.checked = true;
             setTimeout(() => {
-              this.checkedTimed =!this.checkedTimed;
-            },750)
+              this.checkedTimed = !this.checkedTimed;
+            }, 750)
           }
-        }} else {}
-      }
+        }
+      } else { }
     }
+  }
 
-  fetchData():void{
+  fetchData(): void {
     fetch("https://api.api-ninjas.com/v1/riddles/", {
-      method:'GET',
+      method: 'GET',
       headers: {
-    'X-Api-key' : 'q80JOdvIGyOhfvSXFKWV4A==0y5PJl9FCDrqP2ik',
-    'Content-type': 'application/json',}})
-    .then(response => response.json())
-    .then(data => {
-      const validData = data.find((item: { question: string | any[]; }) => item.question.length <= 70);
-      if (validData) {
-        this.title = data[0].title;
-        this.question = validData.question;
-
-        this.answer = data[0].answer;
-      } else {
-        this.fetchData();
+        'X-Api-key': 'q80JOdvIGyOhfvSXFKWV4A==0y5PJl9FCDrqP2ik',
+        'Content-type': 'application/json',
       }
-    });
-   }
+    })
+      .then(response => response.json())
+      .then(data => {
+        const validData = data.find((item: { question: string | any[]; }) => item.question.length <= 70);
+        if (validData) {
+          this.title = data[0].title;
+          this.question = validData.question;
 
-   limitCharacterLength(text: string, maxLength: number): string {
+          this.answer = data[0].answer;
+        } else {
+          this.fetchData();
+        }
+      });
+  }
+
+  limitCharacterLength(text: string, maxLength: number): string {
     if (text.length > maxLength) {
       return text.substring(0, maxLength) + "...";
     }

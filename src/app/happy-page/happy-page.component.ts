@@ -12,7 +12,7 @@ export class HappyPageComponent implements OnInit {
   jokes: string[] = [];
   currentIndex: number = 0;
 
-  constructor(private happyService: HappyService) {}
+  constructor(private happyService: HappyService) { }
 
   ngOnInit(): void {
     this.happyService.fetchJokes(this.jokes);

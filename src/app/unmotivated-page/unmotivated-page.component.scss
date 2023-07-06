@@ -1,93 +1,90 @@
+.mainField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 30%;
+  padding: 40px;
+  width: 50%;
+  height: 50%;
+  border-radius: 20%;
+  border: 4mm ridge rgb(38, 28, 213);
+  border-top: 4mm groove rgb(38, 28, 213);
+  border-left: 4mm groove rgb(38, 28, 213);
+  border-radius: 20%;
+  background-color: #6c8aeb;
 
+  h2 {
+    text-align: center;
+    margin: 0 0 20px;
+    color: whitesmoke;
+    text-shadow: 3px 3px 6px #000;
+    font-size: 32px;
+    font-family: "Roboto", sans-serif;
+  }
 
-  .mainField {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 30%;
-    padding: 40px;
+  hr {
+    border: 0.5px solid #2a2929;
+    margin: 15px;
     width: 50%;
-    height: 50%;
-    border-radius: 20%;
-    border: 4mm ridge rgb(38, 28, 213);
-    border-top: 4mm groove rgb(38, 28, 213);
-    border-left: 4mm groove rgb(38, 28, 213);
-    border-radius: 20%;
-    background-color: #6c8aeb;
+  }
 
-  
-    h2 {
-      text-align: center;
-      margin: 0 0 20px;
-      color: whitesmoke;
-      text-shadow: 3px 3px 6px #000;
-      font-size: 32px;
-      font-family: 'Roboto', sans-serif;
-    }
-  
-    hr {
-      border: 0.5px solid #2a2929;
-      margin: 15px;
-      width: 50%;
-    }
-  
-    p {
-      font-size: 18px;
-      font-family: 'Roboto', sans-serif;
-      margin: 10px;
-      text-align: center;
-      color: #fff;
-      animation: scroll 10s linear infinite;
-      text-shadow: 1px 1px 2px #000;
-  
-      &:hover {
-        text-shadow: 4px 4px 8px #000;
-      }
-    }
+  p {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    animation: scroll 10s linear infinite;
+    text-shadow: 1px 1px 2px #000;
 
-    button.next {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 5px auto 10px;
-      text-align: center;
-      color: white;
-      animation: scroll 10s linear infinite;
-      border: 1px solid #2a2929;
-      border-radius: 5px;
-      background-color: rgb(38, 28, 213);
-      width: 15%;
-      height: 30px;
-      font-size: 15px;
-      font-family: 'Roboto', sans-serif;
-      cursor: pointer;
-      transition: 0.5s;
-      padding: 10px 20px;
-
-      &:hover {
-        box-shadow: #ffffff 10px 0px 15px;
-      }
-    }
-  
-    @media screen and (min-width: 800px) {
-      margin-top: 130px;
-      box-shadow: #2a2929 10px 0px 25px;
-      padding: 40px;
-      height: 50%;
-      width: 30%;
-      border-radius: 20%;
-  
-      h2 {
-        font-size: 50px;
-        margin-top: 20px;
-        margin-bottom: 30px;
-        font-family: 'Roboto', sans-serif;
-      }
-  
-      p {
-        font-size: 25px;
-      }
+    &:hover {
+      text-shadow: 4px 4px 8px #000;
     }
   }
+
+  button.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto 10px;
+    text-align: center;
+    color: white;
+    animation: scroll 10s linear infinite;
+    border: 1px solid #2a2929;
+    border-radius: 5px;
+    background-color: rgb(38, 28, 213);
+    width: 15%;
+    height: 30px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 20px;
+
+    &:hover {
+      box-shadow: #ffffff 10px 0px 15px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    margin-top: 130px;
+    box-shadow: #2a2929 10px 0px 25px;
+    padding: 40px;
+    height: 50%;
+    width: 30%;
+    border-radius: 20%;
+
+    h2 {
+      font-size: 50px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      font-family: "Roboto", sans-serif;
+    }
+
+    p {
+      font-size: 25px;
+    }
+  }
+}

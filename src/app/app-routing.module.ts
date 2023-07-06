@@ -11,14 +11,14 @@ import { UnmotivatedPageComponent } from './unmotivated-page/unmotivated-page.co
 
 const routes: Routes = [
 
-    {path: 'bored', component: BoredPageComponent},
-    {path: 'angry', component: AngryPageComponent},
-    {path: 'happy', component: HappyPageComponent},
-    {path: 'unmotivated', component: UnmotivatedPageComponent},
+    { path: 'bored', component: BoredPageComponent },
+    { path: 'angry', component: AngryPageComponent },
+    { path: 'happy', component: HappyPageComponent },
+    { path: 'unmotivated', component: UnmotivatedPageComponent },
     { path: 'dailymood', component: DailyMoodComponent },
-    { path: 'login', component: LogInComponent},
-    { path: 'signin', component: SignInComponent},
-    { path: '', component: DailyMoodComponent}
+    { path: 'login', component: LogInComponent },
+    { path: 'signin', component: SignInComponent },
+    { path: '', component: DailyMoodComponent }
 ];
 
 @NgModule({
@@ -27,4 +27,4 @@ const routes: Routes = [
 
 })
 
-export class AppRoutingModule {}
+export class AppRoutingModule { }
