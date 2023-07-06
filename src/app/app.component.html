@@ -15,7 +15,7 @@
       (MenuClosed)="toggleBurger($event)"
     ></app-menu-burger>
     <app-profil
-      *ngIf="showProfileMenu"
+      [ngClass]="{hidden : !showProfileMenu}"
     ></app-profil>
     <div class="centerrouter">
     <router-outlet *ngIf="!showBurger && !showProfileMenu"></router-outlet>
