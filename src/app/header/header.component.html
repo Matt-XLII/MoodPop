@@ -6,7 +6,7 @@
     <img src="/assets/profilBlanc.png" height="30" />
   </button>
   <div class="menu-toggle">
-    <button class="toggle hidden" (click)="toggleMenu()">
+    <button class="hidden" (click)="toggleMenu()" [ngClass]="{'untoggled' : !isMenuOpen, 'toggled' : isMenuOpen}">
       {{ isMenuOpen ? "X" : "☰" }}
     </button>
   </div>
