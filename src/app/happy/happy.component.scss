@@ -27,6 +27,7 @@
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
+    cursor: pointer;
   }
 }
 
@@ -133,7 +134,7 @@
   z-index: 2;
   position: absolute;
   bottom: 5px;
-  left: 28px;
+  left: 5px;
   width:15px;
   height: 15px;
   background-image: url('/assets/IconeShare6.png');
@@ -149,28 +150,6 @@
 .share.isTimedChecked {
   display: none;
 }
-
-.like {
-  z-index: 2;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  width:15px;
-  height: 15px;
-  background-image: url('/assets/IconeStar6.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  background-color: transparent ;
-  transition: 1.5s ease-in-out;
-
-}
-
-.like.isTimedChecked {
-  display: none;
-}
-
 
 .test {
   width: 150px;
@@ -202,6 +181,27 @@
 
   .quote {
     font-size: x-large;
+          padding-top: 45px;
+
+  }
+
+  .container.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .retour {
+    top: 5px;
+    right: 10px;
+    width:25px;
+    height: 25px;
+  }
+
+  .share {
+    left: 10px;
+    width:25px;
+    height: 25px;
   }
 }
 

@@ -31,7 +31,7 @@ export class BoredComponent implements OnInit {
    this.fetchData();
     this.theme = this.themeService.theme;
       if (this.theme === 'male-theme') {
-        this.imageSource = "assets/EmbarasséNeutreH3.jfif";
+        this.imageSource = "assets/emojiEmbarrassé.jpeg";
       } else if (this.theme === 'female-theme') {
         this.imageSource = "assets/EmbarasséF1.jpg";
       } else if (this.theme === 'vegan-theme') {
@@ -41,7 +41,7 @@ export class BoredComponent implements OnInit {
       }
     };
 
-  
+
 
   solution() {
     this.showSolution = true; // Afficher la solution lorsque le bouton est cliqué
@@ -95,7 +95,7 @@ export class BoredComponent implements OnInit {
     'Content-type': 'application/json',}})
     .then(response => response.json())
     .then(data => {
-      const validData = data.find((item: { question: string | any[]; }) => item.question.length <= 120);
+      const validData = data.find((item: { question: string | any[]; }) => item.question.length <= 70);
       if (validData) {
         this.title = data[0].title;
         this.question = validData.question;
@@ -114,5 +114,8 @@ export class BoredComponent implements OnInit {
     return text;
   }
 
+  redirectToPage() {
+    window.open('https://www.instagram.com/accounts/login/', '_blank');
+  }
 
 }
