@@ -25,7 +25,7 @@ export class UnmotivatedService {
         }
       })
         .then(function (response) { return response.json() })
-        .then((data: any) => list.push(data.joke))
-    }
+        .then((data: any) => data.joke.length < 150? list.push(data.joke) : this.fetchChuck(list))
+;    }
   }
 }

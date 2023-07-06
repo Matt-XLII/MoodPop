@@ -13,10 +13,10 @@ export class DailyFactComponent implements OnInit {
   }
 
   fetchQuoteFact() {
-    fetch('https://uselessfacts.jsph.pl/api/v2/facts/random')
+    fetch('https://uselessfacts.jsph.pl/api/v2/facts/today')
       .then(response => response.json())
       .then(quote => {
-        const limitedQuote = this.limitCharacterLength(quote.text, 100);
+        const limitedQuote = this.limitCharacterLength(quote.text, 200);
         this.quote = limitedQuote;
       });
   }
