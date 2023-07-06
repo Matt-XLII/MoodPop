@@ -3,21 +3,117 @@ ul {
   padding: 0;
 }
 
-li {
-  margin-bottom: 30px;
-  border: 1px solid black;
-  width: 45%;
+
+
+
+li.btnGreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #50d750;
+  box-shadow: 2px 2px 5px 5px #21712196;
+  border-radius: 50px;
+  border: none;
+  width: 75px;
+  height: 90px;
+  font-size: 20px;
+  font-weight: bold ;
   margin: auto;
-  margin-bottom: 60px;
-  border-radius: 5px;
+  margin-bottom: 20px;
+  border-radius: 10px;
   padding: 5px 20px 5px 20px;
   transition: transform 0.2s ease-in-out;
-  background: radial-gradient(#a3eef4, #ccf5f8);
-  color: black;
+  color: whitesmoke;
+  font-size: 20px ;
+  cursor: pointer;
 }
 
-li:hover {
-  transform: scale(1.1);
+li.btnRed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ed4141;
+  box-shadow: 2px 2px 5px 5px #7a1f1f96;
+  border-radius: 50px;
+  border: none;
+  width: 75px;
+  height: 90px;
+  font-size: 20px;
+  font-weight: bold ;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 5px 20px 5px 20px;
+  transition: transform 0.2s ease-in-out;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+li.btnBlue{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4741ed;
+  box-shadow: 2px 2px 5px 5px #1f1f7a96;
+  border-radius: 50px;
+  border: none;
+  width: 75px;
+  height: 90px;
+  font-size: 20px;
+  font-weight: bold ;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 5px 20px 5px 20px;
+  transition: transform 0.2s ease-in-out;
+  color: whitesmoke;
+  font-size: 16px ;
+  cursor: pointer;
+}
+
+li.btnYellow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcb204;
+  box-shadow: 1px 1px 3px 3git addpx #7a7a1f96;
+  border-radius: 50px;
+  border: none;
+  width: 75px;
+  height: 90px;
+  font-size: 20px;
+  font-weight: bold ;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 5px 20px 5px 20px;
+  transition: transform 0.2s ease-in-out;
+  color: whitesmoke;
+  font-size: 20px ;
+  cursor: pointer;
+}
+
+
+li.btnOrange{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background-color: #eda241;
+  background-color: #fc04d7;
+  box-shadow: 2px 2px 5px 5px #7a1f7a96;
+  border-radius: 50px;
+  border: none;
+  width: 75px;
+  height: 90px;
+  font-size: 20px;
+  font-weight: bold ;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 5px 20px 5px 20px;
+  transition: transform 0.2s ease-in-out;
+  color: whitesmoke;
+  font-size: 17px;
   cursor: pointer;
 }
 
@@ -49,7 +145,7 @@ h1 {
   text-align: center;
   color: whitesmoke;
   text-shadow: 3px 3px 6px #000;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   text-decoration: none;
 }
 
