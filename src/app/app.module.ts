@@ -9,7 +9,7 @@ import { DailyFactComponent } from './daily-fact/daily-fact.component';
 import { HeaderComponent } from './header/header.component';
 import { DailyMoodComponent } from './daily-mood/daily-mood.component';
 import { UnmotivatedComponent } from './unmotivated/unmotivated.component';
-import { AngryComponent, DialogContentComponent } from './angry/angry.component';
+import { AngryComponent } from './angry/angry.component';
 import { HappyComponent } from './happy/happy.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -52,7 +52,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     AngryPageComponent,
     BoredPageComponent,
     UnmotivatedPageComponent,
-    DialogContentComponent
+ 
 
   ],
   imports: [
