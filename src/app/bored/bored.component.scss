@@ -38,6 +38,7 @@
   transition: 1.5s ease-in-out;
   transform: translate(-95px, -95px) scale(2.3) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
+  font-size: medium;
   img{
     border-radius: 10px;
     border: 1px solid #000;
@@ -51,6 +52,8 @@
   margin: 0;
   transform: translate(-95px, -95px) scale(2.3); /* Pas de rotation */
     border-radius: 10px;
+    font-size: small;
+
   img {
     border-radius: 10px;
     border: 1px solid #000;
@@ -71,6 +74,7 @@
   transition: 1.5s ease-in-out;
   transform: translate(-95px, -95px) scale(2.3) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
+  font-size: small;
   img {
     opacity: 0.1;
     border-radius: 10px;

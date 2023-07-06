@@ -23,7 +23,7 @@ export class UnmotivatedComponent implements OnInit {
   ngOnInit(): void {
     this.fetchQuote();
 
-   
+
       this.theme = this.themeService.theme;
       if (this.theme === 'male-theme') {
         this.imageSource = "assets/TristeH2.jfif";
@@ -35,7 +35,7 @@ export class UnmotivatedComponent implements OnInit {
         this.imageSource = "assets/TristeF3.jfif";
       }
     };
-  
+
 
   fetchQuote(): void {
     fetch('https://api.chucknorris.io/jokes/random')
@@ -69,5 +69,9 @@ export class UnmotivatedComponent implements OnInit {
       }
     } else {
     }
+  }
+
+  redirectToPage() {
+    window.open('https://www.instagram.com/accounts/login/', '_blank');
   }
 }

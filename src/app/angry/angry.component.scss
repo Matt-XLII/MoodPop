@@ -172,7 +172,17 @@
 
   .quote {
     font-size: x-large;
+          padding-top: 45px;
+
   }
+
+  .container.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+
 
   .retour {
     top: 5px;
