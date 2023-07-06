@@ -1,6 +1,8 @@
 <div class="container" [ngClass]="{'isClicked' : clicked}" [ngClass]="{'timer': timed}"
   [ngClass]="{'isChecked': checked}" (click)="isClicked()">
-  <img  [src]="imageSource" alt="personne énervée">
+  <img class="angry" [src]="imageSource" alt="personne énervée">
+  <img class ="interdit" src="/assets/18.1.png" alt="moins de 18 ans">
+
   <div class="test" *ngIf="clicked || checked || timed">
     <p [ngClass]="{'isTimedChecked': checkedTimed}" *ngIf="timed && !checkedTimed" class="quote">{{insult}}</p>
     <button [ngClass]="{'isClicked': clicked }" [ngClass]="{'isTimedChecked': checkedTimed}" *ngIf="timed && !checkedTimed"class="retour"></button>

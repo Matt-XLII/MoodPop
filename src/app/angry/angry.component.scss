@@ -7,6 +7,14 @@
   justify-content: center;
 }
 
+.interdit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: auto;
+}
+
 
 .container {
   position: relative;
@@ -20,7 +28,7 @@
   flex-grow: 1;
   z-index: 0;
   border-radius: 10px;
-  img {
+  .angry {
     position: absolute;
     width: 165px;
     height: 200px;
@@ -38,7 +46,7 @@
   transition: 1.5s ease-in-out;
   transform: translate(-95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
-  img{
+  .angry{
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
@@ -53,7 +61,7 @@
   transform: translate(-95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
 
-  img {
+  .angry {
     opacity: 0.1;
     border-radius: 10px;
     border: 1px solid #000;
@@ -72,7 +80,7 @@
   width: 150px; //rajout de la width de 150px
   justify-content: center;
   border-radius: 10px;
-  img {
+  .angry {
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
@@ -155,7 +163,7 @@
     min-width: 300px;
     margin-right: 20px;
 
-    img{
+    .angry{
       min-width: 300px;
       min-height: 360px;
     }
@@ -182,8 +190,6 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-
-
 
   .retour {
     top: 5px;
