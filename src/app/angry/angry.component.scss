@@ -46,7 +46,7 @@
   transition: 1.5s ease-in-out;
   transform: translate(-95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
-  .angry{
+  .angry {
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
@@ -93,6 +93,28 @@
     display: none;
   }
 }
+
+.interdit {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width:35px;
+  height: 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.interdit.isClicked {
+  transform:  rotate3d(0, 1, 0, 180deg);
+  width:25px;
+  height: 25px;
+}
+
+.interdit.isTimedChecked {
+display: none;}
 
 .retour {
   position: absolute;
@@ -202,5 +224,11 @@
     left: 10px;
     width:25px;
     height: 25px;
+  }
+
+  .interdit.isClicked {
+    transform:  rotate3d(0, 1, 0, 180deg);
+    width:45px;
+    height: 45px;
   }
 }
