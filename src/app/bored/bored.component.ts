@@ -31,7 +31,7 @@ export class BoredComponent implements OnInit {
    this.fetchData();
     this.theme = this.themeService.theme;
       if (this.theme === 'male-theme') {
-        this.imageSource = "assets/EmbarasséNeutreH3.jfif";
+        this.imageSource = "assets/emojiEmbarrassé.jpeg";
       } else if (this.theme === 'female-theme') {
         this.imageSource = "assets/EmbarasséF1.jpg";
       } else if (this.theme === 'vegan-theme') {
