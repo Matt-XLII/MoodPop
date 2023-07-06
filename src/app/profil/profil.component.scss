@@ -265,7 +265,9 @@ input:checked + .slider:before {
     display: none;
   }
   .settings-container{
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.441);
+    box-shadow: 3px 3px 10px 10px #02020248;
+    width: 300px;
+    height: 450px;
   }
 
 }
