@@ -131,7 +131,7 @@
   z-index: 2;
   position: absolute;
   bottom: 5px;
-  left: 28px;
+  left: 5px;
   width:15px;
   height: 15px;
   background-image: url('/assets/IconeShare6.png');
@@ -147,28 +147,6 @@
 .share.isTimedChecked {
   display: none;
 }
-
-.like {
-  z-index: 2;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  width:15px;
-  height: 15px;
-  background-image: url('/assets/IconeStar6.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  background-color: transparent ;
-  transition: 1.5s ease-in-out;
-  transform: rotate3d(0, 1, 0, 180deg);
-}
-
-.like.isTimedChecked {
-  display: none;
-}
-
 
 .test {
   width: 150px;
@@ -199,5 +177,18 @@
 
   .quote {
     font-size: x-large;
+  }
+
+  .retour {
+    top: 5px;
+    right: 10px;
+    width:25px;
+    height: 25px;
+  }
+
+  .share {
+    left: 10px;
+    width:25px;
+    height: 25px;
   }
 }
