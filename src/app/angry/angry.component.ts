@@ -1,6 +1,8 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Inject, OnInit} from '@angular/core';
 import { FakeAPI } from '../fake-api/fake-api';
 import { ThemeService } from '../services/theme.service';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-angry',
@@ -21,7 +23,7 @@ theme!: string;
 imageSource!: string;
 
 
-constructor(private themeService: ThemeService) { } // Injecte le service
+constructor(private themeService: ThemeService, public dialog: MatDialog) { } // Injecte le service
 
 
 ngOnInit(): void {
@@ -42,8 +44,6 @@ ngOnInit(): void {
 
 
 isClicked() {
-  this.ageConfirmation(); //rajout pour vérification de l'age//
-
   if (this.checked === false){
     if (this.timed === false && this.clicked === false) {
       this.clicked = !this.clicked;
@@ -72,16 +72,44 @@ isClicked() {
     window.open('https://www.instagram.com/accounts/login/', '_blank');
   }
 
-  ageConfirmation() {
-    const confirmed = window.confirm('Avez-vous plus de 18 ans ?');
-    if (confirmed) {
-      this.checked = false;
-    } else {
-      this.checked = true;
-      this.insult = "Vous devez avoir plus de 18 ans pour accéder à ce contenu.";
-    }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogContentComponent, {
+      data: { component: this }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result === 'major') {
+        this.checked = false;
+        this.isClicked();
+      } else if (result === 'minor') {
+        this.checked = true;
+        this.insult = "Vous devez avoir plus de 18 ans pour accéder à ce contenu.";
+      }
+    });
   }
 
+  toggleClickState() {
+    this.openDialog();
+  }
+}
+
+@Component({
+  selector: 'dialog-content',
+  template: `
+    <h1 mat-dialog-title>Êtes-vous majeur(e) ?</h1>
+    <div mat-dialog-actions>
+      <button mat-button (click)="dialogRef.close('major')">J'ai plus de 18 ans</button>
+      <button mat-button (click)="dialogRef.close('minor')">J'ai moins de 18 ans</button>
+    </div>
+  `,
+})
+
+
+
+
+  export class DialogContentComponent {
+    constructor(public dialogRef: MatDialogRef<DialogContentComponent>,
+                @Inject(MAT_DIALOG_DATA) public data: {component: AngryComponent}) {}
   }
 
 
