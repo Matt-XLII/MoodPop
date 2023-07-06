@@ -38,6 +38,7 @@ rachidJoke(){
 
 richardJoke(){
   return alert("Euh.....Sinon je fais un git clone?😒");
+
 }
 
 }
