@@ -1,46 +1,48 @@
-.account{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 9999;
-    background-color: #333232;
-    width: 90%;
-    height: 65%;
-    margin :auto;
-    border-radius: 10px;
+.account {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  background-color: #333232;
+  width: 90%;
+  height: 65%;
+  margin: auto;
+  border-radius: 10px;
 }
-fieldset{
+input {
+  border: 1px solid #2a2929;
+}
+fieldset {
   border: 0;
   padding: 0;
   margin: auto;
 }
-.close{
+.close {
   display: none;
 }
 
-
-h1{
+h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #fff;
   z-index: 9999;
 }
-form{
+form {
   background-color: #3f3e3e;
   border: 1px solid #2a2929;
   border-radius: 10px;
-  box-shadow: 0 0 15px #2a2929 ;
+  box-shadow: 0 0 15px #2a2929;
   padding: 20px;
-  margin :auto;
+  margin: auto;
   width: 60%;
   height: 60%;
-     input{
+  input {
     display: flex;
     align-items: center;
     width: 60%;
@@ -50,41 +52,39 @@ form{
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-
   }
 }
-button
-{
+button {
   background-color: #a3eef4;
-  width:60%;
-  color:black;
+  width: 60%;
+  color: black;
   padding: 5px 10px;
   border-radius: 10px;
   border: 1px solid #2a2929;
-  box-shadow:   0 0 5px #2a2929 ;
+  box-shadow: 0 0 5px #2a2929;
   cursor: pointer;
   margin: 0 auto;
   display: block;
 }
 
 @media screen and (min-width: 800px) {
-  .account{
+  .account {
     left: 15%;
     width: 60%;
     height: 80%;
   }
-  form{
+  form {
     width: 60%;
     height: 60%;
   }
-  input{
+  input {
     width: 60%;
   }
-  button{
+  button {
     width: 60%;
   }
 
-  .close{
+  .close {
     display: initial;
     position: absolute;
     top: 10px;

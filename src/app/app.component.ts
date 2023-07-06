@@ -1,4 +1,4 @@
-import { Component,} from '@angular/core';
+import { Component, } from '@angular/core';
 import { ThemeService } from './services/theme.service';
 
 @Component({
@@ -8,16 +8,16 @@ import { ThemeService } from './services/theme.service';
 })
 export class AppComponent {
   title = "MoodPop";
-  showBurger :boolean = false;
-  showProfileMenu :boolean = false;
-  whiteTheme :boolean = false;
-  SignIn : boolean = false; 
+  showBurger: boolean = false;
+  showProfileMenu: boolean = false;
+  whiteTheme: boolean = false;
+  SignIn: boolean = false;
 
-constructor(public themeService : ThemeService) {}
+  constructor(public themeService: ThemeService) { }
 
-changeTheme() {
-this.themeService.toggleTheme();
-}
+  changeTheme() {
+    this.themeService.toggleTheme();
+  }
 
   toggleBurger(event: boolean) {
     this.showBurger = event;
@@ -28,7 +28,7 @@ this.themeService.toggleTheme();
   }
 
   themeSwitch(event: boolean) {
-this.whiteTheme = event;
+    this.whiteTheme = event;
   }
 
   onSignIn(event: boolean) {

@@ -1,8 +1,7 @@
 ul {
   list-style-type: none;
   padding: 0;
- }
-
+}
 
 li {
   margin-bottom: 30px;
@@ -13,7 +12,8 @@ li {
   border-radius: 5px;
   padding: 5px 20px 5px 20px;
   transition: transform 0.2s ease-in-out;
-  background: radial-gradient(#a3eef4, #ccf5f8);  color: black;
+  background: radial-gradient(#a3eef4, #ccf5f8);
+  color: black;
 }
 
 li:hover {
@@ -21,8 +21,7 @@ li:hover {
   cursor: pointer;
 }
 
-.catégories{
-
+.catégories {
   background-color: rgba(84, 77, 86, 0.52);
   text-align: center;
 }
@@ -33,7 +32,7 @@ li:hover {
   top: 142px;
   width: 20px;
   height: 20px;
-  background-image: url('/assets/profilBlanc.png');
+  background-image: url("/assets/profilBlanc.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -45,13 +44,13 @@ li:hover {
   display: block;
 }
 
-h1{
+h1 {
+  margin-top : 20px;
   text-align: center;
   color: whitesmoke;
   text-shadow: 3px 3px 6px #000;
   margin-bottom: 10%;
-  text-decoration:none
-
+  text-decoration: none;
 }
 
 .separator {

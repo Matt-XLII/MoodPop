@@ -7,7 +7,6 @@
   justify-content: center;
 }
 
-
 .container {
   position: relative;
   background-color: white;
@@ -35,13 +34,12 @@
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+  transform: translate(102px, 130px) scale(2.25) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
-  img{
+  img {
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-
   }
 }
 
@@ -49,7 +47,7 @@
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+  transform: translate(102px, 130px) scale(2.25) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
 
   img {
@@ -57,8 +55,6 @@
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-
-
   }
   p {
     transform: rotate3d(0, 1, 0, 180deg);
@@ -90,17 +86,16 @@
   position: absolute;
   top: 5px;
   right: 5px;
-  width:15px;
+  width: 15px;
   height: 15px;
-  background-image: url('/assets/IconeReturn6.png');
+  background-image: url("/assets/IconeReturn6.png");
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   background-color: transparent;
-  transform:  rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg);
 }
-
 
 .retour.isTimedChecked {
   display: none;
@@ -117,17 +112,16 @@
   right: 5px;
   width: 20px;
   height: 20px;
-  background-image: url('/assets/iconeCheck.png');
+  background-image: url("/assets/iconeCheck.png");
   background-size: cover;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
   cursor: pointer;
   background-color: transparent;
   transition: 1.5s ease-in-out;
-
 }
 
-.check.isClicked{
+.check.isClicked {
   display: none;
 }
 .share {
@@ -135,17 +129,16 @@
   position: absolute;
   bottom: 5px;
   left: 5px;
-  width:15px;
+  width: 15px;
   height: 15px;
-  background-image: url('/assets/IconeShare6.png');
+  background-image: url("/assets/IconeShare6.png");
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  background-color: transparent ;
+  background-color: transparent;
   transition: 1.5s ease-in-out;
-  transform:  rotate3d(0, 1, 0, 180deg);
-
+  transform: rotate3d(0, 1, 0, 180deg);
 }
 .share.isTimedChecked {
   display: none;
@@ -156,33 +149,31 @@
   height: 150px;
 }
 
-
 @media screen and (min-width: 800px) {
-  .container{
+  .container {
     min-height: 260px;
     min-width: 230px;
     margin-right: 20px;
 
-    img{
+    img {
       min-width: 230px;
       min-height: 260px;
     }
   }
 
   .container.isClicked {
-    transform: translate(0px, 19px) rotate3d(0, 1, 0, 180deg);
+    transform: translate(115px, 160px) scale(2.2) rotate3d(0, 1, 0, 180deg);
     margin-right: 20px;
   }
 
   .container.timer {
-    transform:   translate(0px, 19px) rotate3d(0, 1, 0, 180deg);
+    transform: translate(115px, 160px) scale(2.2) rotate3d(0, 1, 0, 180deg);
     margin-right: 20px;
   }
 
   .quote {
     font-size: x-large;
-          padding-top: 45px;
-
+    padding-top: 45px;
   }
 
   .container.timer {
@@ -190,18 +181,17 @@
     flex-direction: column;
     justify-content: flex-start;
   }
-  
+
   .retour {
     top: 5px;
     right: 10px;
-    width:25px;
+    width: 25px;
     height: 25px;
   }
 
   .share {
     left: 10px;
-    width:25px;
+    width: 25px;
     height: 25px;
   }
 }
-

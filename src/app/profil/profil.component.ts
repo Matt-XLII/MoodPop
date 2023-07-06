@@ -1,4 +1,4 @@
-import { Component, Output,EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { ThemeService } from '../services/theme.service';
@@ -8,9 +8,9 @@ import { ThemeService } from '../services/theme.service';
   templateUrl: './profil.component.html',
   styleUrls: ['./profil.component.scss']
 })
-export class ProfilComponent implements OnInit{
-  constructor(public themeService : ThemeService,
-    private router :Router) { } // Injecte le service
+export class ProfilComponent implements OnInit {
+  constructor(public themeService: ThemeService,
+    private router: Router) { } // Injecte le service
 
   isSignIn: boolean = false;
   stats: boolean = false;
@@ -19,48 +19,48 @@ export class ProfilComponent implements OnInit{
   password: string | any = '';
   isLinkVisited: boolean = true;
   theme: string = 'female-theme'
-  isDark : boolean = false;
+  isDark: boolean = false;
 
   ngOnInit(): void {
-  this.theme = this.themeService.theme;
-  this.isDark = this.themeService.isDark;
+    this.theme = this.themeService.theme;
+    this.isDark = this.themeService.isDark;
   }
 
-changeTheme() {
-this.themeService.toggleTheme();
-}
+  changeTheme() {
+    this.themeService.toggleTheme();
+  }
 
-onMaleToggle() {
-  this.themeService.changeTheme('male-theme');
-  this.theme = this.themeService.theme;
-}
+  onMaleToggle() {
+    this.themeService.changeTheme('male-theme');
+    this.theme = this.themeService.theme;
+  }
 
-onFemaleToggle() {
-  this.themeService.changeTheme('female-theme');
-  this.theme = this.themeService.theme;
-}
+  onFemaleToggle() {
+    this.themeService.changeTheme('female-theme');
+    this.theme = this.themeService.theme;
+  }
 
-onVeganToggle() {
-  this.themeService.changeTheme('vegan-theme');
-  this.theme = this.themeService.theme;
-}
+  onVeganToggle() {
+    this.themeService.changeTheme('vegan-theme');
+    this.theme = this.themeService.theme;
+  }
 
-onSignIn(){
-  this.isSignIn = !this.isSignIn;
+  onSignIn() {
+    this.isSignIn = !this.isSignIn;
   }
 
 
-  onStats(){
+  onStats() {
     this.stats = !this.stats;
 
   }
 
-  onSettings(){
+  onSettings() {
     this.settingsOut = !this.settingsOut;
   }
   onLinkClick() {
     this.isLinkVisited = true;
-    alert("Very smart 👏, you should have noted that !" )
+    alert("Very smart 👏, you should have noted that !")
   }
 
   login() {

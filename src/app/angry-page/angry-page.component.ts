@@ -12,13 +12,13 @@ export class AngryPageComponent implements OnInit {
 
 
   constructor(private angryService: AngryService) { }
-  
+
   getCurrentInsult(): string {
     return this.insults[this.currentIndex];
   }
 
   ngOnInit(): void {
-      this.insults = this.angryService.insultList;
+    this.insults = this.angryService.insultList;
   }
 
   nextInsult(): void {

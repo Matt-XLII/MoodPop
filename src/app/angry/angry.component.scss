@@ -44,7 +44,7 @@
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(-95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+  transform: translate(-100px, 130px) scale(2.25) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
   .angry {
     border-radius: 10px;
@@ -58,7 +58,7 @@
   z-index: 2;
   margin: 0;
   transition: 1.5s ease-in-out;
-  transform: translate(-95px, 130px) scale(2.3) rotate3d(0, 1, 0, 180deg);
+  transform: translate(-100px, 130px) scale(2.25) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
 
   .angry {
@@ -192,12 +192,14 @@ display: none;}
   }
 
   .container.isClicked {
-    transform: translate(0px, 19px) rotate3d(0, 1, 0, 180deg);
+    transition: 1.5s ease-in-out;
+    transform: translate(-115px, 160px) scale(2.2) rotate3d(0, 1, 0, 180deg);
     margin-right: 20px;
   }
 
   .container.timer {
-    transform:   translate(0px, 19px) rotate3d(0, 1, 0, 180deg);
+    transition: 1.5s ease-in-out;
+    transform: translate(-115px, 160px) scale(2.2) rotate3d(0, 1, 0, 180deg);
     margin-right: 20px;
   }
 
