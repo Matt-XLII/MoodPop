@@ -2,13 +2,17 @@ import { Component, Inject, OnInit} from '@angular/core';
 import { FakeAPI } from '../fake-api/fake-api';
 import { ThemeService } from '../services/theme.service';
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { ViewEncapsulation } from '@angular/compiler';
 
+encapsulation: ViewEncapsulation.None
 
 @Component({
   selector: 'app-angry',
   templateUrl: './angry.component.html',
   styleUrls: ['./angry.component.scss']
 })
+
+
 export class AngryComponent implements OnInit {
 
   clicked: boolean = false;
@@ -74,6 +78,8 @@ isClicked() {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogContentComponent, {
+
+      panelClass: 'custom-dialog-container',
       data: { component: this }
     });
 
