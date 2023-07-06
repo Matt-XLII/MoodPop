@@ -17,7 +17,12 @@
     <app-profil
       [ngClass]="{hidden : !showProfileMenu}"
     ></app-profil>
-    <div class="centerrouter">
+    <div class="centerrouter"
+    [ngStyle]="{
+      'background-color': themeService.isDark
+      ? themeService.darkThemeBackground2
+      : themeService.lightThemeBackground
+  }">
     <router-outlet *ngIf="!showBurger && !showProfileMenu"></router-outlet>
 </div>
   </div>
