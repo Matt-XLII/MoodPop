@@ -5,6 +5,8 @@ fieldset {
   margin: 0;
 }
 
+
+
 .sub-section{
   width: 95%;
 }
@@ -38,6 +40,7 @@ form {
 a{
   text-align: center;
   margin-bottom: 10px;
+  color: #67d8e0
 }
 .btn-log{
   border: 1px solid black;
@@ -66,7 +69,7 @@ a{
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background-color: #333232;
+  background-color: #ba17e7;
   margin: 20px;
   border-radius: 10px;
   color: whitesmoke;
@@ -112,6 +115,7 @@ h2{
 
 .section-title {
   font-weight: bold;
+  text-align: center;
 }
 
 .theme-options {
@@ -260,4 +264,8 @@ input:checked + .slider:before {
   .sub-section{
     display: none;
   }
+  .settings-container{
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.441);
+  }
+
 }

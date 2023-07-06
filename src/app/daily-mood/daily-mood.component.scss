@@ -1,7 +1,7 @@
-body {
-  background-color: #544d56;
-}
 
+h1 {
+margin-top :35px;
+}
 .card {
   display: flex;
   flex-direction: row;
@@ -9,7 +9,8 @@ body {
   justify-content: space-around;
   width: 400px;
   margin: 6px auto 80px ;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+
 }
 .titre {
   background-clip: initial;
@@ -62,11 +63,22 @@ body {
 @media screen and (min-width: 800px) {
 
 
+.titre {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+}
+
+  h1 {
+    font-size: 45px;
+   margin-top:30px;
+  }
 
 .card {
   display: flex;
   flex-wrap: nowrap;
- 
+  margin-bottom: 60px;
 
 }
 }

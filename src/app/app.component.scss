@@ -2,6 +2,9 @@
   background-color: whitesmoke;
   color: black;
 }
+.centerrouter{
+  background-color: #544D56;
+}
 
 .hidden {
   display:none;
@@ -13,6 +16,12 @@
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+
+ app-profil{
+  justify-self: center;
+  align-self: center;
+  margin-left: 30%;
+ }
 
   .centerrouter{
     width: 100%;
