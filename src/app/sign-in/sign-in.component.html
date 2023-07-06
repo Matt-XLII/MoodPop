@@ -4,16 +4,14 @@
     src="../../assets/closewhite.png"
     class="close"
     (click)="closeSignIn()"
-    width="30"
+    width="50"
   />
-
   <form class="form" (ngSubmit)="submitRegister()">
     <fieldset class="input-with-icon">
       <input
         type="text"
         placeholder="👽 Your Name"
         required
-        [(ngModel)]="name"
       />
     </fieldset>
 
@@ -22,12 +20,11 @@
         type="text"
         placeholder="👥 Username"
         required
-        [(ngModel)]="username"
       />
     </fieldset>
 
     <fieldset>
-      <input type="email" placeholder="📩 Email" required [(ngModel)]="email" />
+      <input type="email" placeholder="📩 Email" required />
     </fieldset>
 
     <fieldset>
@@ -35,7 +32,6 @@
         type="password"
         placeholder="Password"
         required
-        [(ngModel)]="password"
       />
     </fieldset>
 
@@ -44,7 +40,6 @@
         type="password"
         placeholder="Confirm Password"
         required
-        [(ngModel)]="confirmPassword"
       />
     </fieldset>
 
