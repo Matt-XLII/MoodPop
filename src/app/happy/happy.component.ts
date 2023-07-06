@@ -56,9 +56,12 @@ isClicked() {
         }
       }} else {}
     }
-  }
 
+    redirectToPage() {
+      window.open('https://www.instagram.com/accounts/login/', '_blank');
+    }
 
+}
 
 
 

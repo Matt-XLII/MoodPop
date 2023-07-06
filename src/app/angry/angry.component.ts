@@ -65,6 +65,10 @@ isClicked() {
     let random = Math.floor(Math.random() * this.insultList.length);
     return this.insultList[random];
   }
+
+  redirectToPage() {
+    window.open('https://www.instagram.com/accounts/login/', '_blank');
+  }
 }
 
 
