@@ -42,6 +42,8 @@ ngOnInit(): void {
 
 
 isClicked() {
+  this.ageConfirmation(); //rajout pour vérification de l'age//
+
   if (this.checked === false){
     if (this.timed === false && this.clicked === false) {
       this.clicked = !this.clicked;
@@ -69,7 +71,19 @@ isClicked() {
   redirectToPage() {
     window.open('https://www.instagram.com/accounts/login/', '_blank');
   }
-}
+
+  ageConfirmation() {
+    const confirmed = window.confirm('Avez-vous plus de 18 ans ?');
+    if (confirmed) {
+      this.checked = false;
+    } else {
+      this.checked = true;
+      this.insult = "Vous devez avoir plus de 18 ans pour accéder à ce contenu.";
+    }
+  }
+
+  }
+
 
 
 
