@@ -1,12 +1,19 @@
 
  .mainField {
-  display: block;
-  margin: 15px;
-  padding: 25px;
-  border: 1px solid #2a2929;
-  border-radius: 10px;
-  background-color: #64640b;
-  overflow: hidden;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 130px;
+    box-shadow: #2a2929 10px 0px 25px;
+    padding: 40px;
+    height: 50%;
+    width: 50%;
+    border-radius: 20%;
+    border: 4mm ridge rgba(211, 220, 50, .6);
+    border-top: 4mm groove rgba(211, 220, 50, .6);
+    border-left: 4mm groove rgba(211, 220, 50, .6);
 }
 
 .riddle {
@@ -45,18 +52,43 @@ p:hover {
 }
 
 .answer {
-  display: flex;
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  margin: 10px auto;
-  text-align: center;
-  color: #fff;
+  width: 40%;
+  font-size: 20px;
+  margin: 20px auto;
+  margin-bottom: 10px;
+  color: #000;
+  text-shadow: 1px 1px 2px #fff;
   animation: scroll 10s linear infinite;
-  text-shadow: 1px 1px 2px #000;
-  width: 30%;
-  justify-content: center;
-  align-items: center;
+  border: 1px solid #2a2929;
+  border-radius: 10px;
+  background-color: #c9ad0d;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    background-color: #c9ad0d;
+    color: #000;
+    box-shadow: #ffffff 5px 0px 15px;
+  }
+
+  button {
+    margin: 5px auto;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+    animation: scroll 10s linear infinite;
+    border: 1px solid #2a2929;
+    border-radius: 5px;
+    background-color:#c9ad0d;
+    width: 15%;
+    height: 30px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    
+  }
 }
+
 
 @media screen and (min-width: 800px) {
   .mainField {
