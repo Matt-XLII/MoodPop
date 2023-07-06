@@ -33,11 +33,11 @@ toAngry(){
 }
 
 rachidJoke(){ 
-  return alert("Fuck Rachid");
+  return alert("T'as changé😧");
 }
 
 richardJoke(){
-  return alert("Fuck Richard");
+  return alert("Euh.....Sinon je fais un git clone?😒");
 }
 
 }
