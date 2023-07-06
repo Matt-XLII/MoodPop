@@ -37,7 +37,8 @@ rachidJoke(){
 }
 
 richardJoke(){
-  return alert("Euh .. Sinon je fais un GIT CLONE🥴");
+  return alert("Euh.....Sinon je fais un git clone?😒");
+
 }
 
 }
