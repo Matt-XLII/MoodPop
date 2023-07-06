@@ -11,9 +11,9 @@
     height: 50%;
     width: 50%;
     border-radius: 20%;
-    border: 4mm ridge rgba(211, 220, 50, .6);
-    border-top: 4mm groove rgba(211, 220, 50, .6);
-    border-left: 4mm groove rgba(211, 220, 50, .6);
+    border: 4mm ridge rgba(252, 177, 3, 0.779);
+    border-top: 4mm groove rgba(252, 177, 3, 0.779);
+    border-left: 4mm groove rgba(252, 177, 3, 0.779);
 }
 
 .riddle {
@@ -47,30 +47,30 @@ p {
 }
 
 p:hover {
- 
+
   text-shadow: 4px 4px 8px #000;
 }
 
 .answer {
-  width: 40%;
   font-size: 20px;
   margin: 20px auto;
   margin-bottom: 10px;
+  padding: 10px;
   color: #000;
   text-shadow: 1px 1px 2px #fff;
   animation: scroll 10s linear infinite;
   border: 1px solid #2a2929;
   border-radius: 10px;
-  background-color: #c9ad0d;
+  background-color: #fcb204;
   cursor: pointer;
   transition: 0.5s;
   &:hover {
-    background-color: #c9ad0d;
+    background-color: rgb(252, 177, 3);
     color: #000;
     box-shadow: #ffffff 5px 0px 15px;
   }
 
-  button {
+  button.next {
     margin: 5px auto;
     margin-bottom: 10px;
     text-align: center;
@@ -78,14 +78,14 @@ p:hover {
     animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
     border-radius: 5px;
-    background-color:#c9ad0d;
+    background-color:#780dc9;
     width: 15%;
     height: 30px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     transition: 0.5s;
-    
+
   }
 }
 
@@ -103,23 +103,23 @@ p:hover {
     height: 50%;
     width: 30%;
     border-radius: 20%;
-    border: 4mm ridge rgba(211, 220, 50, .6);
-    border-top: 4mm groove rgba(211, 220, 50, .6);
-    border-left: 4mm groove rgba(211, 220, 50, .6);
+    border: 4mm ridge rgba(252, 177, 3, 0.779);
+    border-top: 4mm groove rgba(252, 177, 3, 0.779);
+    border-left: 4mm groove rgba(252, 177, 3, 0.779);
   }
-  
+
   h2 {
     font-size: 50px;
     margin-top: 20px;
     margin-bottom: 30px;
   }
-  
+
   p {
     font-size: 25px;
   }
 
   .answer {
-    width: 30%;
+    width: 35%;
     font-size: 20px;
     margin: 20px auto;
     margin-bottom: 10px;
@@ -128,16 +128,16 @@ p:hover {
     animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
     border-radius: 10px;
-    background-color: #c9ad0d;
+    background-color: rgba(252, 177, 3, 0.779);;
     cursor: pointer;
     transition: 0.5s;
     &:hover {
-      background-color: #c9ad0d;
+      background-color: rgba(252, 177, 3, 0.779);;
       color: #000;
       box-shadow: #ffffff 5px 0px 15px;
     }
   }
-  
+
   button.next {
     margin: 5px auto;
     margin-bottom: 10px;
@@ -146,16 +146,16 @@ p:hover {
     animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
     border-radius: 5px;
-    background-color:#c9ad0d;
-    width: 15%;
+    background-color: #fcb204;
+    width: 25%;
     height: 30px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     transition: 0.5s;
-    
+
     &:hover {
-      
+
       box-shadow: #ffffff 10px 0px 25px;
     }
   }
