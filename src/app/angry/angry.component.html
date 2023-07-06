@@ -1,5 +1,5 @@
 <div class="container" [ngClass]="{'isClicked' : clicked}" [ngClass]="{'timer': timed}"
-  [ngClass]="{'isChecked': checked}" (click)="isClicked()">
+  [ngClass]="{'isChecked': checked}" (click)="toggleClickState()">
   <img class="angry" [src]="imageSource" alt="personne énervée">
   <img class ="interdit" src="/assets/18.1.png" alt="moins de 18 ans"
   [ngClass]="{'isClicked': clicked }" [ngClass]="{'isTimedChecked': checkedTimed}">

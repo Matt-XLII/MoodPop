@@ -9,7 +9,7 @@ import { DailyFactComponent } from './daily-fact/daily-fact.component';
 import { HeaderComponent } from './header/header.component';
 import { DailyMoodComponent } from './daily-mood/daily-mood.component';
 import { UnmotivatedComponent } from './unmotivated/unmotivated.component';
-import { AngryComponent } from './angry/angry.component';
+import { AngryComponent, DialogContentComponent } from './angry/angry.component';
 import { HappyComponent } from './happy/happy.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -22,6 +22,8 @@ import { StatsMensuellesComponent } from './stats-mensuelles/stats-mensuelles.co
 import { AngryPageComponent } from './angry-page/angry-page.component';
 import { BoredPageComponent } from './bored-page/bored-page.component';
 import { UnmotivatedPageComponent } from './unmotivated-page/unmotivated-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -50,13 +52,16 @@ import { UnmotivatedPageComponent } from './unmotivated-page/unmotivated-page.co
     AngryPageComponent,
     BoredPageComponent,
     UnmotivatedPageComponent,
+    DialogContentComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
 
   providers: [],
