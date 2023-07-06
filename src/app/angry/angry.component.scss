@@ -7,15 +7,6 @@
   justify-content: center;
 }
 
-.interdit {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 50px;
-  height: auto;
-}
-
-
 .container {
   position: relative;
   background-color: white;
@@ -23,20 +14,19 @@
   justify-content: center;
   align-items: center;
   min-width: 165px;
-  min-height: 200px;
+  min-height: 205px;
   margin-top: 20px;
   flex-grow: 1;
-  z-index: 0;
+  z-index: 1;
   border-radius: 10px;
-  .angry {
+  img {
     position: absolute;
     width: 165px;
-    height: 200px;
+    height: 205px;
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
     cursor: pointer;
-
   }
 }
 
@@ -46,11 +36,10 @@
   transition: 1.5s ease-in-out;
   transform: translate(-100px, 130px) scale(2.25) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
-  .angry {
+  img {
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-
   }
 }
 
@@ -61,13 +50,12 @@
   transform: translate(-100px, 130px) scale(2.25) rotate3d(0, 1, 0, 180deg);
   border-radius: 10px;
 
-  .angry {
+  img {
     opacity: 0.1;
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
-
-     }
+  }
   p {
     transform: rotate3d(0, 1, 0, 180deg);
   }
@@ -80,7 +68,7 @@
   width: 150px; //rajout de la width de 150px
   justify-content: center;
   border-radius: 10px;
-  .angry {
+  img {
     border-radius: 10px;
     border: 1px solid #000;
     box-shadow: 0 0 10px #000;
@@ -94,41 +82,23 @@
   }
 }
 
-.interdit {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width:35px;
-  height: 35px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.interdit.isClicked {
-  transform:  rotate3d(0, 1, 0, 180deg);
-  width:25px;
-  height: 25px;
-}
-
-.interdit.isTimedChecked {
-display: none;}
-
 .retour {
   position: absolute;
   top: 5px;
   right: 5px;
-  width:15px;
+  width: 15px;
   height: 15px;
-  background-image: url('/assets/IconeReturn6.png');
+  background-image: url("/assets/IconeReturn6.png");
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
   background-color: transparent;
-  transform:  rotate3d(0, 1, 0, 180deg);
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.retour.isTimedChecked {
+  display: none;
 }
 
 .retour.isTimedChecked {
@@ -142,16 +112,16 @@ display: none;}
   right: 5px;
   width: 20px;
   height: 20px;
-  background-image: url('/assets/iconeCheck.png');
+  background-image: url("/assets/iconeCheck.png");
   background-size: cover;
   background-repeat: no-repeat;
-  border:none;
+  border: none;
   cursor: pointer;
   background-color: transparent;
   transition: 1.5s ease-in-out;
 }
 
-.check.isClicked{
+.check.isClicked {
   display: none;
 }
 .share {
@@ -159,16 +129,16 @@ display: none;}
   position: absolute;
   bottom: 5px;
   left: 5px;
-  width:15px;
+  width: 15px;
   height: 15px;
-  background-image: url('/assets/IconeShare6.png');
+  background-image: url("/assets/IconeShare6.png");
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
-  background-color: transparent ;
-  transform:  rotate3d(0, 1, 0, 180deg);
-
+  background-color: transparent;
+  transition: 1.5s ease-in-out;
+  transform: rotate3d(0, 1, 0, 180deg);
 }
 .share.isTimedChecked {
   display: none;
@@ -179,36 +149,31 @@ display: none;}
   height: 150px;
 }
 
-
-
 @media screen and (min-width: 800px) {
-  .container{
+  .container {
     min-height: 260px;
     min-width: 230px;
     margin-right: 20px;
 
-    img{
+    img {
       min-width: 230px;
       min-height: 260px;
     }
   }
 
   .container.isClicked {
-    transition: 1.5s ease-in-out;
     transform: translate(-115px, 160px) scale(2.2) rotate3d(0, 1, 0, 180deg);
     margin-right: 20px;
   }
 
   .container.timer {
-    transition: 1.5s ease-in-out;
     transform: translate(-115px, 160px) scale(2.2) rotate3d(0, 1, 0, 180deg);
     margin-right: 20px;
   }
 
   .quote {
     font-size: x-large;
-          padding-top: 45px;
-
+    padding-top: 45px;
   }
 
   .container.timer {
@@ -220,20 +185,13 @@ display: none;}
   .retour {
     top: 5px;
     right: 10px;
-    width:25px;
+    width: 25px;
     height: 25px;
   }
 
   .share {
     left: 10px;
-    width:25px;
+    width: 25px;
     height: 25px;
   }
-
-  .interdit.isClicked {
-    transform:  rotate3d(0, 1, 0, 180deg);
-    width:45px;
-    height: 45px;
-  }
-
 }
