@@ -8,9 +8,10 @@ import { ThemeService } from './services/theme.service';
 })
 export class AppComponent {
   title = "MoodPop";
-  showBurger = false;
-  showProfileMenu = false;
-  whiteTheme = false;
+  showBurger :boolean = false;
+  showProfileMenu :boolean = false;
+  whiteTheme :boolean = false;
+  SignIn : boolean = false; 
 
 constructor(public themeService : ThemeService) {}
 
@@ -30,6 +31,8 @@ this.themeService.toggleTheme();
 this.whiteTheme = event;
   }
 
-
+  onSignIn(event: boolean) {
+    this.SignIn = event;
+  }
 
 }

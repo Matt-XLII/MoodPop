@@ -1,6 +1,4 @@
-
-
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-log-in',
@@ -14,10 +12,12 @@ export class LogInComponent {
   isSignIn: boolean = false;
   settingsOut: boolean = true;
 
+  @Output() SignIn = new EventEmitter<boolean>();
+
 
   onLinkClick() {
     this.isLinkVisited = true;
-    alert("Very smart 👏, you should have noted that !" )
+    alert("Very smart 👏, you should have noted that !")
   }
 
   login() {
@@ -28,10 +28,12 @@ export class LogInComponent {
     }
 
   }
-  onSignIn(){
+  onSignIn() {
     this.isSignIn = !this.isSignIn;
-    }
-    onSettings(){
-      this.settingsOut = !this.settingsOut;
-    }
+    this.SignIn.emit(this.isSignIn);
+    this.isSignIn = false;
+  }
+  onSettings() {
+    this.settingsOut = !this.settingsOut;
+  }
 }
