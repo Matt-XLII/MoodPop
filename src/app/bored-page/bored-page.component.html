@@ -1,0 +1,17 @@
+<div class="mainField">
+
+  <h2>Lets find out!</h2>
+
+  <div class="riddle">
+    <hr>
+    <p> Question : {{riddles[riddleIndex][0]}}</p>
+    <button class = "answer" (click)="showSolution()">Here's the answer</button>
+    <p *ngIf="answer"> Answer : {{riddles[riddleIndex][1]}}</p>
+    <span class = "next" (click)="nextRiddle()">Next </span>
+  </div>
+
+</div>
+
+
+
+

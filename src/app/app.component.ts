@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'MoodPop';
-  laFiotte= "Christophe"
+  title = "MoodPop";
+  showBurger: boolean = false;
+  showProfileMenu: boolean = false;
+  whiteTheme: boolean = false;
+  SignIn: boolean = false;
+
+  constructor(public themeService: ThemeService) { }
+
+  changeTheme() {
+    this.themeService.toggleTheme();
+  }
+
+  toggleBurger(event: boolean) {
+    this.showBurger = event;
+  }
+
+  showProfile(event: boolean) {
+    this.showProfileMenu = event;
+  }
+
+  themeSwitch(event: boolean) {
+    this.whiteTheme = event;
+  }
+
+  onSignIn(event: boolean) {
+    this.SignIn = event;
+  }
+
 }

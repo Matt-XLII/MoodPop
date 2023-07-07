@@ -1,0 +1,103 @@
+.mainField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 130px;
+  padding: 40px;
+  height: 50%;
+  width: 50%;
+  border: 1px solid #2a2929;
+  border-radius: 20%;
+  background-color: #f26666;
+  border: 4mm ridge rgba(255, 0, 0, 0.6);
+  border-top: 4mm groove rgba(255, 0, 0, 0.6);
+  border-left: 4mm groove rgba(255, 0, 0, 0.6);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    text-shadow: 3px 3px 6px #000;
+    font-size: 32px;
+    margin-top: 0px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  hr {
+    border: 0.5px solid #2a2929;
+    margin: 15px;
+    width: 50%;
+  }
+
+  p {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    animation: scroll 10s linear infinite;
+    text-shadow: 1px 1px 2px #000;
+
+    &:hover {
+      text-shadow: 4px 4px 8px #000;
+    }
+  }
+
+  button.next {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: whitesmoke;
+    animation: scroll 10s linear infinite;
+    border: 1px solid #2a2929;
+    border-radius: 5px;
+    background-color: rgb(201, 10, 10);
+    width: 20%;
+    height: auto  ;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 10px 20px;
+
+    &:hover {
+      background-color: rgb(201, 10, 10)b;
+      color: fffff;
+      box-shadow: #ffffff 10px 0px 15px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 130px;
+    box-shadow: #2a2929 10px 0px 25px;
+    padding: 40px;
+    height: 50%;
+    width: 30%;
+    border-radius: 20%;
+    background-color: #f26666;
+    border: 4mm ridge rgba(255, 0, 0, 0.6);
+    border-top: 4mm groove rgba(255, 0, 0, 0.6);
+    border-left: 4mm groove rgba(255, 0, 0, 0.6);
+
+    h2 {
+      font-size: 50px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      color: whitesmoke;
+    }
+
+    p {
+      font-size: 25px;
+    }
+  }
+  
+}

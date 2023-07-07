@@ -1,0 +1,206 @@
+<div
+  class="settings-container"
+  *ngIf="settingsOut"
+  [ngStyle]="{
+'background-color': themeService.isDark
+  ? themeService.darkThemeBackground2
+  : themeService.lightThemeBackground,
+}"
+>
+  <div class="sub-section">
+    <form
+      [ngStyle]="{
+        'background-color': themeService.isDark
+          ? themeService.darkThemeBackground2
+          : themeService.lightThemeBackground
+      }"
+    >
+      <h3
+        class="subtitle"
+        [ngStyle]="{
+          color: themeService.isDark
+            ? themeService.darkThemeFontColor
+            : themeService.lightThemeFontColor,
+          'text-shadow': themeService.isDark
+            ? themeService.darkThemeTextShadow
+            : themeService.lightThemeTextShadow
+        }"
+      >
+        LOGIN
+      </h3>
+      <fieldset class="input-with-icon">
+        <input
+          type="text"
+          placeholder="👥 Username"
+          required
+        />
+      </fieldset>
+      <fieldset>
+        <input
+          type="password"
+          placeholder="Password"
+          required
+        />
+      </fieldset>
+      <a href="#" (click)="onLinkClick()" [ngClass]="{ visited: isLinkVisited }"
+        >Forgot your password?</a
+      >
+      <div class="btn">
+        <button class="btn-log" (click)="onSignIn()" (click)="onSettings()">
+          Sign-In
+        </button>
+        <button class="btn-log" type="submit" (click)="login()">Log-In</button>
+      </div>
+    </form>
+  </div>
+
+  <h1
+    class="title"
+    [ngStyle]="{
+      color: themeService.isDark
+        ? themeService.darkThemeFontColor
+        : themeService.lightThemeFontColor,
+      'text-shadow': themeService.isDark
+        ? themeService.darkThemeTextShadow
+        : themeService.lightThemeTextShadow
+    }"
+  >
+    SETTINGS
+  </h1>
+  <div class="theme-options">
+    <span
+      class="option"
+      [ngStyle]="{
+        color: themeService.isDark
+          ? themeService.darkThemeFontColor
+          : themeService.lightThemeFontColor,
+        'text-shadow': themeService.isDark
+          ? themeService.darkThemeTextShadow
+          : themeService.lightThemeTextShadow
+      }"
+      unchecked
+      >Dark</span
+    >
+    <label class="toggle-switch">
+      <input
+        type="checkbox"
+        (click)="changeTheme()"
+        [checked]="!themeService.isDark"
+      />
+      <span class="slider"></span>
+    </label>
+    <span
+      id="white-theme"
+      [ngStyle]="{
+        color: themeService.isDark
+          ? themeService.darkThemeFontColor
+          : themeService.lightThemeFontColor,
+        'text-shadow': themeService.isDark
+          ? themeService.darkThemeTextShadow
+          : themeService.lightThemeTextShadow
+      }"
+      >Light</span
+    >
+  </div>
+
+  <h2
+    class="title"
+    (click)="onStats()"
+    (click)="onSettings()"
+    [ngStyle]="{
+      color: themeService.isDark
+        ? themeService.darkThemeFontColor
+        : themeService.lightThemeFontColor,
+      'text-shadow': themeService.isDark
+        ? themeService.darkThemeTextShadow
+        : themeService.lightThemeTextShadow
+    }"
+  >
+    STATS MENSUELLES
+  </h2>
+
+  <h3
+    class="section-title"
+    [ngStyle]="{
+      color: themeService.isDark
+        ? themeService.darkThemeFontColor
+        : themeService.lightThemeFontColor,
+      'text-shadow': themeService.isDark
+        ? themeService.darkThemeTextShadow
+        : themeService.lightThemeTextShadow
+    }"
+  >
+    What's your gender?
+  </h3>
+
+  <div class="gender-options">
+    <span
+      class="option"
+      [ngStyle]="{
+        color: themeService.isDark
+          ? themeService.darkThemeFontColor
+          : themeService.lightThemeFontColor,
+        'text-shadow': themeService.isDark
+          ? themeService.darkThemeTextShadow
+          : themeService.lightThemeTextShadow
+      }"
+      >Male &nbsp;&nbsp;&nbsp;</span
+    >
+    <label class="toggle-switch" class="male">
+      <input
+        type="checkbox"
+        (click)="onMaleToggle()"
+        [checked]="theme == 'male-theme'"
+      />
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="gender-options">
+    <span
+      class="option"
+      [ngStyle]="{
+        color: themeService.isDark
+          ? themeService.darkThemeFontColor
+          : themeService.lightThemeFontColor,
+        'text-shadow': themeService.isDark
+          ? themeService.darkThemeTextShadow
+          : themeService.lightThemeTextShadow
+      }"
+      >Female</span
+    >
+    <label class="toggle-switch" class="female">
+      <input
+        type="checkbox"
+        (click)="onFemaleToggle()"
+        [checked]="theme == 'female-theme'"
+      />
+
+      <span class="slider"></span>
+    </label>
+  </div>
+  <div class="gender-options">
+    <span
+      class="option"
+      [ngStyle]="{
+        color: themeService.isDark
+          ? themeService.darkThemeFontColor
+          : themeService.lightThemeFontColor,
+        'text-shadow': themeService.isDark
+          ? themeService.darkThemeTextShadow
+          : themeService.lightThemeTextShadow
+      }"
+      >Vegan &nbsp;</span
+    >
+    <label class="toggle-switch" class="vegan">
+      <input
+        type="checkbox"
+        (click)="onVeganToggle()"
+        [checked]="theme == 'vegan-theme'"
+      />
+
+      <span class="slider"></span>
+    </label>
+  </div>
+</div>
+<app-sign-in *ngIf="isSignIn" (closeSignInEvent)="closeSignIn($event)"></app-sign-in>
+<app-stats-mensuelles *ngIf="stats"></app-stats-mensuelles>

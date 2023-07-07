@@ -1,0 +1,48 @@
+<div class="account">
+  <h1>Register Account</h1>
+  <img
+    src="../../assets/closewhite.png"
+    class="close"
+    (click)="closeSignIn()"
+    width="50"
+  />
+  <form class="form" (ngSubmit)="submitRegister()">
+    <fieldset class="input-with-icon">
+      <input
+        type="text"
+        placeholder="👽 Your Name"
+        required
+      />
+    </fieldset>
+
+    <fieldset>
+      <input
+        type="text"
+        placeholder="👥 Username"
+        required
+      />
+    </fieldset>
+
+    <fieldset>
+      <input type="email" placeholder="📩 Email" required />
+    </fieldset>
+
+    <fieldset>
+      <input
+        type="password"
+        placeholder="Password"
+        required
+      />
+    </fieldset>
+
+    <fieldset>
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        required
+      />
+    </fieldset>
+
+    <button type="submit">Register</button>
+  </form>
+</div>

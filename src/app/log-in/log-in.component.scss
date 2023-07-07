@@ -1,0 +1,62 @@
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.sub-section {
+  width: 95%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+
+  h3 {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 3px 3px 6px #000;
+    margin-bottom: 10%;
+    text-decoration: none;
+  }
+  input {
+    display: block;
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #2a2929;
+    border-radius: 4px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+a {
+  text-align: center;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+.btn-log {
+  border: 1px solid black;
+  width: 48%;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  transition: transform 0.2s ease-in-out;
+  background: radial-gradient(#a3eef4, #ccf5f8);
+  color: black;
+  cursor: pointer;
+}
+.btn-signin {
+  border: 1px solid black;
+  width: 48%;
+  border-radius: 5px;
+  padding: 5px 20px 5px 20px;
+  background: radial-gradient(#a3eef4, #ccf5f8);
+  color: black;
+}
+.btn {
+  display: flex;
+  justify-content: space-between;
+}

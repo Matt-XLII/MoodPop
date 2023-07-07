@@ -1,0 +1,194 @@
+.quote {
+  position: absolute;
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 165px;
+  min-height: 205px;
+  margin-top: 20px;
+  flex-grow: 1;
+  z-index: 1;
+  border-radius: 10px;
+  img {
+    position: absolute;
+    width: 165px;
+    height: 205px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+  }
+}
+
+.container.isClicked {
+  z-index: 2;
+  margin: 0;
+  transition: 1.5s ease-in-out;
+  transform: translate(102px, -95px) scale(2.25) rotate3d(0, 1, 0, 180deg);
+  border-radius: 10px;
+  img {
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+  }
+}
+
+.container.timer {
+  z-index: 2;
+  margin: 0;
+  transition: 1.5s ease-in-out;
+  transform: translate(102px, -95px) scale(2.25) rotate3d(0, 1, 0, 180deg);
+  border-radius: 10px;
+  img {
+    opacity: 0.1;
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+  }
+  p {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+.container.isChecked {
+  transition: 1.5s ease-in-out;
+  transform: scale(1);
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  border-radius: 10px;
+  img {
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000;
+    opacity: 0.3;
+  }
+  p {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+  p.isTimedChecked {
+    display: none;
+  }
+}
+
+.retour {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  background-image: url("/assets/IconeReturn6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+
+.retour.isTimedChecked {
+  display: none;
+}
+
+.retour.isTimedChecked {
+  display: none;
+}
+
+.check {
+  z-index: 2;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/iconeCheck.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 1.5s ease-in-out;
+}
+
+.check.isClicked {
+  display: none;
+}
+.share {
+  z-index: 2;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background-image: url("/assets/IconeShare6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 1.5s ease-in-out;
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+.share.isTimedChecked {
+  display: none;
+}
+
+.test {
+  width: 150px;
+  height: 150px;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    min-height: 260px;
+    min-width: 230px;
+    margin-right: 20px;
+
+    img {
+      min-width: 230px;
+      min-height: 260px;
+    }
+  }
+
+  .container.isClicked {
+    transform: translate(115px, -120px) scale(2.2) rotate3d(0, 1, 0, 180deg);
+  }
+
+  .container.timer {
+    transform: translate(115px, -120px) scale(2.2) rotate3d(0, 1, 0, 180deg);
+    margin-right: 20px;
+  }
+
+  .quote {
+    font-size: x-large;
+    padding-top: 45px;
+  }
+
+  .container.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .retour {
+    top: 5px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .share {
+    left: 10px;
+    width: 25px;
+    height: 25px;
+  }
+}

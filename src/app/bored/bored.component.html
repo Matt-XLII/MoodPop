@@ -1,0 +1,50 @@
+<div
+  class="container"
+  [ngClass]="{ isClicked: clicked }"
+  [ngClass]="{ timer: timed }"
+  [ngClass]="{ isChecked: checked }"
+  (click)="isClicked()"
+>
+  <img [src]="imageSource" alt="personne bored" />
+  <div class="test" *ngIf="clicked || checked || timed">
+    <p
+      [ngClass]="{ isTimedChecked: checkedTimed }"
+      *ngIf="timed && !checkedTimed && texteVisible"
+      class="quote"
+    >
+      {{ title }}: {{ question }}
+    </p>
+    <p
+      [ngClass]="{ isTimedChecked: checkedTimed }"
+      class="solution"
+      *ngIf="showSolution"
+    >
+      {{ answer }}
+    </p>
+    <button
+      class="answer"
+      [ngClass]="{ isTimedChecked: checkedTimed }"
+      *ngIf="timed && !checkedTimed && texteVisible"
+      (click)="solution()"
+    ></button>
+    <button
+      [ngClass]="{ isClicked: clicked }"
+      [ngClass]="{ isTimedChecked: checkedTimed }"
+      *ngIf="timed && !checkedTimed"
+      (click)="isAnswered()"
+      class="retour"
+    ></button>
+    <button
+      [ngClass]="{ isClicked: clicked }"
+      [ngClass]="{ isTimedChecked: checkedTimed }"
+      *ngIf="timed && !checkedTimed"
+      class="share"
+      (mousedown)="redirectToPage()"
+    ></button>
+    <button
+      [ngClass]="{ isTimedChecked: checkedTimed }"
+      [ngClass]="{ isClicked: clicked }"
+      class="check"
+    ></button>
+  </div>
+</div>

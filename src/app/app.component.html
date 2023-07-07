@@ -1,2 +1,38 @@
-<router-outlet></router-outlet>
-<app-happy></app-happy>
+<div
+  class="responsivedesign"
+  [ngStyle]="{
+    'background-color': themeService.isDark
+      ? themeService.darkThemeBackground2
+      : themeService.lightThemeBackground
+  }"
+>
+  <app-header
+    class="header"
+    (Toggle)="toggleBurger($event)"
+    (Profile)="showProfile($event)"
+    (SignIn)="onSignIn($event)"
+    [isMenuOpen]="showBurger"
+  ></app-header>
+  <app-menu-burger
+    [ngClass]="{ hidden: !showBurger }"
+    (MenuClosed)="toggleBurger($event)"
+  ></app-menu-burger>
+  <app-profil [ngClass]="{ hidden: !showProfileMenu }"></app-profil>
+  <div
+    class="centerrouter"
+    [ngStyle]="{
+      'background-color': themeService.isDark
+        ? themeService.darkThemeBackground2
+        : themeService.lightThemeBackground
+    }"
+  >
+    <app-sign-in
+      *ngIf="SignIn"
+      (closeSignInEvent)="onSignIn($event)"
+    ></app-sign-in>
+    <router-outlet
+      *ngIf="!showBurger && !showProfileMenu && !SignIn"
+    ></router-outlet>
+  </div>
+</div>
+<app-footer></app-footer>
