@@ -7,6 +7,7 @@ header {
   height: 90px;
   width: 100%;
   min-width: 375px;
+  box-shadow: #00000086 0px 5px 20px;
 }
 
 .logo img {
@@ -67,7 +68,7 @@ header {
     width: 15%;
     height: 100vh;
     min-width: 250px;
-    box-shadow: #2f2f2f 5px 0px 35px;
+    box-shadow: #2f2f2f 5px 0px 20px;
     .logo {
       position: absolute;
       top: 15px;

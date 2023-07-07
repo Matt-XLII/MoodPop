@@ -2,31 +2,34 @@
   background-color: whitesmoke;
   color: black;
 }
-.centerrouter {
-  background-color: #544d56;
+.centerrouter{
+  background-color: #544D56;
 }
 
 .hidden {
-  display: none;
+  display:none;
 }
 
-@media screen and (min-width: 800px) {
-  .responsivedesign {
-    display: flex;
+@media screen and (min-width : 800px) {
+  .responsivedesign{
+    display : flex;
     justify-content: space-between;
     width: 100%;
   }
 
-  app-profil {
-    justify-self: center;
-    align-self: center;
-    width: 100%;
-    margin: 0 35% 0 30%;
-  }
+ app-profil{
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  margin: 0 35% 0 30%;
+ }
 
-  .centerrouter {
+  .centerrouter{
     width: 100%;
-    background: url("/assets/rocheux.jpg") no-repeat center center fixed;
-    background-size: cover;
+   background: url("/assets/rocheux.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+
+
   }
 }
