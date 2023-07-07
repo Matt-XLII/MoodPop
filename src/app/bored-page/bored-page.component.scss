@@ -56,8 +56,7 @@ p:hover {
   margin: 20px auto;
   margin-bottom: 10px;
   padding: 10px;
-  color: #000;
-  text-shadow: 1px 1px 2px #fff;
+  color: #ffffff;
   animation: scroll 10s linear infinite;
   border: 1px solid #2a2929;
   border-radius: 10px;
@@ -66,10 +65,10 @@ p:hover {
   transition: 0.5s;
   &:hover {
     background-color: rgb(252, 177, 3);
-    color: #000;
+    color: #ffffff;
     box-shadow: #161616 5px 0px 15px;
   }
-
+}
   .next {
     margin: 5px auto;
     margin-bottom: 10px;
@@ -77,15 +76,16 @@ p:hover {
     color: #ffffff;
     border: 1px solid #2a2929;
     border-radius: 5px;
-    background-color:#780dc9;
+    background-color:#fcb204;
     width: 15%;
     height: 30px;
     font-size: 15px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
     transition: 0.5s;
+    padding: 10px 15px 5px 10px;
   }
-}
+
 
 
 @media screen and (min-width: 800px) {
@@ -126,11 +126,11 @@ p:hover {
     animation: scroll 10s linear infinite;
     border: 1px solid #2a2929;
     border-radius: 10px;
-    background-color: rgba(252, 177, 3, 0.779);;
+    background-color: rgba(252, 177, 3, 0.779);
     cursor: pointer;
     transition: 0.5s;
     &:hover {
-      background-color: rgba(252, 177, 3, 0.779);;
+      background-color: rgba(252, 177, 3, 0.779);
       color: #ffffff;
       box-shadow: #000000 5px 0px 15px;
     }
